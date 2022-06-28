@@ -13,6 +13,7 @@ import LoginLayout from '../layouts/LoginLayout.vue';
 import LoginPage from '../pages/login/LoginPage.vue';
 import DeliLayout from '../layouts/DeliLayout.vue';
 import ClientPage from '../pages/deli/ClientPage.vue';
+import ServicesPage from '../pages/deli/ServicesPage.vue';
 import ErrorPage from '../pages/ErrorPage.vue';
 
 const router = createRouter({
@@ -73,13 +74,13 @@ const router = createRouter({
       component: DeliLayout,
       children: [
         {
-          path: '/',
+          path: '',
           component: ClientPage,
         },
-        // {
-        //   path: '/',
-        //   component: BusinessPage,
-        // },
+        {
+          path: '/services',
+          component: ServicesPage,
+        },
 
         // {
         //   path: '',

@@ -22,4 +22,8 @@ body {
 .br {
   border: 1px solid red;
 }
+@font-face {
+ font-family: "Euclid";
+ src: url("/fonts/Euclid-Circular-Regular.ttf") format("truetype");
+}
 </style>
