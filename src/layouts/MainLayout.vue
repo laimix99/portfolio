@@ -1,65 +1,35 @@
 <script setup>
-import { ref, computed, reactive } from 'vue';
-const links = ref([
+const links = [
   { path: '/', name: 'My app' },
   { path: '/todo', name: 'TODO' },
-  { path: '/spinner', name: 'Spinner' },
+  // { path: '/spinner', name: 'Spinner' },
   { path: '/calculator', name: 'Calculator' },
   { path: '/stock', name: 'Stock' },
   { path: '/movies', name: 'Movies' },
   { path: '/login', name: 'Login' },
   { path: '/deli', name: 'Deli' },
-]);
+];
 </script>
+
 <template>
-  <div class="layout">
-    <div class="layout-header">
+  <div
+    class="flex flex-col w-full relative bg-red-900"
+    sm="bg-green-100"
+    md="bg-green-200"
+    lg="bg-green-300"
+  >
+    <div class="flex flex-row justify-center items-center flex-wrap py-20px w-full">
       <router-link
         v-for="(link, linkIndex) in links"
         :key="linkIndex"
-        class="link"
+        class="p-10px no-underline hover:opacity-50"
         :to="link.path"
       >
         <span>{{ link.name }}</span>
       </router-link>
     </div>
-
-    <!-- <router-link class="link" to="/todo">TODO</router-link>
-      <router-link class="link" to="/spinner">Spinner</router-link>
-      <router-link class="link" to="/calculator">Calculator</router-link> -->
-    <div class="layout-body">
-      <router-view></router-view>
+    <div class="flex justify-center w-full">
+      <router-view/>
     </div>
   </div>
 </template>
-<style lang="scss" scoped>
-.layout {
-  position: relative;
-  max-width: 100vw;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  &-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 20px 0;
-    width: 100%;
-    .link {
-      text-decoration: none;
-      padding: 10px;
-      color: black;
-      opacity: 1;
-      &:hover {
-        opacity: 0.5;
-      }
-    }
-  }
-  &-body {
-    width: 100vw;
-  }
-}
-</style>

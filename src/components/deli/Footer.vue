@@ -27,8 +27,8 @@ const info = ref([
       <span v-for="i in info">{{i.name}}</span>
     </div>
     <div class="communities">
-      <a href=""><img src="images/apple.svg" alt=""></a>
-      <a href=""><img src="images/google.svg" alt=""></a>
+      <a href=""><img src="/images/apple.svg" alt=""></a>
+      <a href=""><img src="/images/google.svg" alt=""></a>
       <div class="messager">
         <a href=""><img class="cub" src="images/icons-messanger1.svg" alt=""></a>
         <a href=""><img class="cub" src="images/icons-messanger2.svg" alt=""></a>
