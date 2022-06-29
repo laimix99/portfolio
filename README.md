@@ -1,4 +1,4 @@
-# laimix99 - Portfolio
+# Portfolio by laimix99
 
 [-] Add windicss
   https://windicss.org/utilities/general/typography.html#text-decoration
