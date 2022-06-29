@@ -36,7 +36,7 @@ const calc = () => {
   </div>
 </template>
 
-<style>
+<style scoped>
 .shell {
   margin: 0 auto;
   margin-top: 40px;
@@ -52,12 +52,14 @@ input {
   padding: 5px 5px;
   text-align: right;
 }
+/* flex flex-wrap justify-around w-full */
 .grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   width: 100%;
 }
+/* flex flex-1 h-50px font-sm border-none */
 .cell {
   flex: 33%;
   height: 50px;

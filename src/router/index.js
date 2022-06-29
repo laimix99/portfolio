@@ -78,7 +78,7 @@ const router = createRouter({
           component: ClientPage,
         },
         {
-          path: '/services',
+          path: 'services',
           component: ServicesPage,
         },
 

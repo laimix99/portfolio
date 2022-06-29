@@ -11,7 +11,7 @@ import Footer from '../components/deli/Footer.vue'
 <div class="layout">
   <div class="layout-header">
     <div class="layout-header-menu">
-      <router-link class="link" to="/services">
+      <router-link class="link" to="/deli/services">
         <span class="layout-header-menu-text">о сервисе</span>
       </router-link> 
       <router-link class="link" to="/deli">
