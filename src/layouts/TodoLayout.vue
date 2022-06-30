@@ -10,14 +10,14 @@ import { ref, computed, reactive, onBeforeMount } from 'vue';
 </script>
 
 <template>
-<div class="flex flex-row w-full content-center">
+<div class=" layout flex flex-row w-full items-start">
   <div class="flex flex-col">
     <router-link to="/" class="all-projects bg-no-repeat w-40px h-40px cursor-pointer top-10px left-10px absolute"/>
     <span class=" link text-green-700 cursor-pointer hover:opacity-50 text-20px mt-100px ml-10px w-full text-left" @click="setVersion('v1')">Version 1</span>
     <span class="text-green-700 cursor-pointer hover:opacity-50 text-20px mt-20px ml-10px w-full text-left" @click="setVersion('v2')">Version 2</span>
     <p class="text-12px mt-5px ml-10px">Added Windi CSS</p>
   </div>
-  <div class="m-auto">
+  <div class="mt-40px m-auto ">
     <AppV1 v-if="currentVersion === 'v1'" />
     <AppV2 v-if="currentVersion === 'v2'"/>
     <AppV3 v-if="currentVersion === 'v3'"/>
@@ -27,18 +27,14 @@ import { ref, computed, reactive, onBeforeMount } from 'vue';
 </template>
 
 <style lang="scss" scoped>
-    .all-projects {
+.layout {
+  background-color: #d1c8c2;
+  height: 100vh;
+}
+.all-projects {
     // color: #fff;
     background: url('https://cdn0.iconfinder.com/data/icons/web-and-mobile-icons-volume-2/128/88-512.png')
       center;
     background-size: 100%;
-    // background-repeat: no-repeat;
-    // border-radius: 50%;
-    // height: 40px;
-    // width: 40px;
-    // cursor: pointer;
-    // position: absolute;
-    // top: 10px;
-    // left: 10px;
   }
 </style>

@@ -4,7 +4,8 @@ import MainLayout from '../layouts/MainLayout.vue';
 import IndexPage from '../pages/IndexPage.vue';
 import TodoPage from '../pages/TodoPage.vue';
 import SpinnerPage from '../pages/SpinnerPage.vue';
-import CalculatorPage from '../pages/CalculatorPage.vue';
+import CalculatorLayout from '../layouts/CalculatorLayout.vue';
+import CalculatorPage from '../pages/CalculatorPage.vue'
 import StockPage from '../pages/StockPage.vue';
 import OneMoviePage from '../pages/movies/OneMoviePage.vue';
 import MoviesPage from '../pages/movies/MoviesPage.vue';
@@ -36,10 +37,10 @@ const router = createRouter({
           path: 'spinner',
           component: SpinnerPage,
         },
-        {
-          path: 'calculator',
-          component: CalculatorPage,
-        },
+        // {
+        //   path: 'calculator',
+        //   component: CalculatorPage,
+        // },
         {
           path: 'stock',
           component: StockPage,
@@ -91,6 +92,26 @@ const router = createRouter({
         {
           path: 'v1',
           component: TodoPage,
+        },
+      ],
+    },
+    {
+      path: '/todo',
+      component: TodoLayout,
+      children: [
+        {
+          path: 'v1',
+          component: TodoPage,
+        },
+      ],
+    },    
+    {
+      path: '/calculator',
+      component: CalculatorLayout,
+      children: [
+        {
+          path: 'v1',
+          component: CalculatorPage,
         },
       ],
     },

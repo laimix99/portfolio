@@ -1,7 +1,7 @@
 <template>
   <div class="TermsServicesDeli">
     <div class="employees">
-      <img src="images/mechanic.png" alt="">
+      <img src="/images/mechanic.png" alt="">
       <div class="text">
         <h1>Сотрудники Делисервиса сделают реальностью использование автомобиля только по назначению</h1>
         <p>А вы всегда будете уверенны в точной стоимости, сроках и качестве услуг.</p>
