@@ -1,7 +1,7 @@
 <template>
 <div class="BgServicesSeli">
   <div class="bg-services">
-   <img src="images/logo-services.png" alt="">
+   <img src="/images/logo-services.png" alt="">
   </div>
   <div class="new-format">
     <h1>новый формат свободы и заботы о том, что вам действительно дорого </h1>

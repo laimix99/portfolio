@@ -39,6 +39,10 @@ onMounted(() => {
 
 <template>
   <div class="todo-page">
+    <!-- App menu [v1, v2] -->
+    <!-- router-view/ -->
+    <!-- <AppV1 v-if="pageId === v1"/> -->
+    <!-- <AppV2 v-if="pageId === v2"/> -->
     <h1>i am todo page</h1>
     <input
       type="text"

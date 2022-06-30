@@ -27,19 +27,19 @@ const info = ref([
       <span v-for="i in info">{{i.name}}</span>
     </div>
     <div class="communities">
-      <a href=""><img src="images/apple.svg" alt=""></a>
-      <a href=""><img src="images/google.svg" alt=""></a>
+      <a href=""><img src="/images/apple.svg" alt=""></a>
+      <a href=""><img src="/images/google.svg" alt=""></a>
       <div class="messager">
-        <a href=""><img class="cub" src="images/icons-messanger1.svg" alt=""></a>
-        <a href=""><img class="cub" src="images/icons-messanger2.svg" alt=""></a>
-        <a href=""><img class="cub" src="images/icons-messanger3.svg" alt=""></a>
-        <a href=""><img class="cub" src="images/icons-messanger4.svg" alt=""></a>
+        <a href=""><img class="cub" src="/images/icons-messanger1.svg" alt=""></a>
+        <a href=""><img class="cub" src="/images/icons-messanger2.svg" alt=""></a>
+        <a href=""><img class="cub" src="/images/icons-messanger3.svg" alt=""></a>
+        <a href=""><img class="cub" src="/images/icons-messanger4.svg" alt=""></a>
       </div>
     </div>
   </div>
   <div class="contact">
     <div class="band"></div>
-    <img class="chat" src="images/chat.png" alt="">
+    <img class="chat" src="/images/chat.png" alt="">
   </div>
   <div class="address">ООО "Делисервис" ОГРН 1177746569120 125009, г. Москва, ул. Тверская, д. 6, стр. 5. Помощь на дороге — круглосуточно.</div>
 </div>
@@ -173,9 +173,6 @@ const info = ref([
   }
 }
 @media ( max-width: 768px ) {
-  .DeliFooter {
-    // padding: 0px 0px 40px 0px;
-  }
   .header {
     padding: 10px 32px 0px 32px !important;
     .services {
@@ -189,9 +186,6 @@ const info = ref([
     }
   }
   .contact {
-    .band {
-      // padding: 5px !important;
-    }
     .chat {
       padding: 5px !important;
     }

@@ -20,7 +20,10 @@ body {
   margin: 0px;
 }
 .br {
-  border: 1px solid red;
+  outline: 1px solid red;
+}
+.bg {
+  outline: 1px solid green;
 }
 @font-face {
  font-family: "Euclid";
