@@ -14,6 +14,7 @@ import LoginPage from '../pages/login/LoginPage.vue';
 import DeliLayout from '../layouts/DeliLayout.vue';
 import ClientPage from '../pages/deli/ClientPage.vue';
 import ServicesPage from '../pages/deli/ServicesPage.vue';
+import TodoLayout from '../layouts/TodoLayout.vue';
 import ErrorPage from '../pages/ErrorPage.vue';
 
 const router = createRouter({
@@ -27,10 +28,10 @@ const router = createRouter({
           path: '',
           component: IndexPage,
         },
-        {
-          path: 'todo',
-          component: TodoPage,
-        },
+        // {
+        //   path: 'todo',
+        //   component: TodoPage,
+        // },
         {
           path: 'spinner',
           component: SpinnerPage,
@@ -81,15 +82,16 @@ const router = createRouter({
           path: 'services',
           component: ServicesPage,
         },
-
-        // {
-        //   path: '',
-        //   component: DeliPage,
-        // },
-        // {
-        //   path: '',
-        //   component: DeliPage,
-        // },
+      ],
+    },
+    {
+      path: '/todo',
+      component: TodoLayout,
+      children: [
+        {
+          path: '',
+          component: TodoPage,
+        },
       ],
     },
     {

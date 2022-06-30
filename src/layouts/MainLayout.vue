@@ -1,13 +1,14 @@
 <script setup>
 const links = [
-  { path: '/', name: 'My app' },
-  { path: '/todo', name: 'TODO' },
-  // { path: '/spinner', name: 'Spinner' },
+  // { path: '/todo', name: 'TODO' },
   { path: '/calculator', name: 'Calculator' },
-  { path: '/stock', name: 'Stock' },
   { path: '/movies', name: 'Movies' },
-  { path: '/login', name: 'Login' },
   { path: '/deli', name: 'Deli' },
+    { path: '/todo', name: 'Todo' },
+  // { path: '/', name: 'My app' },
+  // { path: '/spinner', name: 'Spinner' },
+  // { path: '/stock', name: 'Stock' },
+  // { path: '/login', name: 'Login' },
 ];
 </script>
 
