@@ -13,8 +13,9 @@ import { ref, computed, reactive, onBeforeMount } from 'vue';
 <template>
 <div class="flex flex-row w-full content-center">
   <div class="flex flex-col">
-    <span class=" link text-green-900 cursor-pointer hover:opacity-50 text-20px m-20px w-full text-left" @click="setVersion('v1')">Version 1</span>
-    <span class="text-blue-500 cursor-pointer hover:opacity-50 text-20px m-20px w-full text-left" @click="setVersion('v2')">Version 2</span>
+    <span class=" link text-green-700 cursor-pointer hover:opacity-50 text-20px mt-20px ml-10px w-full text-left" @click="setVersion('v1')">Version 1</span>
+    <span class="text-green-700 cursor-pointer hover:opacity-50 text-20px mt-20px ml-10px w-full text-left" @click="setVersion('v2')">Version 2</span>
+    <p class="text-12px mt-5px ml-10px">Added Windi CSS</p>
   </div>
   <div class="m-auto">
     <AppV1 v-if="currentVersion === 'v1'" />

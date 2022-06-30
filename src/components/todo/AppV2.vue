@@ -39,13 +39,11 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="todo-page">
-    <!-- App menu [v1, v2] -->
-    <!-- router-view/ -->
-    <!-- <AppV1 v-if="pageId === v1"/> -->
-    <!-- <AppV2 v-if="pageId === v2"/> -->
-    <h1>i am todo page</h1>
+  <div class="p-10px">
+    <h1>I am todo page</h1>
     <input
+     
+      class="placeholder-amber-500"
       type="text"
       v-model="state.title"
       placeholder="Title"
@@ -54,27 +52,27 @@ onMounted(() => {
     <div
       v-for="t in state.todos"
       :key="t.id"
-      style="
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        padding: 10px;
-        background: #eee;
-        margin-bottom: 10px;
-      "
+      class="w-full flex flex-row p-10px m-5px bg-gray-200 opacity-50 rounded-8px"
+      
     >
-      <span style="">{{ t.title }}</span>
+      <span>{{ t.title }}</span>
       <div style="display: flex; flex-grow: 1"></div>
-      <span @click="t.isDone ? todoUndone(t.id) : todoDone(t.id)">{{
+      <span class="cursor-pointer hover:opacity-50 text-green-500" @click="t.isDone ? todoUndone(t.id) : todoDone(t.id)">{{
         t.isDone ? 'Undone' : 'Done'
       }}</span>
-      <span style="margin-left: 10px" @click="todoDelete(t.id)">Delete</span>
+      <span class="ml-10px cursor-pointer hover:opacity-50 text-red-500" @click="todoDelete(t.id)">Delete</span>
     </div>
   </div>
 </template>
 
-<style>
-.todo-page {
-  padding: 10px;
-}
+<style lang="scss" scoped>
+  input {
+    border: solid grey 1px;
+    border-radius: 8px;
+    padding: 6px 12px;
+    &:focus {
+      outline: none;
+      border: 1px solid red;
+    }
+  }
 </style>
