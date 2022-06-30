@@ -30,7 +30,7 @@ const links = [
           :to="link.path"
         >
           <img class="w-80 h-50 rounded-16px z-2" :src="link.img" alt="">
-          <span class="text-zinc-300 text-30px mt-15px z-2">{{ link.name }}</span>
+          <span class="text-zinc-300 text-30px mt-15px z-2 ">{{ link.name }}</span>
           <h1 class="text-zinc-300 text-15px opacity-50 mt-10px z-2">{{ link.subtitle }}</h1>
         </router-link>
       </div>

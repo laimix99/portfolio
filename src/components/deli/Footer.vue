@@ -30,16 +30,16 @@ const info = ref([
       <a href=""><img src="/images/apple.svg" alt=""></a>
       <a href=""><img src="/images/google.svg" alt=""></a>
       <div class="messager">
-        <a href=""><img class="cub" src="images/icons-messanger1.svg" alt=""></a>
-        <a href=""><img class="cub" src="images/icons-messanger2.svg" alt=""></a>
-        <a href=""><img class="cub" src="images/icons-messanger3.svg" alt=""></a>
-        <a href=""><img class="cub" src="images/icons-messanger4.svg" alt=""></a>
+        <a href=""><img class="cub" src="/images/icons-messanger1.svg" alt=""></a>
+        <a href=""><img class="cub" src="/images/icons-messanger2.svg" alt=""></a>
+        <a href=""><img class="cub" src="/images/icons-messanger3.svg" alt=""></a>
+        <a href=""><img class="cub" src="/images/icons-messanger4.svg" alt=""></a>
       </div>
     </div>
   </div>
   <div class="contact">
     <div class="band"></div>
-    <img class="chat" src="images/chat.png" alt="">
+    <img class="chat" src="/images/chat.png" alt="">
   </div>
   <div class="address">ООО "Делисервис" ОГРН 1177746569120 125009, г. Москва, ул. Тверская, д. 6, стр. 5. Помощь на дороге — круглосуточно.</div>
 </div>

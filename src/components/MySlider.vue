@@ -60,8 +60,8 @@ import { ref, computed, reactive, onMounted } from 'vue';
       
     </div>
     <div class="btn" >
-      <button class="prev" @click="prevSlide"><img src="images/prev.svg" alt=""></button>
-      <button class="next" @click="nextSlide"><img src="images/next.svg" alt=""></button>  
+      <button class="prev" @click="prevSlide"><img src="/images/prev.svg" alt=""></button>
+      <button class="next" @click="nextSlide"><img src="/images/next.svg" alt=""></button>  
     </div>
   </div>
  </template>
