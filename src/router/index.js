@@ -89,7 +89,7 @@ const router = createRouter({
       component: TodoLayout,
       children: [
         {
-          path: '',
+          path: 'v1',
           component: TodoPage,
         },
       ],
