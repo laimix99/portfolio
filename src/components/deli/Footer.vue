@@ -173,9 +173,6 @@ const info = ref([
   }
 }
 @media ( max-width: 768px ) {
-  .DeliFooter {
-    // padding: 0px 0px 40px 0px;
-  }
   .header {
     padding: 10px 32px 0px 32px !important;
     .services {
@@ -189,9 +186,6 @@ const info = ref([
     }
   }
   .contact {
-    .band {
-      // padding: 5px !important;
-    }
     .chat {
       padding: 5px !important;
     }
