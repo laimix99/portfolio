@@ -6,14 +6,14 @@ import { ref, computed, reactive, onBeforeMount } from 'vue';
   const currentVersion = ref('v1')
   const setVersion = (v) => {
     currentVersion.value = v
-
   }
 </script>
 
 <template>
 <div class="flex flex-row w-full content-center">
   <div class="flex flex-col">
-    <span class=" link text-green-700 cursor-pointer hover:opacity-50 text-20px mt-20px ml-10px w-full text-left" @click="setVersion('v1')">Version 1</span>
+    <router-link to="/" class="all-projects bg-no-repeat w-40px h-40px cursor-pointer top-10px left-10px absolute"/>
+    <span class=" link text-green-700 cursor-pointer hover:opacity-50 text-20px mt-100px ml-10px w-full text-left" @click="setVersion('v1')">Version 1</span>
     <span class="text-green-700 cursor-pointer hover:opacity-50 text-20px mt-20px ml-10px w-full text-left" @click="setVersion('v2')">Version 2</span>
     <p class="text-12px mt-5px ml-10px">Added Windi CSS</p>
   </div>
@@ -25,3 +25,20 @@ import { ref, computed, reactive, onBeforeMount } from 'vue';
 </div>
   
 </template>
+
+<style lang="scss" scoped>
+    .all-projects {
+    // color: #fff;
+    background: url('https://cdn0.iconfinder.com/data/icons/web-and-mobile-icons-volume-2/128/88-512.png')
+      center;
+    background-size: 100%;
+    // background-repeat: no-repeat;
+    // border-radius: 50%;
+    // height: 40px;
+    // width: 40px;
+    // cursor: pointer;
+    // position: absolute;
+    // top: 10px;
+    // left: 10px;
+  }
+</style>
