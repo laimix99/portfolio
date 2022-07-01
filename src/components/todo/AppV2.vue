@@ -1,6 +1,6 @@
 <!-- here v1 + windicss -->
 <script setup>
-import { onMounted, reactive } from 'vue';
+import { onMounted, reactive, computed } from 'vue';
 
 const state = reactive({
   todos: [],
@@ -36,14 +36,28 @@ const todoUndone = (id) => {
 onMounted(() => {
   console.log(':onMounted');
 });
+const props = defineProps({
+  height: {
+    type: Number
+  },
+  width: {
+    type: Number
+  }
+
+});
+const needed = computed(() => {
+  const n = Math.floor(props.height / 50 )
+  return n - state.todos.length - 2;
+})
+
 </script>
 
 <template>
-  <div class="p-10px">
+  <div class="todo  " :style="{width: width + 'px', height: height + 'px'}">
     <h1>I am todo page</h1>
     <input
      
-      class="placeholder-amber-500"
+      class="placeholder-amber-500 text-right"
       type="text"
       v-model="state.title"
       placeholder="Title"
@@ -52,7 +66,7 @@ onMounted(() => {
     <div
       v-for="t in state.todos"
       :key="t.id"
-      class="w-full flex flex-row p-10px m-5px bg-gray-200 opacity-50 rounded-8px"
+      class=" string w-full h-50px flex flex-row opacity-50 items-center p-5px"
       
     >
       <span>{{ t.title }}</span>
@@ -61,6 +75,13 @@ onMounted(() => {
         t.isDone ? 'Undone' : 'Done'
       }}</span>
       <span class="ml-10px cursor-pointer hover:opacity-50 text-red-500" @click="todoDelete(t.id)">Delete</span>
+    </div>
+    <div
+      v-for="s in needed"
+      :key="s"
+      class=" string w-full h-50px flex flex-row  opacity-50"
+    >
+
     </div>
   </div>
 </template>
@@ -74,5 +95,17 @@ onMounted(() => {
       outline: none;
       border: 1px solid red;
     }
+  }
+  .todo {
+    background-color: #f2d6a6;
+    overflow-y: auto;
+    box-sizing: border-box;
+    border-radius: 16px;
+    border: 1px solid black;
+    box-shadow: 4px 4px 10px rgb(0, 0, 0, 0.7);
+  }
+  .string {
+    border-bottom: solid 2px black;
+    box-sizing: border-box;
   }
 </style>
