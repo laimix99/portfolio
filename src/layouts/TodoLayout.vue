@@ -7,19 +7,37 @@ import { ref, computed, reactive, onBeforeMount } from 'vue';
   const setVersion = (v) => {
     currentVersion.value = v
   }
+  const screenHeight = document.documentElement.clientHeight;
+  // console.log(screenHeight)
+
+
+  const versions = [
+    {title: 'Version 1', description: '', click: 'v1'},
+    {title: 'Version 2', description: 'Added Windi CSS and Props', click: 'v2'}
+  ]
 </script>
 
 <template>
 <div class=" layout flex flex-row w-full items-start">
   <div class="flex flex-col">
     <router-link to="/" class="all-projects bg-no-repeat w-40px h-40px cursor-pointer top-10px left-10px absolute"/>
-    <span class=" link text-green-700 cursor-pointer hover:opacity-50 text-20px mt-100px ml-10px w-full text-left" @click="setVersion('v1')">Version 1</span>
-    <span class="text-green-700 cursor-pointer hover:opacity-50 text-20px mt-20px ml-10px w-full text-left" @click="setVersion('v2')">Version 2</span>
-    <p class="text-12px mt-5px ml-10px">Added Windi CSS</p>
+    <div class="header flex flex-col items-start w-200px h-100vh">
+      <div class="items mt-80px w-full">
+        <div class="item flex flex-col items-start pl-10px" v-for="version in versions" @click="setVersion(version.click)">
+          <span class="title text-30px text-light-900 mt-15px">{{ version.title }}</span>
+          <p class="description text-12px text-light-900 opacity-50 mt-10px">{{ version.description }}</p>
+        </div> 
+      </div>
+    </div>
   </div>
-  <div class="mt-40px m-auto ">
+  <div class="mt-40px m-auto relative">
+    <!-- <input type="text" class="absolute top-0 left-0"> -->
+    <!-- <input type="text"> -->
     <AppV1 v-if="currentVersion === 'v1'" />
-    <AppV2 v-if="currentVersion === 'v2'"/>
+    <AppV2 v-if="currentVersion === 'v2'"
+    :height="550"
+    :width="800"
+    />
     <AppV3 v-if="currentVersion === 'v3'"/>
   </div>
 </div>
@@ -27,14 +45,29 @@ import { ref, computed, reactive, onBeforeMount } from 'vue';
 </template>
 
 <style lang="scss" scoped>
-.layout {
-  background-color: #d1c8c2;
-  height: 100vh;
+.layout { 
+  min-height: 100vh;
+  background: #FFA17F;
+  background: -webkit-linear-gradient(to right, #00223E, #FFA17F);
+  background: linear-gradient(to right, #00223E, #FFA17F); 
 }
+.header {
+  .title {
+
+  }
+  .description {
+    color: #fff;
+  }
+}
+
 .all-projects {
-    // color: #fff;
-    background: url('https://cdn0.iconfinder.com/data/icons/web-and-mobile-icons-volume-2/128/88-512.png')
-      center;
-    background-size: 100%;
+  background: url('https://thypix.com/wp-content/uploads/blue-arrow-79.png')center no-repeat;
+  background-size: 100%;
+  }
+  .item {
+    &:hover {
+      background-color: rgb(86, 83, 83);
+      opacity: 0.2;
+    }
   }
 </style>
