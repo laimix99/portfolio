@@ -17,13 +17,11 @@
 <style lang="scss" scoped>
 .all-projects {
   color: #fff;
-  background: url('https://e7.pngegg.com/pngimages/246/887/png-clipart-power-on-off-logo-computer-icons-shutdown-internet-computer-software-quit-miscellaneous-web-design.png')
-    center;
-  background-size: 160%;
+  background: url('https://thypix.com/wp-content/uploads/blue-arrow-79.png') center;
+  background-size: 100%;
   background-repeat: no-repeat;
-  border-radius: 50%;
-  height: 40px;
-  width: 40px;
+  height: 50px;
+  width: 50px;
   cursor: pointer;
   position: absolute;
   left: 10px;
