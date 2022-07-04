@@ -16,34 +16,26 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <div class="movie-detail">
-    <h2>{{ movie.Title }}</h2>
+  <div class="movie-detail p-16px text-left">
+    <h2 class="text-28px font-600 mb-16px">{{ movie.Title }}</h2>
     <p>{{ movie.Year }}</p>
-    <img :src="movie.Poster" alt="" class="featured-img" />
-    <p>{{ movie.Plot }}</p>
+    <img :src="movie.Poster" alt="" class="featured-img block max-w-200px mb-16px" />
+    <p class="text-18px">{{ movie.Plot }}</p>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .movie-detail {
-  padding: 16px;
-  text-align: left;
 
   h2 {
     color: #fff;
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 16px;
   }
   .featured-img {
-    display: block;
-    max-width: 200px;
-    margin-bottom: 16px;
+
   }
   p {
     color: #fff;
-    font-size: 18px;
-    line-height: 1.4;
+
   }
 }
 </style>

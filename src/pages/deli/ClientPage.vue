@@ -13,51 +13,24 @@
 </script>
   
 <template>
-<div class="client-page">
-  <FirstSection class="deli-img"/>
-  <OurQualities class="our-qualiti"/>
-  <div class="services-ser">
+<div class="client-page w-full max-w-1280px flex flex-col justify-start items-center">
+  <FirstSection class="deli-img z-1"/>
+  <OurQualities class="our-qualiti -mt-16px z-3"/>
+  <div class="services-ser pt-90px max-w-1008px flex flex-row z-2 box-border">
     <Services class="deli-services"/>
   </div>
-  <OfferPackage class="offer "/>
+  <OfferPackage class="offer -mt-65px z-1"/>
   <PricesService />
   <Cooperate/>
   <ServicesSlider/>
-  <Team/>
+  <!-- <Team/> -->
   
 </div>
 
   
 </template>
-<style lang="scss">
-  .client-page {
-    width:  100%;
-    max-width: 1280px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .our-qualiti {
-    margin-top: -16px;
-    z-index: 3 ;
-  }
-  .deli-img {
-    z-index: 1;
-  }
-  .services-ser {
-    padding-top:90px ;
-    max-width: 1008px;
-    display: flex;
-    flex-direction: row;
-    z-index: 2;
-    box-sizing: border-box;
+<style lang="scss" scoped>
 
-  }
-  .offer {
-    margin-top: -65px;
-    z-index: 1;
-  }
    @media ( max-width: 991px ) {
      .offer {
        margin-top: 20px;

@@ -17,128 +17,72 @@ const info = ref([
 
 
 <template>
-<div class="DeliFooter ">
-  <div class="header">
-    <div class="services" >
-      <a href="" v-for="service in services">{{ service.name }}</a>
+<div class="DeliFooter flex flex-col justify-center w-full rounded-16px mt-40px">
+  <div class="header flex flex-row items-start justify-between max-w-1280px pt-32px pr-32px pl-32px">
+    <div class="services flex flex-col" >
+      <a class="m-0 pb-24px text-left not-italic font-700 text-16px leading-20px" href="" v-for="service in services">{{ service.name }}</a>
       
     </div>
-    <div class="info" >
-      <span v-for="i in info">{{i.name}}</span>
+    <div class="info flex flex-col" >
+      <span class="pb-13px text-left not-italic font-700 leading-20px" v-for="i in info">{{i.name}}</span>
     </div>
-    <div class="communities">
-      <a href=""><img src="/images/apple.svg" alt=""></a>
-      <a href=""><img src="/images/google.svg" alt=""></a>
-      <div class="messager">
-        <a href=""><img class="cub" src="/images/icons-messanger1.svg" alt=""></a>
-        <a href=""><img class="cub" src="/images/icons-messanger2.svg" alt=""></a>
-        <a href=""><img class="cub" src="/images/icons-messanger3.svg" alt=""></a>
-        <a href=""><img class="cub" src="/images/icons-messanger4.svg" alt=""></a>
+    <div class="communities flex flex-col">
+      <a href=""><img class="pb-8px" src="/images/apple.svg" alt=""></a>
+      <a href=""><img class="pb-8px" src="/images/google.svg" alt=""></a>
+      <div class="messager flex justify-between">
+        <a class="link rounded-8px" href=""><img class="cub p-9px" src="/images/icons-messanger1.svg" alt=""></a>
+        <a class="link rounded-8px" href=""><img class="cub p-9px" src="/images/icons-messanger2.svg" alt=""></a>
+        <a class="link rounded-8px" href=""><img class="cub p-9px" src="/images/icons-messanger3.svg" alt=""></a>
+        <a class="link rounded-8px" href=""><img class="cub p-9px" src="/images/icons-messanger4.svg" alt=""></a>
       </div>
     </div>
   </div>
-  <div class="contact">
-    <div class="band"></div>
-    <img class="chat" src="/images/chat.png" alt="">
+  <div class="contact px-32px flex items-center">
+    <div class="band h-1px w-full"></div>
+    <img class="chat p-12px rounded-16px" src="/images/chat.png" alt="">
   </div>
-  <div class="address">ООО "Делисервис" ОГРН 1177746569120 125009, г. Москва, ул. Тверская, д. 6, стр. 5. Помощь на дороге — круглосуточно.</div>
+  <div class="address not-italic font-300 text-12px leading-16px">ООО "Делисервис" ОГРН 1177746569120 125009, г. Москва, ул. Тверская, д. 6, стр. 5. Помощь на дороге — круглосуточно.</div>
 </div>
 </template>
 
 <style lang="scss" scoped>
 .DeliFooter {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
   background: #FFFFFF;
-  border-radius: 16px;
-
   .header {
-    padding: 32px 32px 0px 32px;
-    max-width: 1280px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    
     .services {
-      display: flex;
-      flex-direction: column;
-
       a {
-        margin: 0;
-        text-decoration: none;
-        padding-bottom: 24px;
-        text-align: left;
         color: #9DA8B5;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 20px;
       }
     }
-    .info {
-      display: flex;
-      flex-direction: column;
-      
+    .info {      
       span {
-        padding-bottom: 13px;
-        text-align: left;
         color: #9DA8B5;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 20px;
       }
     }
     .communities {
-      display: flex;
-      flex-direction: column;
       img {
-        // width: 100%;
-        // max-width: 2500px;
-        padding-bottom: 8px;
       }
       .messager {
-        display: flex;
-        justify-content: space-between;
-        .cub {
-          width: 15px;
-          height: 15px;
-          padding: 6px;
+        .link {
           background: #152F4E;
-          border-radius: 8px;
-          
+          .cub {
+
+          }
         }
       }
     }
   }
   .contact {
-    padding: 0px 32px 0px 32px ;
-    display: flex;
-    align-items: center;
-
     .band {
-      height: 1px;
-      width: 100%;
       background: #D5DCE6;
-      z-index: 5;
     }
     .chat {
-      padding: 12px;
       background: #D52B1E;
       box-shadow: 4px 8px 16px rgba(216, 47, 34, 0.5);
-      border-radius: 16px;
-      z-index: 10;
     }
   }
   .address {
     color: #9DA8B5;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 12px;
-    line-height: 16px;
-
   }
 }
 @media ( max-width: 991px ) {

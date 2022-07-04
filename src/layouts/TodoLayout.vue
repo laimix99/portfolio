@@ -35,7 +35,7 @@ import { ref, computed, reactive, onBeforeMount } from 'vue';
     <!-- <input type="text"> -->
     <AppV1 v-if="currentVersion === 'v1'" />
     <AppV2 v-if="currentVersion === 'v2'"
-    :height="550"
+    :height="800"
     :width="800"
     />
     <AppV3 v-if="currentVersion === 'v3'"/>

@@ -1,70 +1,37 @@
 <template>
-  <div class="page">
-    <h1>с нами сотрудничают</h1>
-    <p>мойки, шиномонтаж, выездная заправка, техническое обслуживание, онлайн оформление ОСАГО и КАСКО</p>
-    <div class="icons">
-      <img src="/images/беру.png" alt="" class="icon">
-      <img src="/images/аптека.png" alt="" class="icon">
-      <img src="/images/leroy.png" alt="" class="icon">
-      <img src="/images/ozon.png" alt="" class="icon">
+  <div class="page mt-80px flex flex-col justify-start items-center">
+    <h1 class="m-0 p-0 text-64px font-500 not-italic leading-48px">с нами сотрудничают</h1>
+    <p class="mt-40px w-full not-italic font-300 text-16px leading-24px text-center">мойки, шиномонтаж, выездная заправка, техническое обслуживание, онлайн оформление ОСАГО и КАСКО</p>
+    <div class="icons flex justify-between w-full max-w-552px mt-48px">
+      <img src="/images/беру.png" alt="" class="icon object-contain w-120px">
+      <img src="/images/аптека.png" alt="" class="icon object-contain w-120px">
+      <img src="/images/leroy.png" alt="" class="icon object-contain w-120px">
+      <img src="/images/ozon.png" alt="" class="icon object-contain w-120px">
     </div>
-    <button>подробнее о сервисе для бизнеса </button>
+    <button class="mt-48px rounded-8px not-italic font-700 text-16px leading-20px py-20px px-32px cursor-pointer">подробнее о сервисе для бизнеса </button>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .page {
-  margin-top: 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
   background: #F2F5F8;
 
   h1 {
     color: #152F4E;
-    margin: 0px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 64px;
-    line-height: 48px;
-    
   }
   p {
-    margin-top: 40px;
     color: #152F4E;
-    width: 100%;
-    max-width: 630px;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: center;
+
   }
   .icons {
-    
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 552px;
-    margin-top: 48px;
+
     .icon {
-      object-fit: contain;
-      width: 120px;
+
     }
   }
   button {
-    margin-top: 48px;
     background: #6CDDBB;
-    border-radius: 8px;
     color: #152F4E;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
-    padding: 20px 32px;
-    border: none;
-    cursor: pointer;
     &:active {
       opacity: 0.5;
     }
@@ -74,7 +41,7 @@
 @media ( max-width: 768px ) {
   .page {
     h1 {
-      padding: 0px 50px;
+      padding: 0px 30px;
       font-size: 40px;
       text-align: left;
     }
@@ -84,7 +51,6 @@
     }
     .icons {
       flex-direction: column;
-      // justify-content: center;
       align-items: center;
       margin-top: 20px;
 

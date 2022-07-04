@@ -1,14 +1,14 @@
 <script setup></script>
 
 <template>
-  <div class="layout-movies">
-    <div class="layout-movies-header">
+  <div class="layout-movies w-full max-w-full min-h-100vh m-0 p-0">
+    <div class="layout-movies-header flex justify-center items-center w-full">
       <router-link to="/movies">
-        <h1><span>Vue</span>Movies</h1>
+        <h1 class="text-28px py-5px"><span>Vue</span>Movies</h1>
       </router-link>
-      <router-link to="/" class="all-projects" />
+      <router-link to="/" class="all-projects w-50px h-50px cursor-pointer absolute left-10px" />
     </div>
-    <div class="body">
+    <div class="body flex flex-col justify-start">
       <router-view />
     </div>
   </div>
@@ -20,48 +20,29 @@
   background: url('https://thypix.com/wp-content/uploads/blue-arrow-79.png') center;
   background-size: 100%;
   background-repeat: no-repeat;
-  height: 50px;
-  width: 50px;
-  cursor: pointer;
-  position: absolute;
-  left: 10px;
 }
 .layout-movies {
-  width: 100%;
-  max-width: 100%;
-  min-height: 100vh;
-  margin: 0px;
-  padding: 0px;
-  // box-sizing: border-box;
-  // outline: 1px solid red;
   background: #35495e;
   &::selection {
     background: #fff;
     color: green;
   }
   &-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // padding: 10px 16px;
-    width: 100%;
+
     background-color: #2c3d4e;
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
     h1 {
       color: #fff;
-      font-size: 28px;
       span {
         color: #42b883;
       }
     }
   }
   &-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+
   }
   a {
-    text-decoration: none;
+    // text-decoration: none;
   }
 }
 </style>

@@ -73,7 +73,7 @@ onMounted(() => {
   </div>
 </template>
 
-<style>
+<style scoped>
 .todo-page {
   padding: 10px;
 }

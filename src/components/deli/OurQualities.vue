@@ -8,50 +8,28 @@
 </script>
 
 <template>
-    <div class="items ">
-        <div class="item " v-for="n in qualities" >
-            <div class="item-title">{{ n.title }}</div>
-            <div class="item-text">{{ n.text }}</div>
+    <div class="items flex box-border justify-center w-full">
+        <div class="item flex flex-col items-start mr-9px p-32px  rounded-16px" v-for="n in qualities" >
+            <div class="item-title not-italic font-500px text-32px leading-32px">{{ n.title }}</div>
+            <div class="item-text w-full max-w-267px not-italic font-300 text-16px leading-24px mt-16px text-left">{{ n.text }}</div>
         </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
   .items {
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    width: 100%;
+
     .item {
-      margin-right: 9px;
-      padding: 32px;
-      display: flex;
-      flex-direction: column;
-      align-items: start;
-      width: 267px;
-      height: 110px;
       background: #FFFFFF;
       box-shadow: 8px 16px 24px rgba(185, 194, 205, 0.5);
-      border-radius: 16px;
 
       &-title {
         color: #152F4E;
         font-family: 'Euclid Circular A';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 32px;
-        line-height: 32px;
       }
       &-text {
         font-family: 'Euclid Circular A';
-        width: 100%;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 16px;
-        line-height: 24px;
         color: #152F4E;
-        margin-top: 16px;
-        text-align: left;
       }
     }
   }

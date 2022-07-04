@@ -128,11 +128,11 @@
 </script>
 
 <template>
-  <div class="page">
-    <div class="page-header">
-      <h1 >пакетные предложения *</h1>
-      <span>экономьте до 27% в год на обслуживании авто</span>
-      <img src="/images/offer-icons.png" alt="">
+  <div class="page flex flex-col w-full max-w-1280px rounded-16px pt-30px pr-85px pl-104px box-border">
+    <div class="page-header flex justify-between items-center">
+      <h1 class="pl-24px not-italic font-500 text-64px leading-48px text-left">пакетные предложения *</h1>
+      <span class="not-italic font-500 text-16px leading-20px text-left rounded-8px py-18px pr-65px pl-30px">экономьте до 27% в год на обслуживании авто</span>
+      <img class="w-full max-w-220px -ml-100px" src="/images/offer-icons.png" alt="">
     </div>
     <DeliTabs 
       :tabs="tabs" 
@@ -144,157 +144,73 @@
         v-for="tab in tabs" 
         :isSelected="selected === tab.name"
       >
-        <div class="items" v-for="block in tab.content">
-          <div class="item" >
+        <div class="items flex flex-row justify-center w-full max-w-500px pr-20px" v-for="block in tab.content">
+          <div class="item flex flex-col justify-between box-border rounded-16px w-full max-w-246px p-32px text-left " >
             <div class="div">
-              <h1 class="title">{{ block.title}}</h1>
+              <h1 class="title not-italic font-500 text-24px leading-30px m-0">{{ block.title}}</h1>
               <div class="services">
-                <span class="service" v-for="service in block.services">
-                  <div class="service-text">{{ service.service }}</div>
-                  <div class="service-number">{{ service.number }}</div>
+                <span class="service flex justify-between items-center not-italic font-300 text-14px leading-18px pb-12px pt-7px" v-for="service in block.services">
+                  <div class="service-text font-300 text-14px leading-18px w-full max-w-149px">{{ service.service }}</div>
+                  <div class="service-number rounded-4px not-italic font-300 text-12px leading-16px py-4px px-8px">{{ service.number }}</div>
                 </span>
               </div>
             </div>
-            <h2 class="price">{{ block.price }}</h2>
+            <h2 class="price pt-10px not-italic font-500 text-24px leading-30px m-0">{{ block.price }}</h2>
           </div>
         </div>
       </DeliTab>
       
     </DeliTabs>
-    <div class="page-text">* войдите в мобильное приложение, чтобы узнать итоговую стоимость, рассчитанную именно для вашего автомобиля</div>
+    <div class="page-text opacity-50 not-italic font-300 text-14px leading-18px pt-32px pb-50px">* войдите в мобильное приложение, чтобы узнать итоговую стоимость, рассчитанную именно для вашего автомобиля</div>
   </div>
 </template>
 
 <style lang="scss" scoped>
   .page {
-    width: 100%;
-    max-width: 1280px;
     background-color: #152F4E;
-    border-radius: 16px;
-    padding: 30px 85px 0px 104px;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
 
     &-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      
-
       h1 {
-        padding-left: 24px;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 64px;
-        line-height: 48px;
         color: #FFFFFF;
-        text-align: left;
         border-left: 8px solid #fff;
       }
       span {
-        // width: 100%;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 20px;
         color: #FFFFFF;
-        text-align: left;
         border: 1px solid #6CDDBB;
-        border-radius: 8px;
-        padding: 18px 65px 18px 30px;
-        // width: 185px;
+
       }
       img {
-        width: 100%;
-        max-width: 220px;
-        margin-left:-100px ;
+
       }
     }
     .items {
-      display: flex;
-      width: 100%;
-      max-width: 500px;
-      flex-direction: row;
-      justify-content: center;
-      padding-right: 20px;
       .item {
-        display: flex;
-        box-sizing: border-box;
-        flex-direction: column;
-        justify-content: space-between;
         background: #FFFFFF;
-        border-radius: 16px;
-        width: 100%;
-        max-width: 246px !important;
-        // min-height: 302px;
-        padding: 32px;
-        text-align: left;
         .title {
-          font-style: normal;
-          font-weight: 500;
-          font-size: 24px;
-          line-height: 30px;
           color: #152F4E;
-          margin: 0px;
         }
         .services {
           
           .service {
-          font-style: normal;
-          font-weight: 300;
-          font-size: 14px;
-          line-height: 18px;
           color: #152F4E;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
           border-bottom: 1px solid #D5DCE6;
-          padding-bottom: 12px;
-          padding-top: 7px;
-        
-
-          
 
           &-text {
-            font-weight: 300;
-            font-size: 14px;
-            line-height: 18px;
             color: #152F4E; 
-            width: 100%;
-            max-width: 149px;
           }
           &-number {
             background: #F2F5F8;
-            border-radius: 4px;
-            font-style: normal;
-            font-weight: 300;
-            font-size: 12px;
-            line-height: 16px;
             color: #152F4E;
-            padding: 4px 8px;
           }
         }
         }
         .price {
-          padding-top: 10px;
-          font-style: normal;
-          font-weight: 500;
-          font-size: 24px;
-          line-height: 30px;
           color: #3FC099;
-          margin: 0px;
         }
       }
     }
     &-text {
       color: #FFFFFF;
-      opacity: 0.5;
-      font-style: normal;
-      font-weight: 300;
-      font-size: 14px;
-      line-height: 18px;
-      padding: 32px 0px 50px 0px;
     }
 }
 

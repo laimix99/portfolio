@@ -1,11 +1,11 @@
 <template>
 <div class="BgServicesSeli">
-  <div class="bg-services">
-   <img src="/images/logo-services.png" alt="">
+  <div class="bg-services flex items-center z-1 w-full max-w-1258px rounded-16px h-680px">
+   <img class="w-full" src="/images/logo-services.png" alt="">
   </div>
-  <div class="new-format">
-    <h1>новый формат свободы и заботы о том, что вам действительно дорого </h1>
-    <p>Делисервис возник из нашего собственного желания проводить больше времени с семьей, друзьями и за любимым делом, а не тратить его на обслуживание автомобиля.</p>
+  <div class="new-format box-border -mt-250px z-2 w-full max-w-593px py-80px px-108px">
+    <h1 class="m-0 w-full max-w-384 text-left not-italic font-500 text-32px leading-32px">новый формат свободы и заботы о том, что вам действительно дорого </h1>
+    <p class="m-0 mt-32px w-full max-w-384px text-left not-italic font-300 text-16px leading-24px">Делисервис возник из нашего собственного желания проводить больше времени с семьей, друзьями и за любимым делом, а не тратить его на обслуживание автомобиля.</p>
   </div>
 </div>
 
@@ -17,49 +17,18 @@
 <style lang="scss" scoped>
 .BgServicesSeli {
   .bg-services {
-    z-index: 1;
-    width: 100%;
-    max-width: 1258px;
-    border-radius: 16px;
-    height: 680px;
-    background: url('images/bg-services-deli.png') center center/cover no-repeat;
-    display: flex;
-    align-items: center;
+    background: url('/images/bg-services-deli.png') center center/cover no-repeat;
     img {
-      width: 100%;
+
     }
   }
   .new-format {
-    box-sizing: border-box;
-    margin-top: -250px;
-    z-index: 2;
-    box-sizing: border-box;
     border-radius: 0px 16px 16px 0px;
     background: #fff;
-    width: 100%;
-    max-width: 592px;
-    padding: 80px 108px;
     h1 {
-      margin: 0;
-      width: 100%;
-      max-width: 384px;
-      text-align: left;
       color: #152F4E;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 32px;
-      line-height: 32px;
     }
     p {
-      margin: 0;
-      margin-top: 32px;
-      width: 100%;
-      max-width: 384px;
-      text-align: left;
-      font-style: normal;
-      font-weight: 300;
-      font-size: 16px;
-      line-height: 24px;
       color: #152F4E;
     }
   }

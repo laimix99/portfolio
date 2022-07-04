@@ -1,21 +1,21 @@
 <template>
-  <div class="TermsServicesDeli">
-    <div class="employees">
-      <img src="/images/mechanic.png" alt="">
-      <div class="text">
-        <h1>Сотрудники Делисервиса сделают реальностью использование автомобиля только по назначению</h1>
-        <p>А вы всегда будете уверенны в точной стоимости, сроках и качестве услуг.</p>
+  <div class="TermsServicesDeli f-wull max-w-1255px -mt-150px flex flex-row justify-between items-start">
+    <div class="employees w-full max-w-520px pt-150px">
+      <img class="w-full" src="/images/mechanic.png" alt="">
+      <div class="text py-80px px-104px">
+        <h1 class="not-italic font-300 text-16px leading-24px w-full max-w-280px m-0 text-left">Сотрудники Делисервиса сделают реальностью использование автомобиля только по назначению</h1>
+        <p class="not-italic font-300 text-16px leading-24px w-full max-w-280px m-0 text-left mt-15px">А вы всегда будете уверенны в точной стоимости, сроках и качестве услуг.</p>
       </div>
     </div>
-    <div class="service">
-      <div class="service-title">Уже сейчас у вас есть возможность освободиться от необходимости ездить в автосервисы, искать качественную мойку и терять время в очереди на заправку.</div>
-      <div class="service-subtitle">
-        <div class="service-subtitle-text">мы сами</div>
+    <div class="service flex flex-col items-start w-full py-210px px-104px">
+      <div class="service-title w-full max-w-487px not-italic font-500 text-24px leading-30px text-left">Уже сейчас у вас есть возможность освободиться от необходимости ездить в автосервисы, искать качественную мойку и терять время в очереди на заправку.</div>
+      <div class="service-subtitle mt-40px max-w-182px rounded-8px">
+        <div class="service-subtitle-text not-italic font-500 text-32px leading-32px py-14px px-24px">мы сами</div>
       </div>
-      <div class="service-description">заберём,<br />обслужими<br />вернём</div>
-      <div class="service-text">ваш автомобиль. </div>
-      <a href="">
-        <button>подробнее о сервисе для клиентов</button>
+      <div class="service-description mt-24px not-italic font-500 text-64px leading-70px text-left">заберём,<br />обслужими<br />вернём</div>
+      <div class="service-text not-italic font-500 text-32px leading-32px text-left mt-10px">ваш автомобиль. </div>
+      <a class="mt-48px" href="">
+        <button class="rounded-8px py-22px px-32px not-italic font-700 text-16px leading-20px">подробнее о сервисе для клиентов</button>
       </a>
     </div>
   </div>
@@ -23,45 +23,15 @@
 
 <style lang="scss" scoped>
   .TermsServicesDeli {
-    width: 100%;
-    max-width: 1255px;
-    margin-top: -150px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
 
     .employees {
-      width: 100%;
-      max-width: 520px;
-      padding-top: 150px;
-      img {
-       width: 100%; 
-      }
+
       .text {
-        padding: 80px 104px;
         h1 {
-        font-style: normal;
-        font-weight: 300;
-        font-size: 16px;
-        line-height: 24px;
-        width: 100%;
-        max-width: 280px;
-        margin: 0;
-        text-align: left;
         color: #152F4E;
 
       }
         p {
-           margin: 0;
-          font-style: normal;
-          font-weight: 300;
-          font-size: 16px;
-          line-height: 24px;
-          width: 100%;
-          max-width: 280px;
-          text-align: left;
-          margin-top: 15px;
           color: #152F4E;
 
         }
@@ -69,69 +39,31 @@
 
     }
     .service {
-      width: 100%;
-      padding: 210px 104px;
-      background: #6CDDBB;
       border-radius: 16px 0px 0px 16px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+      background: #6CDDBB;
 
       &-title {
-        width: 100%;
-        max-width: 487px;
         color: #152F4E;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 30px;
-        text-align: left;
       }
       &-subtitle {
-        margin-top: 40px;
         background: #fff;
-        max-width: 182px;
-        // height: 64px;
-        border-radius: 8px;
+
         &-text {
           color: #152F4E;
-          font-style: normal;
-          font-weight: 500;
-          font-size: 32px;
-          line-height: 32px;
-          padding: 14px 24px;
         }
       }
       &-description {
-        margin-top: 24px;
         color: #152F4E;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 64px;
-        line-height: 70px;
-        text-align: left;
       }
       &-text {
         color: #152F4E;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 32px;
-        line-height: 32px;
-        text-align: left;
-        margin-top: 10px;
       }
       a {
-        margin-top: 48px;
+
         button {
           background: #152F4E;
-          border-radius: 8px;
           color: #FFFFFF;
           border: none;
-          padding: 22px 32px;
-          font-style: normal;
-          font-weight: 700;
-          font-size: 16px;
-          line-height: 20px;
         }
       }
     }
