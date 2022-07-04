@@ -9,21 +9,21 @@ import Footer from '../components/deli/Footer.vue'
 <template>
   
 <div class="layout">
-  <div class="layout-header">
-    <div class="layout-header-menu">
-      <router-link class="link" to="/deli/services">
-        <span class="layout-header-menu-text">о сервисе</span>
+  <div class="layout-header max-w-1280px m-auto flex justify-between items-center py-18px px-32px">
+    <div class="layout-header-menu w-full flex flex-row justify-start">
+      <router-link class="link no-underline" to="/deli/services">
+        <span class="layout-header-menu-text py-24px relative mr-32px leading-24px opacity-30 cursor-pointer text-20px">о сервисе</span>
       </router-link> 
       <router-link class="link" to="/deli">
-        <span class="layout-header-menu-text">для клиента</span>
+        <span class="layout-header-menu-text py-24px relative mr-32px leading-24px opacity-30 cursor-pointer text-20px">для клиента</span>
       </router-link>
     </div>
-    <div class="layout-header-contact">
-      <a href="tel:88001234567" class="room">8 800 123 45 67</a>
-      <div class="lang">eng</div>
+    <div class="layout-header-contact flex flex-row justify-between">
+      <a href="tel:88001234567" class="room no-underline w-120px font-700 not-italic">8 800 123 45 67</a>
+      <div class="lang font-700 not-italic text-16px ml-32px">eng</div>
     </div>
   </div>
-  <div class="body">
+  <div class="body w-full max-w-1280px m-auto min-h 100vh">
     <router-view />
     <Footer></Footer>
   </div>
@@ -37,36 +37,17 @@ import Footer from '../components/deli/Footer.vue'
   background: #F2F5F8;
 
   .body {
-    width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-    min-height: 100vh;
+
   }
 
   &-header {
-    max-width: 1280px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 32px;
+
     &-menu {
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: start;
 
       .link {
-        text-decoration: none;
+
         .layout-header-menu-text {
-          padding: 24px 0px;
-          position: relative;
-          margin-right: 32px;
-          font-size: 20px;
-          line-height: 24px;
           color: #152f4e;
-          opacity: 0.3;
-          cursor: pointer;
           &:hover {
             color: #152f4e;
             opacity: 1;
@@ -87,23 +68,13 @@ import Footer from '../components/deli/Footer.vue'
       }
     }
     &-contact {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+
 
       .room {
-        text-decoration: none;
-        width: 120px;
-        font-style: normal;
-        font-weight: 700;
         color: #152f4e;
       }
       .lang {
-        font-style: normal;
-        font-weight: 700;
-        font-size: 16px;
         color: #152f4e;
-        margin-left: 32px;
       }
     }
   }

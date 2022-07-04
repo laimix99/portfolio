@@ -9,22 +9,22 @@ const car = ref([
 ])
 </script>
 <template>
-  <div>
-    <div class="services ">
-      <div class="services-header ">
-        <h1>
+  <div class="flex">
+    <div class="services flex flex-col items-center w-full">
+      <div class="services-header flex flex-col w-full">
+        <h1 class=" flex items-start not-italicfont-500 text-64px leading-48px m-0 w-212px text-left pb-8px pl-24px">
           наши услуги
-          <span>кругnлосуточно</span>
+          <span class="rounded-8px not-italic font-500 text-16px leading-20px py-8px px-16px">круглосуточно</span>
         </h1>
-        <p>освободим до 10% вашего времени для семьи, друзей и любимого дела</p>
+        <p class="mt-20px ml-24px w-387px h-48px not-italic font-300 text-16px leading-24px text-left">освободим до 10% вашего времени для семьи, друзей и любимого дела</p>
       </div>
-      <img src="/images/bg-services.png"  alt="">
+      <img class="" src="/images/bg-services.png"  alt="">
     </div>
-    <div class="car">
-      <div class="items">
-        <div class="item" v-for="c  in car">
-          <img class="img-car" :src="c.img" alt="">
-          <div class="item-text">{{ c.text }}</div>
+    <div class="car max-w-384px box-border">
+      <div class="items flex flex-col justify-start w-full max-w-384px box-border">
+        <div class="item flex justify-start items-center box-border mt-8px w-full max-w-384px rounded-16px py-24px pr-160px pl-24px" v-for="c  in car">
+          <img class="img-car mr-24px" :src="c.img" alt="">
+          <div class="item-text max-w-160px not-italic font-500 text-24px leading-30px text-left">{{ c.text }}</div>
         </div>
       </div>
     </div>
@@ -33,103 +33,40 @@ const car = ref([
 
 <style lang="scss" scoped>
 div {
-  display: flex;
-  flex-direction: row;
 
   .services {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
     img {
-      width: 150%;
+      max-width: 150% ;
     }
     
     &-header {
-      display: flex;
-      width: 100%;
-      flex-direction: column;
+
       h1 {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 64px;
-        line-height: 48px;
         color: #152F4E;
-        margin: 0px;
-        width:212px ;
-        text-align: left;
-        display: flex;
-        align-items: flex-start;
-        padding-bottom: 8px;
-        padding-left: 24px;
         border-left: 8px solid #D52B1E;
         span {
-          width: 148px;
-          background-color: #d52b1e;
-          border-radius: 8px;
-          font-style: normal;
-          font-weight: 500;
-          font-size: 16px;
-          line-height: 20px;
           color: #FFFFFF;
-          margin: 8px 16px 8px 16px;
-          padding: 8px 16px;
+          background-color: #d52b1e;
         }
       }
       p {
-        margin-top: 20px;
-        margin-left: 24px;
-        margin-right: 0px;
-        width: 387px;
-        height: 48px;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 16px;
-        line-height: 24px;
         color: #152F4E;
-        text-align: left;
       }
       
     }
     
   }
   .car {
-    max-width: 384px;
-    box-sizing: border-box;
     .items {
-    width: 100%;
-    max-width: 384px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
 
-    .item {
-      box-sizing: border-box;
-      margin-top: 8px;
-      display: flex;
-      justify-content: start;
-      align-items: center;
-      width: 100%;
-      max-width: 384px;
-      // max-height: 258px;
-      border: 1px solid #D5DCE6;
-      border-radius: 16px;
-      padding: 24px 160px 24px 24px;
+      .item {
+        border: 1px solid #D5DCE6;
 
-      .img-car{
-        margin-right: 26px;
-      }
-      &-text {
-        max-width: 160px;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 30px;
-        color: #152F4E;
-        text-align: left;
+        &-text {
+          color: #152F4E;
+        }
       }
     }
-  }
   }
 }
 
@@ -192,9 +129,8 @@ div {
         .item {
           display: flex;
           flex-direction: row;
-          // width: 350px;
-           padding:10px!important;
-          // padding: 0;
+          width: 250px;
+          padding: 10px!important;
 
           .img-car {
             max-width: 100px;

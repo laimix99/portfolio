@@ -52,7 +52,7 @@ import { ref, computed, reactive, onMounted } from 'vue';
   }
 </script>
  <template>
-  <div class="slider br" :class="`${navPosition}`">
+  <div class="slider" :class="`${navPosition}`">
     <div class="wrapper">
       <div class="carusel" :style="{'margin-left': '-' + (100 / maxViewSlides * props.maxSwipeSlides * currentSlideIndex) + '%'}">
         <slot></slot>
@@ -75,7 +75,7 @@ import { ref, computed, reactive, onMounted } from 'vue';
   width: 100%;
   .btn {
     margin-top: 64px;
-    border: 1px solid red;
+
     button {
       background: #FFFFFF;
       margin-right: 8px;
@@ -152,7 +152,7 @@ import { ref, computed, reactive, onMounted } from 'vue';
       // position: absolute;
       transition: all ease .5s;
       justify-content: flex-start;
-      border: 1px solid red;
+
     }
   }
 

@@ -5,7 +5,7 @@
  </script>
  
  <template>
- <div class="page">
+ <div class="page flex flex-col justify-start items-center box-border w-full pb-60px mb-74px rounded-16px max-w-1238px">
   <BgServicesDeli class="BgServicesDeli"/>
   <TermsServicesDeli class="TermsServicesDeli"/>
   <CarParkServicesDeli/>
@@ -14,16 +14,7 @@
 </template>
 <style lang="scss" scoped>
   .page {
-    box-sizing: border-box;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
     background: #fff;
-    padding-bottom: 60px;
-    margin-bottom: 74px;
-    border-radius: 16px;
 
     .BgServicesDeli {
       z-index: 4;

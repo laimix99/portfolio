@@ -16,13 +16,14 @@ const calc = () => {
 </script>
 
 <template>
-  <div class="shell">
-    <div class="grid">
+  <div class="shell m-0 m-auto mt-40px w-200px ">
+    <div class="grid flex flex-wrap justify-around w-full">
       <input
         tape="text"
         @keypress.enter="calc()"
         v-model="result"
         placeholder="0"
+        class="w-200px border-0 text-18px py-5px px-5px text-right"
       />
       <button @click="input(num)" class="cell" v-for="num in numbers">
         {{ num }}
@@ -36,28 +37,21 @@ const calc = () => {
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .shell {
-  margin: 0 auto;
-  margin-top: 40px;
-  width: 200px;
-  box-shadow: 0 3px 15px grey;
+
+  box-shadow: 0 3px 15px grey; 
 }
 
 input {
-  width: 200px;
-  border: 0;
   color: #243849;
-  font-size: 18px;
-  padding: 5px 5px;
-  text-align: right;
 }
-/* flex flex-wrap justify-around w-full */
+
 .grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  width: 100%;
+  width: 100%; 
 }
 /* flex flex-1 h-50px font-sm border-none */
 .cell {

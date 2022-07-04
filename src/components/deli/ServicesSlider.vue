@@ -15,13 +15,13 @@ const items = ref([
 </script>
 
 <template>
-<div class="page">
+<div class="page flex flex-col justify-start items-center mt-60px w-full max-w-1280px rounded-16px py-80px px-108px">
   <div class="title">
-    <h1>
-      # <span>делисервис</span>
+    <h1 class=" m-0 not-italic font-500 text-64px leading-48px">
+      # <span class="-ml-20px">делисервис</span>
       </h1>
   </div>
-  <div class="content">
+  <div class="content flex flex-col justify-center relative mt-64px w-full max-w-1014px">
     <MySlider
       class=""
       :arrayLength="items.length"
@@ -39,8 +39,8 @@ const items = ref([
         :viewSlides="3"
       />
     </MySlider>
-    <a href="">
-      <button>полезные статьи</button>
+    <a href="" class="absolute bottom-0 right-0">
+      <button class="cursor-pointer py-22px px-32px rounded-8px not-italic font-700 text-16px leading-20px">полезные статьи</button>
     </a>
   </div>
 </div>
@@ -51,60 +51,22 @@ const items = ref([
 
 <style lang="scss" scoped>
 .page {
-  margin-top: 60px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  max-width: 1280px;
   background: #152F4E;
-  border-radius: 16px;
-  padding: 80px 108px 80px 108px;
-  box-sizing: border-box;
   .title {
 
     h1 {
       color: #d52b1e;
-      margin: 0px;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 64px;
-      line-height: 48px;
       span {
         color: #fff;
-        margin-left: -20px;
       }
     }
   }
   .content {
-    // overflow: hidden;
-    position: relative;
-    margin-top: 64px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    // align-items: flex-end;
-    max-width: 1014px;
     a {
-      z-index: 10;
-      // margin-top: -65px;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      
       button {
-        cursor: pointer;
-        background: #fff;
-        padding: 22px 32px;
-        border-radius: 8px;
         border: none;
+        background: #fff;
         color: #152F4E;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 20px;
       }
     }
     
