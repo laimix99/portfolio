@@ -18,20 +18,22 @@ const links = [
 <div
   class="layout flex flex-col w-100vw h-100vh relative items-center"
   >
-    <h1 class="name absolute bottom-0 left-0 z-1 opacity-50 text-25vw font-700 opacity-15">laimix99</h1>
-    <div class="w-full flex flex-col items-start  max-w-1600px p-20px">
+    <div class="name" />
+    <div class="w-full flex flex-col items-start  max-w-1600px lg:p-20px p-10px">
       <h1 class="title text-light-50 text-50px pt-30px">My portfolio</h1>
-      <div class=" mt-50px m-auto contetnt flex flex-row justify-start items-center flex-wrap py-20px w-full z-2">
+      <div class=" mt-50px flex flex-row justify-start items-center flex-wrap py-20px w-full z-2">
         
         <router-link
           v-for="(link, linkIndex) in links"
           :key="linkIndex"
-          class="item flex flex-col mr-20px mb-20px items-start rounded-16px p-10px z-2"
+          class="item flex flex-col mb-20px justify-between items-start rounded-16px p-10px z-2"
           :to="link.path"
         >
-          <img class="w-80 h-50 rounded-16px z-2" :src="link.img" alt="">
-          <span class="text-zinc-300 text-30px mt-15px z-2 ">{{ link.name }}</span>
-          <h1 class="text-zinc-300 text-15px opacity-50 mt-10px z-2">{{ link.subtitle }}</h1>
+          <img class="w-full rounded-16px z-4" :src="link.img" alt="">
+          <div class="item-info flex flex-col items-start justify-start w-full">
+            <span class="text-white text-2vw z-4 mt-6">{{ link.name }}</span>
+            <span class="text-gray-300 font-200 text-left text-1vw mt-0.5vw z-2">{{ link.subtitle }}</span>
+          </div>
         </router-link>
       </div>
     </div>
@@ -45,20 +47,101 @@ const links = [
 <style scoped lang="scss">
 .layout {
   background: url('https://media1.giphy.com/media/ZVik7pBtu9dNS/giphy.gif?cid=ecf05e47rst13k9d9bbblr3n084srlcjt14d36ve0u0hcuis&rid=giphy.gif&ct=g')center center/cover no-repeat;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .item {
+  width: calc(25% - 20px);
+  box-sizing: border-box;
   background: #355C7D;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   transition-duration: 300ms;
+  position: relative;
+  aspect-ratio: 340/320;
+  margin: 0 10px;
+  margin-bottom: 20px;
+  @media screen and (max-width: 1600px) {
+    width: calc(33.33% - 20px);
+    margin: 0 10px;
+    margin-bottom: 20px;
+    span {
+      font-size: 2vw;
+      &:nth-child(2) {
+        font-size: 1vw;
+        margin-top: 0.5vw;
+      }
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    width: calc(50% - 20px);
+    margin: 0 10px;
+    margin-bottom: 20px;
+  }
+  @media screen and (max-width: 700px) {
+    width: 100%;
+    height: 330px;
+    margin: 0px 5px;
+    margin-bottom: 20px;
+    // &:nth-child(2n) {
+    //   width: 100%;
+    // }
+    span {
+      font-size: 24px;
+      &:nth-child(2) {
+        font-size: 18px;
+        margin-top: 6px;
+      }
+    }
+  }
+  &-info {
+    min-height: 35%;
+    height: 35%;
+  }
+  img {
+    // object-fit: cover;
+    min-height: 65%;
+    height: 65%;
+  }
+  span {
+    font-size: 24px;
+    &:nth-child(2) {
+      font-size: 18px;
+      margin-top: 6px;
+    }
+  }
+  &:after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    border-radius: 16px;
+    background: rgb(0,0,0,0.15);
+    top: 0;
+    left: 0;
+    z-index: 2;
+    // pointer-events: none;
+  }
   &:hover {
     transform: translateY(-10px);
   }
 }
 
 .name {
-  color: #fff;
+  background: rgb(0,0,0,0.5);
+  @apply fixed inset-0 w-full overflow-hidden max-w-100vw h-screen;
+  &:after {
+    content: 'laimix99';
+    font-family: 'Splash', cursive;
+    font-stretch: 200% !important;
+    font-weight: 700;
+    color: rgba(173, 125, 164, 0.15);
+    font-size: 28vw;
+    position: absolute;
+    bottom: 20vh;
+    left: 0;
+    transform:
+      scale(1, 2.5);
+  }
 }
 .title {
   background-color: #74EBD5;
