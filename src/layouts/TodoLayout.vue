@@ -7,7 +7,7 @@ import { ref, computed, reactive, onBeforeMount } from 'vue';
   const setVersion = (v) => {
     currentVersion.value = v
   }
-  const screenHeight = document.documentElement.clientHeight;
+  // const screenHeight = document.documentElement.clientHeight;
   // console.log(screenHeight)
 
 
@@ -23,7 +23,7 @@ import { ref, computed, reactive, onBeforeMount } from 'vue';
     <router-link to="/" class="all-projects bg-no-repeat w-40px h-40px cursor-pointer top-10px left-10px absolute"/>
     <div class="header flex flex-col items-start w-200px h-100vh">
       <div class="items mt-80px w-full">
-        <div class="item flex flex-col items-start pl-10px" v-for="version in versions" @click="setVersion(version.click)">
+        <div class="item flex flex-col items-start pl-10px cursor-pointer" v-for="version in versions" @click="setVersion(version.click)">
           <span class="title text-30px text-light-900 mt-15px">{{ version.title }}</span>
           <p class="description text-12px text-light-900 opacity-50 mt-10px">{{ version.description }}</p>
         </div> 
@@ -68,6 +68,7 @@ import { ref, computed, reactive, onBeforeMount } from 'vue';
     &:hover {
       background-color: rgb(86, 83, 83);
       opacity: 0.2;
+      border-radius: 8px;
     }
   }
 </style>

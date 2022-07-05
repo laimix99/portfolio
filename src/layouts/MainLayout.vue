@@ -82,9 +82,6 @@ const links = [
     height: 330px;
     margin: 0px 5px;
     margin-bottom: 20px;
-    // &:nth-child(2n) {
-    //   width: 100%;
-    // }
     span {
       font-size: 24px;
       &:nth-child(2) {
