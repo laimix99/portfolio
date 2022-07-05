@@ -18,7 +18,7 @@ const links = [
 <div
   class="layout flex flex-col w-100vw h-100vh relative items-center"
   >
-    <h1 class="name absolute bottom-0 left-0 z-1 opacity-50 text-25vw font-700 opacity-15">laimix99</h1>
+    <div class="name" />
     <div class="w-full flex flex-col items-start  max-w-1600px p-20px">
       <h1 class="title text-light-50 text-50px pt-30px">My portfolio</h1>
       <div class=" mt-50px m-auto contetnt flex flex-row justify-start items-center flex-wrap py-20px w-full z-2">
@@ -45,7 +45,7 @@ const links = [
 <style scoped lang="scss">
 .layout {
   background: url('https://media1.giphy.com/media/ZVik7pBtu9dNS/giphy.gif?cid=ecf05e47rst13k9d9bbblr3n084srlcjt14d36ve0u0hcuis&rid=giphy.gif&ct=g')center center/cover no-repeat;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .item {
   background: #355C7D;  /* fallback for old browsers */
@@ -58,7 +58,37 @@ const links = [
 }
 
 .name {
-  color: #fff;
+  
+  // font-family: 'Heebo', sans-serif;
+  // font-stretch: 200% !important;
+  // transform: scale(1, 2);
+  // font-size: 25vw;
+  // width: 100%;
+  // max-width: 100vw;
+  // max-height: 100vh;
+  // // line-height: 100%;
+  // overflow: hidden;
+  // background-color: red;
+  // top: 0;
+  // border: 1px solid red;
+  background: rgb(0,0,0,0.5);
+  @apply fixed inset-0 w-full overflow-hidden max-w-100vw h-screen;
+  &:after {
+    content: 'laimix99';
+    // font-family: 'Vampiro One', cursive;
+    font-family: 'Splash', cursive;
+    // font-family: 'Nosifer', cursive;
+    font-stretch: 200% !important;
+    font-weight: 700;
+    color: rgba(173, 125, 164, 0.15);
+    font-size: 28vw;
+    position: absolute;
+    bottom: 20vh;
+    left: 0;
+    transform:
+      scale(1, 2.5);
+    // opacity: 0.15;
+  }
 }
 .title {
   background-color: #74EBD5;
