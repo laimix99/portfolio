@@ -1,5 +1,6 @@
 <script setup>
 import FirstSection from '../components/krypto/FirstSection.vue'
+import Trade from '../components/krypto/Trade.vue'
   const descriptions = [
     {title: 'How it works'},
     {title: 'Cryptos'},
@@ -10,7 +11,7 @@ import FirstSection from '../components/krypto/FirstSection.vue'
 </script>
 
 <template>
-  <div class="krypto flex flex-col items-center w-full  h-100vh m-auto">
+  <div class="krypto flex flex-col items-center w-full  h-100% m-auto">
     <div class="header  flex flex-row justify-between items-start w-full max-w-1100px py-35px">
       <img class="logo w-full max-w-83px h-full max-h-28px" src="/images/krypto/header/logo.png" alt="">
       <div class="description flex flex-row justify-center">
@@ -22,6 +23,7 @@ import FirstSection from '../components/krypto/FirstSection.vue'
       </div>
     </div>
     <FirstSection/>
+    <Trade/>
   </div>
 </template>
 
