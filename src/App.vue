@@ -9,6 +9,7 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap'); */
 /* @import url('https://fonts.googleapis.com/css2?family=Vampiro+One&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   /* font-family: 'Splash'; */

@@ -4,6 +4,7 @@ const links = [
   { path: '/todo', name: 'Todo', img: 'https://smartprogress.do/uploadImages/001487344.jpg', subtitle: 'Here you can see different versions of ToDo' },
   { path: '/movies', name: 'Movies', img: 'https://xchip.ru/wp-content/uploads/2021/09/yvavya.jpg', subtitle: 'Application for the movies and series search' },
   { path: '/deli', name: 'Deli', img: 'https://investelite.ru/wp-content/uploads/2021/10/1577440491_gf7tmw-9k6m.jpg', subtitle: 'Delimobile website' },
+  { path: '/krypto', name: 'Krypto', img: '', subtitle: 'Delimobile website' },
   // { path: '/', name: 'My app' },
   // { path: '/spinner', name: 'Spinner' },
   // { path: '/stock', name: 'Stock' },
