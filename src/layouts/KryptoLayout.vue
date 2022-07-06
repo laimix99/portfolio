@@ -2,6 +2,7 @@
 import FirstSection from '../components/krypto/FirstSection.vue'
 import Trade from '../components/krypto/Trade.vue'
 import Cryptocurrency from '../components/krypto/Cryptocurrency.vue'
+import Features from '../components/krypto/Features.vue'
   const descriptions = [
     {title: 'How it works'},
     {title: 'Cryptos'},
@@ -26,6 +27,7 @@ import Cryptocurrency from '../components/krypto/Cryptocurrency.vue'
     <FirstSection/>
     <Trade/>
     <Cryptocurrency/>
+    <Features/>
   </div>
 </template>
 
