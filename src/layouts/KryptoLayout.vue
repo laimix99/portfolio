@@ -5,6 +5,7 @@ import Cryptocurrency from '../components/krypto/Cryptocurrency.vue'
 import Features from '../components/krypto/Features.vue'
 import Platfrom from '../components/krypto/Platfrom.vue'
 import Users from '../components/krypto/Users.vue'
+import Analysis from '../components/krypto/Analysis.vue'
   const descriptions = [
     {title: 'How it works'},
     {title: 'Cryptos'},
@@ -32,6 +33,7 @@ import Users from '../components/krypto/Users.vue'
     <Features/>
     <Platfrom/>
     <Users/>
+    <Analysis/>
   </div>
 </template>
 
