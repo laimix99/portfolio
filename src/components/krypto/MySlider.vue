@@ -52,9 +52,15 @@ const navigation = {
 <style scoped lang="scss">
 .next {
   background: rgb(255, 0, 0, 0.1);
+  &:hover {
+    box-shadow: 0px 0px 40px rgba(239, 68, 59, 0.4);
+  }
 }
 .prev {
   background: rgb(255, 0, 0, 0.1);
+  &:hover {
+    box-shadow: 0px 0px 40px rgba(239, 68, 59, 0.4);
+  }
 }
   .my-swiper {
     max-width: 1100px;
