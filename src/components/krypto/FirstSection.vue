@@ -19,7 +19,7 @@
       </div>
     </div>
     <div class="buttons mt-40px flex flex-row w-full max-w-400px" >
-      <button class="py-18px px-24px text-16px text-white leading-19px font-700 mr-30px max-w-206px w-full  uppercase">Downloa APP</button>
+      <button class="py-18px px-24px text-16px text-white leading-19px font-700 mr-30px max-w-206px w-full  uppercase">Download APP</button>
       <button class="py-18px px-24px text-16px text-white leading-19px font-700 max-w-206px w-full  box-border uppercase">Trade crypto</button>
     </div>
     <div class="coins mt-40px">
