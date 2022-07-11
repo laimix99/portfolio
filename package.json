@@ -8,7 +8,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vueuse/core": "^8.9.1",
     "sass": "^1.51.0",
+    "swiper": "^8.3.0",
     "vue": "^3.2.33",
     "vue-router": "^4.0.13"
   },
