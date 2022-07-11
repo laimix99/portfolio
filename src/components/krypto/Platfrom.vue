@@ -17,4 +17,23 @@
     background: url('/images/krypto/platform/bg.png')center bottom/cover no-repeat;
    
   }
+  @media screen and (max-width: 767px) {
+    .platfrom {
+      padding: 60px 0px;
+      height: 350px;
+
+      h1 {
+        font-size: 40px;
+        line-height: 40px;
+      }
+      .store {
+        margin-top: 60px;
+        a {
+          img {
+            width: 130px;
+          }
+        }
+      }
+    }
+  }
 </style>

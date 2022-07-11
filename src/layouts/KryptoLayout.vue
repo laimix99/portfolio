@@ -17,8 +17,9 @@ import Footer from '../components/krypto/Footer.vue'
 </script>
 
 <template>
-  <div class="krypto flex flex-col items-center w-full  h-100% m-auto">
-    <div class="header  flex flex-row justify-between items-start w-full max-w-1100px py-35px">
+  <div class="krypto flex flex-col items-center w-full h-100% m-auto"
+  >
+    <div class="header flex flex-row justify-between items-center w-full max-w-1100px py-35px">
       <img class="logo w-full max-w-83px h-full max-h-28px" src="/images/krypto/header/logo.png" alt="">
       <div class="description flex flex-row justify-center">
         <h1 class="mr-30px text-white text-16px leading-19px font400 cursor-pointer" v-for="d in descriptions">{{ d.title }}</h1>
@@ -41,17 +42,31 @@ import Footer from '../components/krypto/Footer.vue'
 
 <style scoped lang="scss">
   .krypto {
+    background: #160E33;
     .header {
-      
+      @media screen and (max-width: 991px) {
+        @apply py-20px px-20px;
+      }
+      @media screen and (max-width: 767px) {
+        h1 {
+          @apply text-10px mr-15px;
+        }
+        img {
+          @apply w-50px;
+        }
+      }
+      @media screen and (max-width: 479px) {
+        h1 {
+          @apply mr-10px;
+        .lang {
+          @apply hidden;
+        }
+      }
       .lang {
         border: 2px solid #EF443B;
         
       }
-    
     }
-
-    background: #160E33;
-    
   }
-
+}
 </style>

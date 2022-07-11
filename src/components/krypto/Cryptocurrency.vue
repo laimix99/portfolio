@@ -13,7 +13,7 @@
   <div class="cryptocurrency flex flex-col items-center pt-86px pb-160px relative">
     <h1 class="text-64px text-white leading-76px font-700">Available Creyptos</h1>
     <span class="text-24px text-white opacity-60 leading-28px mt-20px">Tincidunt id nibh orci nibh justo. Purus et turpis nulla elementum, sed vel.</span>
-    <div class="h-650px relative">
+    <div class="content h-650px relative">
       <MySlider 
         :slides="cards"
         class="mt-80px"
@@ -36,5 +36,25 @@
   .price {
     color: #EF443B;
   }
-
+  @media screen and (max-width: 1300px) {
+    .content {
+      height: 400px;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    .content {
+      height: 250px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    h1 {
+      font-size: 40px;
+    }
+    span {
+      font-size: 18px;
+    }
+    .content {
+    //   height: 100px;
+    }
+  }
 </style>

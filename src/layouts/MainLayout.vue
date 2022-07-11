@@ -92,8 +92,8 @@ const links = [
     }
   }
   &-info {
-    min-height: 35%;
-    height: 35%;
+    min-height: 30%;
+    height: 30%;
   }
   img {
     // object-fit: cover;

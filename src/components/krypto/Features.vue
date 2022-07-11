@@ -24,3 +24,41 @@
     </div>
   </div>
 </template>
+
+<style scoped lang="scss">
+  @media screen and (max-width: 991px) {
+    .features {
+      padding-bottom: 50px;
+    }
+    h1 {
+      font-size: 40px;
+    }
+    span {
+      font-size: 18px;
+    }
+    .items { 
+      margin-top: 25px;
+      padding: 0px 10px;
+      .item {
+        width: 50%;
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .items {
+      display: flex;
+      flex-direction: column;
+      .item {
+        width: 100%;
+        .logo {
+          .title {
+            font-size: 25px;
+          }
+        }
+        .description {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+</style>
