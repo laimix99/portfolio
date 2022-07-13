@@ -17,6 +17,7 @@ import ClientPage from '../pages/deli/ClientPage.vue';
 import ServicesPage from '../pages/deli/ServicesPage.vue';
 import TodoLayout from '../layouts/TodoLayout.vue';
 import KryptoLayout from '../layouts/KryptoLayout.vue'
+import BreewLayout from '../layouts/BreewLayout.vue'
 import ErrorPage from '../pages/ErrorPage.vue';
 
 const router = createRouter({
@@ -119,6 +120,13 @@ const router = createRouter({
     {
       path: '/krypto',
       component: KryptoLayout,
+      children: [
+      
+      ],
+    },
+    {
+      path: '/breew',
+      component: BreewLayout,
       children: [
       
       ],
