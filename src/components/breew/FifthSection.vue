@@ -35,7 +35,7 @@
       .items {
         @apply flex mt-69px;
         .item {
-          @apply bg-white rounded-23px flex py-34px px-54px mr-30px flex items-center ;
+          @apply bg-white rounded-23px py-34px px-54px mr-30px flex items-center ;
           img {
             @apply w-40px h-40px py-5px px-5px rounded-1/2 mr-30px;
             background-color: #0582CA;;

@@ -10,7 +10,7 @@
   <div class="eighth-section">
     <div class="container">
       <div class="title">
-        <h1>06</h1>
+        <h1>07</h1>
         <span>08</span>
       </div>
       <p>Latest resources</p>
