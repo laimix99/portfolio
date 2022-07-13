@@ -5,6 +5,7 @@ import ThirdSection from '../components/breew/ThirdSection.vue'
 import FourthSection from '../components/breew/FourthSection.vue'
 import FifthSection from '../components/breew/FifthSection.vue'
 import SixthSection from '../components/breew/SixthSection.vue'
+import SeventhSection from '../components/breew/SeventhSection.vue'
   const links = ['Home', 'About', 'Token', 'Pages']
 </script>
 
@@ -25,6 +26,7 @@ import SixthSection from '../components/breew/SixthSection.vue'
     <FourthSection/>
     <FifthSection/>
     <SixthSection/>
+    <SeventhSection/>
   </div>
 </template>
 

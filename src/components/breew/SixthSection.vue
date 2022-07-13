@@ -30,7 +30,7 @@
         <div class="buttons">
           <button>Download app</button>
           <button>View pricing</button>
-      </div>
+        </div>
       </div>
     </div>
   </div>
