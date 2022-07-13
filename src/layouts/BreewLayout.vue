@@ -8,6 +8,7 @@ import SixthSection from '../components/breew/SixthSection.vue'
 import SeventhSection from '../components/breew/SeventhSection.vue'
 import EighthSection from '../components/breew/EighthSection.vue'
 import NinthSection from '../components/breew/NinthSection.vue'
+import TenthSection from  '../components/breew/TenthSection.vue'
   const links = ['Home', 'About', 'Token', 'Pages']
 </script>
 
@@ -31,6 +32,7 @@ import NinthSection from '../components/breew/NinthSection.vue'
     <SeventhSection/>
     <EighthSection/>
     <NinthSection/>
+    <TenthSection/>
   </div>
 </template>
 

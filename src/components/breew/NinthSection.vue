@@ -29,7 +29,7 @@
 
 <style scoped lang="scss">
   .ninth-section {
-    @apply w-full flex flex-col items-center pt-190px h-full max-h-1648px;
+    @apply w-full flex flex-col items-center pt-190px h-full max-h-1548px;
     overflow-y: hidden;
     background: #EAEAEA;
     .container {
