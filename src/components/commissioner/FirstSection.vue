@@ -17,13 +17,16 @@ const titles = [
           <p >{{ title }}</p>
         </div>  
       </div>
+      <a href="tel:89655325020">
+        <button>Вызвать коммисара</button>
+      </a>
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
   .first-section {
-    @apply  w-full h-700px relative z-1 py-100px flex flex-col items-center;
+    @apply  w-full h-700px relative z-1 py-50px flex flex-col items-center;
     background: url('https://оценка174.рф/images/img/avariynyy-komissar.jpg')center center/cover no-repeat;
     &::before {
       content: '';
@@ -53,6 +56,18 @@ const titles = [
           p {
             @apply z-3 text-30px;
             color: #F2F2F4;
+          }
+        }
+      }
+      a {
+        @apply z-3;
+
+        button {
+          @apply text-24px py-20px px-20px mt-40px rounded-8px;
+          background-color: #CE253D;
+          color: #F2F2F4;
+          &:hover {
+            background-color: rgb(127, 26, 41);
           }
         }
       }

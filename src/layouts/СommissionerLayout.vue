@@ -3,6 +3,8 @@ import { onMounted, ref } from "vue";
 import KeyBenefits from '../components/commissioner/KeyBenefits.vue'
 import Regulations from '../components/commissioner/Regulations.vue'
 import FirstSection from '../components/commissioner/FirstSection.vue'
+import Contacts from '../components/commissioner/Contacts.vue'
+import Price from '../components/commissioner/Price.vue'
 const links = [
   {title: 'цены', path: ''},
   {title: 'услуги', path: ''},
@@ -27,7 +29,9 @@ const links = [
     <FirstSection/>
     <div class="container">
       <KeyBenefits/>
+      <Price/>
       <Regulations/>
+      <Contacts/>
     </div>
   </div>
 </template>
