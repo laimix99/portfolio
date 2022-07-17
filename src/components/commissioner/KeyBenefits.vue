@@ -19,12 +19,15 @@
         <div class="item-title">{{ item.title }}</div>
       </div>
     </div>
+    <a href="tel:89655325020">
+      <button>Вызвать коммисара</button>
+    </a>
   </div>
 </template>
 
 <style scoped lang="scss">
   .key-benefits {
-    @apply flex flex-col items-center w-full pt-50px;
+    @apply flex flex-col items-center w-full py-50px;
     h1 {
       @apply text-46px font-700;
       color: rgb(29, 28, 28);
@@ -36,7 +39,7 @@
     .items {
       @apply flex flex-wrap w-full mt-50px;
       .item {
-        @apply mr-40px mt-20px flex flex-col items-center rounded-16px py-10px;
+        @apply mx-20px  mt-20px flex flex-col items-center rounded-16px py-10px;
         background-color: #fff;
         width: calc(33.33% - 40px);
         img {
@@ -45,6 +48,17 @@
         &-title {
           @apply text-22px mt-10px leading-30px;
           color: rgba(29, 28, 28, 0.5);
+        }
+      }
+    }
+    a {
+
+      button {
+        @apply text-24px py-20px px-20px mt-40px rounded-8px;
+        background-color: #CE253D;
+        color: #F2F2F4;
+        &:hover {
+          background-color: rgb(127, 26, 41);
         }
       }
     }
