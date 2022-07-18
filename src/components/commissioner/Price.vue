@@ -50,18 +50,21 @@
       color: rgb(29, 28, 28);
     }
     .items {
-      @apply flex flex-col items-center w-full;
+      @apply flex flex-col items-center w-full mt-50px;
       .item {
         @apply flex items-center justify-between rounded-16px py-10px px-10px w-full mt-40px min-h-120px;
         background-color: #D6D6D6;
         h2 {
-          @apply w-full max-w-250px text-left;
+          @apply w-full text-16px max-w-250px text-left;
+          color: rgb(29, 28, 28);
         }
         span {
-          @apply text-left;
+          @apply text-16px ;
+          color: #CE253D;
         }
         p {
-          @apply w-full max-w-450px;
+          @apply w-full text-16px max-w-450px leading-20px;
+          color: rgb(29, 28, 28);
         }
       }
     }

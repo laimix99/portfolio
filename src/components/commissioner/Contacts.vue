@@ -50,6 +50,12 @@
           color: rgb(29, 28, 28);
         }
       }
+      .right-col {
+
+        iframe {
+
+        }
+      }
     }
   }
 </style>

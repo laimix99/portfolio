@@ -1,11 +1,11 @@
 <script setup>
   const items = [
-    {img: '', title: 'Оформим документы на месте ДТП'},
-    {img: '', title: 'Проведем независимую экспертизу'},
-    {img: '', title: 'Урегулируем споры со страховой'},
-    {img: '', title: 'Проведем фото-фиксацию места ДТП'},
-    {img: '', title: 'Подготовим претензию в страховую'},
-    {img: '', title: '	Проведем оценку качества ремонта'},
+    {img: '/images/commissioner/key-benefits/item-1.png', title: 'Оформим документы на месте ДТП'},
+    {img: '/images/commissioner/key-benefits/item-2.png', title: 'Проведем независимую экспертизу'},
+    {img: '/images/commissioner/key-benefits/item-3.png', title: 'Урегулируем споры со страховой'},
+    {img: '/images/commissioner/key-benefits/item-4.png', title: 'Проведем фото-фиксацию места ДТП'},
+    {img: '/images/commissioner/key-benefits/item-5.png', title: 'Подготовим претензию в страховую'},
+    {img: '/images/commissioner/key-benefits/item-6.png', title: '	Проведем оценку качества ремонта'},
   ]
 </script>
 
@@ -43,7 +43,7 @@
         background-color: #fff;
         width: calc(33.33% - 40px);
         img {
-          @apply w-100px h-100px bg-black;
+          @apply w-80px ;
         }
         &-title {
           @apply text-22px mt-10px leading-30px;

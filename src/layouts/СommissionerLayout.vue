@@ -5,12 +5,12 @@ import Regulations from '../components/commissioner/Regulations.vue'
 import FirstSection from '../components/commissioner/FirstSection.vue'
 import Contacts from '../components/commissioner/Contacts.vue'
 import Price from '../components/commissioner/Price.vue'
+import Reviews from '../components/commissioner/Reviews.vue'
 const links = [
   {title: 'цены', path: ''},
   {title: 'услуги', path: ''},
   {title: 'о компании', path: ''},
   {title: 'контакты', path: ''},
-  {title: 'статьи', path: ''},
 ]
 
 </script>
@@ -31,6 +31,7 @@ const links = [
       <KeyBenefits/>
       <Price/>
       <Regulations/>
+      <Reviews/>
       <Contacts/>
     </div>
   </div>
