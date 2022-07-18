@@ -9,6 +9,7 @@ import Footer from '../components/deli/Footer.vue'
 <template>
   
 <div class="layout">
+  <router-link to="/" class="all-projects bg-no-repeat w-40px h-40px cursor-pointer top-10px left-10px absolute"/>
   <div class="layout-header max-w-1280px m-auto flex justify-between items-center py-18px px-32px">
     <div class="layout-header-menu w-full flex flex-row justify-start">
       <router-link class="link no-underline" to="/deli/services">
@@ -32,6 +33,10 @@ import Footer from '../components/deli/Footer.vue'
 </template>
 
 <style lang="scss" scoped>
+.all-projects {
+  background: url('https://thypix.com/wp-content/uploads/blue-arrow-79.png')center no-repeat;
+  background-size: 100%;
+  }
 
 .layout {
   background: #F2F5F8;

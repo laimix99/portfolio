@@ -17,8 +17,8 @@ import Footer from '../components/krypto/Footer.vue'
 </script>
 
 <template>
-  <div class="krypto flex flex-col items-center w-full h-100% m-auto"
-  >
+  <div class="krypto flex flex-col items-center w-full h-100% m-auto">
+    <router-link to="/" class="all-projects bg-no-repeat w-40px h-40px cursor-pointer top-10px left-10px absolute"/>
     <div class="header flex flex-row justify-between items-center w-full max-w-1100px py-35px">
       <img class="logo w-full max-w-83px h-full max-h-28px" src="/images/krypto/header/logo.png" alt="">
       <div class="description flex flex-row justify-center">
@@ -43,6 +43,10 @@ import Footer from '../components/krypto/Footer.vue'
 <style scoped lang="scss">
   .krypto {
     background: #160E33;
+    .all-projects {
+      background: url('https://thypix.com/wp-content/uploads/blue-arrow-79.png')center no-repeat;
+      background-size: 100%;
+      }
     .header {
       @media screen and (max-width: 991px) {
         @apply py-20px px-20px;
