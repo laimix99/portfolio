@@ -5,10 +5,12 @@ const titles = [
   'Оформим все документы на месте ДТП', 
   'Поможем получить страховое возмещение', 
   'Сэкономим Ваше время']
+  const emit = defineEmits(['action'])
 </script>
 
 <template>
   <div class="first-section">
+    <h3 class="relative z-4" style="color: red; font-size:42px;">Секция 1: нужен текст</h3>
     <div class="container">
       <h1>Служба аварийных комиссаров</h1>
       <div class="items">
@@ -17,8 +19,8 @@ const titles = [
           <p >{{ title }}</p>
         </div>  
       </div>
-      <a href="tel:89655325020">
-        <button>Вызвать коммисара</button>
+      <a @click="emit('action')">
+        <button>Заказать звонок</button>
       </a>
     </div>
   </div>

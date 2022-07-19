@@ -20,7 +20,7 @@
 <style scoped lang="scss">
   .card {
     @apply flex items-center h-full max-h-400px rounded-16px;
-    background-color: #D6D6D6;
+    background-color: #EEEEEE;
     img {
       @apply w-400px h-300px ;
       background: red;
