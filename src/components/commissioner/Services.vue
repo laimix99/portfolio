@@ -31,7 +31,7 @@ const emit = defineEmits(['action'])
 
 <template>
   <div class="services">
-    <h3 class="relative z-4" style="color: red; font-size:42px;">Секция 5: нужен текст и картинки (если нету картинак я поищю в интернете )</h3>
+    <h3 class="relative z-4" style="color: red; font-size:42px;">Секция 4:Вариант: 2 нужен текст и картинки (если нету картинок я поищу в интернете )</h3>
     <h1>Наши услуги</h1>
     <span>Независимые оценщики при подсчете суммы ущерба используют только реальные рыночные цены, и они не отчитываются перед страховой компанией</span>
     <div class="content">

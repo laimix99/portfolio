@@ -33,7 +33,7 @@
 
 <template>
   <div class="price-card">
-    <h3 class="relative z-4" style="color: red; font-size:42px;">Секция 4: нужен текст и цена</h3>
+    <h3 class="relative z-4" style="color: red; font-size:42px;">Секция 4:Вариант 1 нужен текст и цена</h3>
     <h1>Цены на услуги аварийных комиссаров</h1>
     <div class="items">
       <div class="item" v-for="item in items">
