@@ -1,18 +1,30 @@
 <script setup>
-import { onMounted, ref } from "vue";
+import { onMounted, computed, ref } from "vue";
 import KeyBenefits from '../components/commissioner/KeyBenefits.vue'
 import Regulations from '../components/commissioner/Regulations.vue'
 import FirstSection from '../components/commissioner/FirstSection.vue'
 import Contacts from '../components/commissioner/Contacts.vue'
 import Price from '../components/commissioner/Price.vue'
 import Reviews from '../components/commissioner/Reviews.vue'
-const links = [
-  {title: 'цены', path: ''},
-  {title: 'услуги', path: ''},
-  {title: 'о компании', path: ''},
-  {title: 'контакты', path: ''},
-]
-
+import Company from '../components/commissioner/Сompany.vue'
+import Services from '../components/commissioner/Services.vue'
+const price = ref()
+const contacts = ref()
+const company = ref()
+const services = ref()
+const links = ref([
+  {title: 'цены', pos: computed(() => price.value?.$el.offsetTop)},
+  {title: 'услуги', pos: computed(() => services.value?.$el.offsetTop)},
+  {title: 'о компании', pos: computed(() => company.value?.$el.offsetTop)},
+  {title: 'контакты', pos: computed(() => contacts.value?.$el.offsetTop)},
+])
+const menuLink = (pos) => {
+  console.log("menuLink pos:", pos, window)
+  window.scrollTo(0, pos)  
+}
+onMounted(() => {
+  console.log("onMounted", price.value)
+})
 </script>
 
 <template>
@@ -21,19 +33,27 @@ const links = [
       <div class="menu">
         <div class="logo">ЦЕНТР УРЕГУЛИРОВАНИЯ УБЫТКОВ</div>
         <div class="links">
-          <div class="link" v-for="link in links">{{ link.title }}</div>
+          <div v-for="link in links" @click="menuLink(link.pos)" class="link">
+            {{ link.title }}
+          </div>
         </div>
-        <a href="tel:89655325020">8-965-532-50-20</a>
+        <a href="tel:89655325020">Тел: 8-965-532-50-20</a>
       </div>
     </div>
-    <FirstSection/>
-    <div class="container">
+    <FirstSection @action="menuLink(links[3].pos)" />
+    <div class="container" >
       <KeyBenefits/>
-      <Price/>
-      <Regulations/>
-      <Reviews/>
-      <Contacts/>
     </div>
+    <Regulations/>
+    <div class="container" >
+      <Price ref="price" @action="menuLink(links[3].pos)" />
+      <Services ref="services" @action="menuLink(links[3].pos)"/>
+    </div>
+    <Company ref="company" />
+    <div class="container">
+      <Reviews/>
+    </div>
+    <Contacts ref="contacts" />
   </div>
 </template>
 
@@ -43,18 +63,7 @@ const links = [
     background: #FAFAFA;
     .header {
       @apply w-full flex flex-col items-center;
-      background-color: #CE253D;
-  // position: absolute;
-  // background-color: #fff;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 99;
-  -webkit-transition: all 0.3s ease-out 0s;
-  -moz-transition: all 0.3s ease-out 0s;
-  -ms-transition: all 0.3s ease-out 0s;
-  -o-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
+      background-color: #140E36;
       .menu {
         @apply flex items-center justify-between w-full max-w-1100px py-5px;
         .logo {
@@ -64,13 +73,19 @@ const links = [
         .links {
           @apply flex;
           .link {
-            @apply mr-40px text-16px uppercase; 
+            @apply mr-40px text-16px uppercase cursor-pointer; 
             color: #F2F2F4;
+            &:hover {
+              color: rgba(242, 242, 244, 0.5);
+            }
           }
         }
         a {
           @apply text-20px font-700;
           color: #F2F2F4;
+          &:hover {
+              color: rgba(242, 242, 244, 0.5);
+          }
         }
       }
     }

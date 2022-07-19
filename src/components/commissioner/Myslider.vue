@@ -20,7 +20,12 @@ const navigation = {
   nextEl: '.next',
   prevEl: '.prev',
 }
-
+// const swiper = new Swiper('.swiper', {
+//   scrollbar: {
+//     el: '.swiper-scrollbar',
+//     draggable: true,
+//   },
+// });
 </script>
 
 <template>
@@ -53,15 +58,15 @@ const navigation = {
 .my-slider {
 
   .next {
-    background: #CE253D;
+    background: #140E36;
     &:hover {
-      box-shadow: 0px 0px 40px rgba(239, 68, 59, 0.4);
+      box-shadow: 0px 0px 40px rgba(20, 14, 54, 0.4);
     }
   }
   .prev {
-    background: #CE253D;
+    background: #140E36;
     &:hover {
-        box-shadow: 0px 0px 40px rgba(239, 68, 59, 0.4);
+      box-shadow: 0px 0px 40px rgba(20, 14, 54, 0.4);
     }
   }
   .my-swiper {
