@@ -8,6 +8,7 @@ const items = [
 
 <template>
   <div class="regulations">
+    <h3 class="relative z-4" style="color: red; font-size:42px;">Секция 3: нужен текст</h3>
     <h1>Что нужно делать если попали в ДТП?</h1>
     <div class="items">
       <div class="item" v-for="item in items">
@@ -23,10 +24,12 @@ const items = [
 
 <style scoped lang="scss">
   .regulations {
-    @apply flex flex-col items-center py-50px;
+    @apply flex flex-col w-full items-center py-50px;
+    background-color: #21283F;
+    color: #fff !important;
     h1 {
       @apply text-46px font-700;
-      color: rgb(29, 28, 28);
+      // color: rgb(29, 28, 28);
     }
     .items {
       @apply flex flex-col items-start mt-50px w-full max-w-850px;
@@ -37,7 +40,7 @@ const items = [
         }
         span {
           @apply text-22px text-left leading-30px;
-          color: rgba(29, 28, 28, 0.6);
+          // color: rgba(29, 28, 28, 0.6);
         }
       }
     }
