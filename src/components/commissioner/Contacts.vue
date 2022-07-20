@@ -35,6 +35,7 @@
           <div class="link">
             <a class="email" href="mailto:Ubytkov@list.ru">E-mail: Ubytkov@list.ru</a>
             <a class="phone" href="tel:89655325020">Телефон: 8-965-532-50-20</a>
+            <p>Адрес: г. Екатеринбург, ул. Белинского, д. 222, 3 этаж, офис 18</p>
           </div>
         </div>
       </div>
@@ -77,12 +78,16 @@
           .link {
             @apply flex flex-col mt-40px;
             a {
-            @apply mt-10px text-15px;
-            color: #F2F2F4;
-            &:hover {
-              color: rgba(242, 242, 244, 0.6);
+              @apply mt-10px text-15px;
+              color: #F2F2F4;
+              &:hover {
+                color: rgba(242, 242, 244, 0.6);
+              }
             }
-          }
+            p {
+              @apply mt-10px text-15px;
+              color: #F2F2F4
+            }
           }
         }
       }

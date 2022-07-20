@@ -1,17 +1,14 @@
 <script setup>
   const items = [
+    {img: '/images/commissioner/key-benefits/item-4.png', title: 'Проведем фото-фиксацию места ДТП'},
     {img: '/images/commissioner/key-benefits/item-1.png', title: 'Оформим документы на месте ДТП'},
     {img: '/images/commissioner/key-benefits/item-2.png', title: 'Проведем независимую экспертизу'},
-    {img: '/images/commissioner/key-benefits/item-3.png', title: 'Урегулируем споры со страховой'},
-    {img: '/images/commissioner/key-benefits/item-4.png', title: 'Проведем фото-фиксацию места ДТП'},
-    {img: '/images/commissioner/key-benefits/item-5.png', title: 'Подготовим претензию в страховую'},
-    {img: '/images/commissioner/key-benefits/item-6.png', title: '	Проведем оценку качества ремонта'},
   ]
 </script>
 
 <template>
   <div class="key-benefits">
-    <h3 class="relative z-4" style="color: red; font-size:42px;">Секция 2: нужен текст</h3>
+    <!-- <h3 class="relative z-4" style="color: red; font-size:42px;">Секция 2: нужен текст</h3> -->
     <h1>Ключевые достоинства аварийного комиссара Центрет урегулирования убытков</h1>
     <span>Экономим Ваше время и берем всю головную боль на себя!</span>
     <div class="items">

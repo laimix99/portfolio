@@ -1,7 +1,7 @@
 <template>
   <div class="company">
     <div class="container">
-      <h3 class="relative z-4" style="color: red; font-size:42px;">Секция 5: нужен текст. Если эту секцию не надо то я ее уберу</h3>
+      <!-- <h3 class="relative z-4" style="color: red; font-size:42px;">Секция 5: нужен текст. Если эту секцию не надо то я ее уберу</h3> -->
       <h1>О компании</h1>
       <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi quidem nam, explicabo cumque sit repudiandae iste nisi sint eaque possimus modi eos, facilis corrupti voluptates magni rem enim dolore provident.
         Voluptates cum deserunt ipsa neque adipisci veritatis vero quos blanditiis similique possimus! Qui, quos nemo maiores ratione saepe reprehenderit ipsum doloremque numquam corrupti, atque necessitatibus quibusdam perferendis? Veritatis, dolorum ipsam?

@@ -28,7 +28,7 @@ const cards = [
 
 <template>
   <div class="reviews">
-    <h3 class="relative z-4" style="color: red; font-size:42px;">Секция 6: нужен текст и фото</h3>
+    <!-- <h3 class="relative z-4" style="color: red; font-size:42px;">Секция 6: нужен текст и фото</h3> -->
     <h1>Отзывы наших клиентов</h1>
     <div class="content">
       <Myslider
