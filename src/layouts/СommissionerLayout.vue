@@ -60,14 +60,11 @@ const handleMobileMenu = () => {
           </div>
         </div>
         <div class="phones">
-          <a href="tel:89655325020">8-965-532-50-20</a>
-          <a href="tel:89655325020">8-965-532-50-20</a>
+          <a href="tel:89655325003">8-965-532-50-03</a>
+          <a href="tel:89097024962">8-909-702-49-62</a>
         </div>
         <!-- :style="{backgroundImage: showMobileMenu ? `url('/images/burger.svg')` : `url('/images/cross.svg')`}" -->
         <button v-if="showButton" class="burger" @click="handleMobileMenu" >
-          <!-- <span class="band"></span>
-          <span class="band"></span>
-          <span class="band"></span> -->
           <BurgerIcon v-if="!showMobileMenu" />
           <CrossIcon v-else />
         </button>
@@ -78,9 +75,9 @@ const handleMobileMenu = () => {
     <div class="container" >
       <KeyBenefits/>
     </div>
-    <Regulations/>
+    <Price ref="price" @action="menuLink(links[2].pos)" />
     <div class="container" >
-      <Price ref="price" @action="menuLink(links[2].pos)" />
+      <Regulations/>
     </div>
     <Company ref="company" />
     <div class="container">

@@ -30,7 +30,8 @@ defineProps(['menu'])
         <div class="contacts">
           <h2>Контакты:</h2>
           <a class="contacts-link" href="mailto:Ubytkov@list.ru">E-mail: Ubytkov@list.ru</a>
-          <a class="contacts-link" href="tel:89655325020">Телефон: 8-965-532-50-20</a>
+          <a class="contacts-link" href="tel:89655325003">8-965-532-50-03</a>
+          <a class="contacts-link" href="tel:89097024962">8-909-702-49-62</a>
         </div>
       </div>
     </div>

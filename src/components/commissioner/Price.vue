@@ -48,9 +48,11 @@
 <style scoped lang="scss">
   .price-card {
     @apply flex flex-col items-center w-full py-100px;
+    background-color: #21283F;
     h1 {
       @apply text-46px font-700;
-      color: rgb(29, 28, 28);
+      // color: rgb(29, 28, 28);
+      color: #F2F2F4;
       @media screen and (max-width: 767px) {
         @apply text-30px;
       }
