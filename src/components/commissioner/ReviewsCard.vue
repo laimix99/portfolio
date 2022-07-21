@@ -42,8 +42,11 @@
     .text {
       @apply flex flex-col items-start pl-20px;
       @media screen and (max-width: 991px) {
-        @apply py-20px;
+        @apply p-20px;
       }
+      // @media screen and (max-width: 767px) {
+      //   @apply pr-10px;
+      // }
       h1 {
         @apply text-left text-20px leading-30px;
         color: rgb(29, 28, 28);
@@ -53,6 +56,9 @@
       }
       span {
         @apply text-16px font-700 mt-30px;
+        @media screen and (max-width: 991px) {
+          @apply mt-10px;
+        }
       }
     }
   }

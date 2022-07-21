@@ -34,8 +34,8 @@
           <button>Отправить</button>
           <div class="link">
             <a class="email" href="mailto:Ubytkov@list.ru">E-mail: Ubytkov@list.ru</a>
-            <a class="phone" href="tel:89655325020">Телефон: 8-965-532-50-20</a>
-            <a class="phone" href="tel:89655325020">Телефон: 8-965-532-50-20</a>
+            <a class="phone" href="tel:89655325003">8-965-532-50-03</a>
+            <a class="phone" href="tel:89097024962">8-909-702-49-62</a>
             <p>Адрес: г. Екатеринбург, ул. Белинского, д. 222, 3 этаж, офис 18</p>
           </div>
         </div>
