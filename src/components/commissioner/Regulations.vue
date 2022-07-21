@@ -30,8 +30,10 @@ const items = [
 <style scoped lang="scss">
   .regulations {
     @apply flex flex-col w-full items-center py-50px;
-    background-color: #21283F;
-    color: #fff !important;
+    // background-color: #21283F;
+    // color: #fff !important;
+    color: rgb(29, 28, 28);
+    
     .container {
       @apply flex flex-col items-center w-full max-w-1100px;
       @media screen and (max-width: 991px) {
@@ -39,6 +41,7 @@ const items = [
       }
       h1 {
         @apply text-46px font-700;
+        color: rgb(29, 28, 28);
         // color: rgb(29, 28, 28);
         @media screen and (max-width: 767px) {
           @apply text-30px;
@@ -56,7 +59,7 @@ const items = [
           }
           svg {
             @apply mr-20px;
-            fill: white;
+            fill: rgb(29, 28, 28);
           }
           span {
             @apply text-22px text-left leading-30px;
