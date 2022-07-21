@@ -22,6 +22,8 @@ const titles = [
       <a @click="emit('action')">
         <button>Заказать звонок</button>
       </a>
+      <a class="phone" href="tel:89655325003">8-965-532-50-03</a>
+      <a class="phone" href="tel:89097024962">8-909-702-49-62</a>
     </div>
   </div>
 </template>
@@ -93,6 +95,10 @@ const titles = [
             @apply text-18px;
           }
         }
+      }
+      .phone {
+        @apply z-3 text-22px mt-20px;
+        color: #F2F2F4;
       }
     }
   }
