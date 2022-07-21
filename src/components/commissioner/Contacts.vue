@@ -35,11 +35,13 @@
           <div class="link">
             <a class="email" href="mailto:Ubytkov@list.ru">E-mail: Ubytkov@list.ru</a>
             <a class="phone" href="tel:89655325020">Телефон: 8-965-532-50-20</a>
+            <a class="phone" href="tel:89655325020">Телефон: 8-965-532-50-20</a>
+            <p>Адрес: г. Екатеринбург, ул. Белинского, д. 222, 3 этаж, офис 18</p>
           </div>
         </div>
       </div>
       <div class="right-col">
-       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2184.7142227257245!2d60.62741001595517!3d56.79937458084615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c16eccb95641e9%3A0x5943557ed1624f23!2z0YPQuy4g0JHQtdC70LjQvdGB0LrQvtCz0L4sIDIyMiwg0JXQutCw0YLQtdGA0LjQvdCx0YPRgNCzLCDQodCy0LXRgNC00LvQvtCy0YHQutCw0Y8g0L7QsdC7LiwgNjIwMTMw!5e0!3m2!1sru!2sru!4v1658082561765!5m2!1sru!2sru" width="500" height="400" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2184.7142227257245!2d60.62741001595517!3d56.79937458084615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c16eccb95641e9%3A0x5943557ed1624f23!2z0YPQuy4g0JHQtdC70LjQvdGB0LrQvtCz0L4sIDIyMiwg0JXQutCw0YLQtdGA0LjQvdCx0YPRgNCzLCDQodCy0LXRgNC00LvQvtCy0YHQutCw0Y8g0L7QsdC7LiwgNjIwMTMw!5e0!3m2!1sru!2sru!4v1658082561765!5m2!1sru!2sru"  style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </div>
@@ -54,9 +56,15 @@
     h1 {
       @apply text-46px font-700;
       color: #F2F2F4;
+      @media screen and (max-width: 767px) {
+        @apply text-30px;
+      }
     }
     .content {
       @apply flex items-start justify-between w-full max-w-1100px mt-70px px-20px;
+      @media screen and (max-width: 991px) {
+        @apply flex-col items-center;
+      }
       // box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
       .left-col {
         @apply flex flex-col w-full  ;
@@ -77,19 +85,31 @@
           .link {
             @apply flex flex-col mt-40px;
             a {
-            @apply mt-10px text-15px;
-            color: #F2F2F4;
-            &:hover {
-              color: rgba(242, 242, 244, 0.6);
+              @apply mt-10px text-15px;
+              color: #F2F2F4;
+              &:hover {
+                color: rgba(242, 242, 244, 0.6);
+              }
             }
-          }
+            p {
+              @apply mt-10px text-15px;
+              color: #F2F2F4
+            }
           }
         }
       }
       .right-col {
-
+        @media screen and (max-width: 991px) {
+          @apply mt-20px;
+        }
         iframe {
-
+          @apply;
+          // width="500" height="400"
+          width: 500px;
+          height: 400px;
+          @media screen and (max-width: 767px) {
+            width: 350px;
+          }
         }
       }
     }

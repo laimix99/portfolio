@@ -29,12 +29,12 @@ const navigation = {
 </script>
 
 <template>
-  <div class="my-slider relative">
-    <button class="next p-10px rounded-1/2 absolute right-0 top-1/2">
-      <img class="w-24px h-24px " src="/images/krypto/my-slider/next.png" alt="">
+  <div class="my-slider">
+    <button class="next">
+      <img  src="/images/krypto/my-slider/next.png " alt="">
     </button>
-    <button class="prev  p-10px rounded-1/2 absolute left-0 top-1/2">
-      <img class="w-24px h-24px" src="/images/krypto/my-slider/prev.png" alt="">
+    <button class="prev  ">
+      <img class="" src="/images/krypto/my-slider/prev.png" alt="">
     </button>
     <!-- <p>{{ viewSlides }} x {{ height }}</p> -->
     <swiper
@@ -56,22 +56,69 @@ const navigation = {
 
 <style scoped lang="scss">
 .my-slider {
-
+  @apply relative h-full;
+  @media screen and (max-width: 991px) {
+    @apply max-h-700px;
+  }
   .next {
+    @apply p-10px rounded-1/2 absolute right-0 top-1/2;
     background: #140E36;
     &:hover {
       box-shadow: 0px 0px 40px rgba(20, 14, 54, 0.4);
     }
+    @media screen and (max-width: 991px) {
+      @apply right-80px;
+    }
+    @media screen and (max-width: 767px) {
+      @apply p-5px  right-40px;
+    }
+    @media screen and (max-width: 479px) {
+      @apply -top-40px right-120px;
+    }
+    img {
+      @apply w-24px h-24px;
+      // @media screen and (max-width: 767px) {
+      //   @apply w-15px h-15px;
+      // }
+    }
   }
   .prev {
+    @apply p-10px rounded-1/2 absolute left-0 top-1/2;
     background: #140E36;
     &:hover {
       box-shadow: 0px 0px 40px rgba(20, 14, 54, 0.4);
+    }
+    @media screen and (max-width: 991px) {
+      @apply left-80px;
+    }
+    @media screen and (max-width: 767px) {
+      @apply p-5px  left-40px;
+    }
+     @media screen and (max-width: 479px) {
+      @apply -top-40px left-120px;
+    }
+    img {
+      @apply w-24px h-24px;
+      // @media screen and (max-width: 767px) {
+      //   @apply w-15px h-15px;
+      // }
     }
   }
   .my-swiper {
     max-width: 900px;
     height: 100%;
+    @media screen and (max-width: 991px) {
+      @apply max-w-400px h-500px;
+    }
+    @media screen and (max-width: 767px) {
+      @apply max-w-250px;
+    }
+    @media screen and (max-width: 479px) {
+      @apply max-w-300px;
+    }
+    // @media screen and (max-width: 767px) {
+    //   @apply max-w-300px;
+    // }
     
     .slide {
       height: 100%;
