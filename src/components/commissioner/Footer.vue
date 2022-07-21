@@ -39,14 +39,21 @@ defineProps(['menu'])
 
 <style scoped lang="scss">
   .footer {
-    @apply flex flex-col items-center w-full py-50px;
+    @apply flex flex-col items-center w-full py-30px;
     background-color: #3E3E3E;
     .container {
       @apply flex flex-col items-center w-full max-w-1100px;
+      @media screen and (max-width: 991px) {
+        @apply px-10px;
+      }
       .content {
         @apply flex items-start justify-between w-full;
+        @media screen and (max-width: 767px) {
+          @apply flex-col items-start;
+        }
         .logo {
           @apply flex flex-col items-start;
+          
           h1 {
             @apply w-full max-w-100px text-left font-700;
             color: #CCCCCC;
@@ -72,8 +79,14 @@ defineProps(['menu'])
         }
         .menu {
           @apply flex;
+          @media screen and (max-width: 767px) {
+            @apply  mt-20px;
+          }
           .links {
             @apply flex ;
+            @media screen and (max-width: 767px) {
+              @apply flex-col;
+            }
             .menu-link {
               @apply flex mr-15px;
               span {
@@ -85,6 +98,9 @@ defineProps(['menu'])
         }
         .contacts {
           @apply flex flex-col items-start;
+          @media screen and (max-width: 767px) {
+            @apply mt-20px;
+          }
           h2 {
             @apply font-700 text-20px;
             color: #CCCCCC;

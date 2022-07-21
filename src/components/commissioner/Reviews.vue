@@ -4,25 +4,25 @@ import ReviewsCard from './ReviewsCard.vue';
 
 const cards = [
   {
-    img: 'https://s15.stc.yc.kpcdn.net/share/i/12/12270457/wr-960.webp', 
+    img: '/images/commissioner/reviews/item-1.jpg', 
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias officiis illo recusandae maxime unde ratione enim vero mollitia debitis! Iusto necessitatibus neque quae animi voluptatum dolores distinctio delectus. Dicta, modi.', 
     name: 'Алена'
   },
   {
-    img: 'http://cdn.iz.ru/sites/default/files/styles/900x506/public/news-2022-07/2022-07-17%2020.19.40.jpg?itok=F9aQXre5',
+    img: '/images/commissioner/reviews/item-2.jpg',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias officiis illo recusandae maxime unde ratione enim vero mollitia debitis! Iusto necessitatibus neque quae animi voluptatum dolores distinctio delectus. Dicta, modi.', 
     name: 'Марина'
   },
   {
-    img: 'https://kubnews.ru/upload/resize_cache/webp/iblock/47a/608_410_2/35okcw0n7yhcfuducwkih83khth6qgyi.webp', 
+    img: '/images/commissioner/reviews/item-3.jpg', 
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias officiis illo recusandae maxime unde ratione enim vero mollitia debitis! Iusto necessitatibus neque quae animi voluptatum dolores distinctio delectus. Dicta, modi.', 
     name: 'Анна'
   },
-  {
-    img: 'https://icdn.lenta.ru/images/2022/07/18/13/20220718130340997/square_320_4660087e88c749cfc6d6d457e9294204.jpg', 
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias officiis illo recusandae maxime unde ratione enim vero mollitia debitis! Iusto necessitatibus neque quae animi voluptatum dolores distinctio delectus. Dicta, modi.', 
-    name: 'Вадим'
-  },
+  // {
+  //   img: '/images/commissioner/reviews/item-1.jpg', 
+  //   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias officiis illo recusandae maxime unde ratione enim vero mollitia debitis! Iusto necessitatibus neque quae animi voluptatum dolores distinctio delectus. Dicta, modi.', 
+  //   name: 'Вадим'
+  // },
 ]
 </script>
 
@@ -45,13 +45,22 @@ const cards = [
 
 <style scoped lang="scss">
   .reviews {
-    @apply flex flex-col items-center py-10px  w-full;
+    @apply flex flex-col items-center py-100px h-full w-full mb-50px;
     h1 {
       @apply text-46px font-700;
       color: rgb(29, 28, 28);
+      @media screen and (max-width: 767px) {
+        @apply text-30px;
+      }
     }
     .content {
-      @apply h-400px w-full  mt-50px;
+      @apply  h-400px w-full  mt-50px;
+      // @media screen and (max-width: 991px) {
+      //   @apply max-w-400px max-h-650px ;
+      // }
+      // @media screen and (max-width: 767px) {
+      //   @apply max-w-300px;
+      // }
     }
   }
 </style>

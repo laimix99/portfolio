@@ -2,18 +2,21 @@
   const items = [
     {
       title: 'Вызвать аварийного комиссара', 
-      price: '2000', 
-      descripton: 'Аварийный комиссар приедет на место ДТП, окажет квалифицированную помощь, заполнит все необходимые документы для ГИБДД, возьмет на себя все общение с участниками ДТП'
+      img: '/images/commissioner/price/item-1.jpg',
+      price: '2500', 
+      descripton: 'Аварийный комиссар прибудет на место ДТП в течение 15-20 минут. Он составит полный пакет документов для оформления вашего ДТП, и полного возмещения убытка от страховой компании, проведёт полную консультацию по факту ДТП, и по возмещению вашего убытка.'
     },
     {
-      title: 'Судебное представительство', 
-      price: '10 000', 
-      descripton: 'Защита нарушенных прав в суде. Установление/оспаривание вины участников ДТП в судебном порядке'
+      title: 'Вызов эвакуатора на место ДТП', 
+      img: '/images/commissioner/price/item-2.jpg',
+      price: '3000', 
+      descripton: 'Довольно часто, после ДТП, характер повреждений не позволяет самостоятельно, своим ходом передвигаться на автомобиле.Так же после ДТП у машины могут быть скрытые дефекты. «Элементы подвески и т.д.» Для того что бы не усугубить ущерб автомобиля, вы можете вызвать эвакуатор на место ДТП, для последующей безопасной транспортировки т/с.'
     }, 
     {
-      title: 'Экспертиза качества ремонта автомобилей', 
+      title: 'Юридическое сопровождение-Независимая экспертиза', 
+      img: '/images/commissioner/price/item-3.jpg',
       price: '15 000', 
-      descripton: 'Проведем оценку качества ремонта автомобиля по направлению страховой компании'
+      descripton: 'После ДТП у пострадавшего лица есть право на независимую экспертизу.Проводим полный осмотр вашего т/с на СТО, делаем полный разбор автомобиля (если это необходимо), учитываем все скрытые дефекты после ДТП. Предоставляем независимого эксперта.Добьёмся для вас полного страхового возмещения от страховой компании.'
     },
   ]
   const emit = defineEmits(['action'])
@@ -22,9 +25,10 @@
 <template>
   <div class="price-card">
     <!-- <h3 class="relative z-4" style="color: red; font-size:42px;">Секция 4:Вариант 1 нужен текст и цена</h3> -->
-    <h1>Цены на услуги аварийных комиссаров</h1>
+    <h1>Цены на услуги</h1>
     <div class="items">
       <div class="item" v-for="item in items">
+        <img :src="item.img" alt="">
         <div class="text">
           <h2>{{ item.title }}</h2>
           <p>{{ item.descripton }}</p>
@@ -47,39 +51,36 @@
     h1 {
       @apply text-46px font-700;
       color: rgb(29, 28, 28);
+      @media screen and (max-width: 767px) {
+        @apply text-30px;
+      }
     }
     .items {
       @apply flex flex-wrap items-start justify-center w-full h-full max-w-1100px mt-50px;
-      .price {
-        @apply flex flex-row w-full items-end justify-start mb-20px;
-        span {
-          @apply text-42px text-left mt-20px font-700;
-          color: #57000d;
-          
-        }
-        p {
-          font-size: 32px;
-          margin-right: 10px;
-          color: #660917;
-        }
+      @media screen and (max-width: 991px) {
+        @apply flex-col items-center;
       }
-      .plug-item {
-        @apply flex flex-col items-center justify-center p-20px mx-20px mt-40px rounded-8px ;
-        width: calc(33.33% - 40px);
-        background-color: #fff;
-        // height: 100%;
-        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+      @media screen and (max-width: 767px) {
+        @apply mt-20px;
       }
       .item {
-        @apply flex flex-col items-center justify-between p-20px mx-20px mt-40px rounded-8px ;
+        @apply flex flex-col items-center justify-between h-680px p-10px mx-10px mt-40px rounded-8px ;
         width: calc(33.33% - 40px);
         background-color: #fff;
         // height: 100%;
         box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+        @media screen and (max-width: 991px) {
+          @apply mx-0 max-w-350px;
+          width: 100%;
+        }
+        @media screen and (max-width: 767px) {
+          @apply h-630px;
+        }
+        img {
+          @apply w-full max-w-350px h-full max-h-160px ;
+        }
         .text {
-          @apply flex flex-col items-start h-full;
-          // height: 280px;
-          height: 230px;
+          @apply flex flex-col items-start h-full mt-10px;
           h2 {
             @apply w-full text-20px font-700 text-left;
             line-height: 120%;
@@ -89,6 +90,25 @@
             @apply w-full text-16px text-left mt-10px;
             line-height: 140%;
             color: rgb(29, 28, 28);
+          }
+        }
+        
+        .price {
+          @apply flex flex-row w-full items-end justify-start mb-20px;
+          span {
+            @apply text-42px text-left mt-20px font-700;
+            color: #0C698F;
+            @media screen and (max-width: 767px) {
+              @apply text-30px;
+            }
+          }
+          p {
+            font-size: 32px;
+            margin-right: 10px;
+            color: #0C698F;
+            @media screen and (max-width: 767px) {
+              @apply text-30px;
+            }
           }
         }
         a {

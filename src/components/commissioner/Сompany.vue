@@ -19,13 +19,22 @@
     background-color: #21283F;
     .container {
       @apply flex flex-col items-center max-w-1100px;
+      @media screen and (max-width: 991px) {
+        @apply px-10px;
+      }
       h1 {
         @apply text-46px font-700;
         color: #F2F2F4;
+        @media screen and (max-width: 767px) {
+          @apply text-30px;
+        }
       }
       span {
         @apply text-22px leading-33px text-left mt-50px;
         color: #F2F2F4;
+        @media screen and (max-width: 767px) {
+          @apply text-18px leading-30px;
+        }
       }
     }
   }

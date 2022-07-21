@@ -28,7 +28,7 @@ const titles = [
 
 <style scoped lang="scss">
   .first-section {
-    @apply  w-full h-700px relative z-1 py-50px flex flex-col items-center;
+    @apply  w-full  relative z-1 py-50px flex flex-col items-center;
     background: url('https://оценка174.рф/images/img/avariynyy-komissar.jpg')center center/cover no-repeat;
     &::before {
       content: '';
@@ -43,21 +43,39 @@ const titles = [
     }
     .container {
       @apply flex flex-col items-center w-full max-w-1100px;
+      @media screen and (max-width: 991px) {
+        @apply px-10px;
+      }
       h1 {
         @apply text-75px z-3 relative font-700;
         color: #F2F2F4;
+        @media screen and (max-width: 767px) {
+          @apply text-30px;
+        }
       }
       .items {
         @apply flex flex-col items-start z-3 mt-50px pl-100px;
+        @media screen and (max-width: 991px) {
+          @apply pl-20px;
+        }
+        @media screen and (max-width: 767px) {
+          @apply mt-20px;
+        }
         .item {
           @apply flex items-center mt-20px;
           .doc {
-            @apply w-10px h-10px rounded-1/2 z-3 mr-10px;
+            @apply w-10px h-10px rounded-1/2 z-3 pr-10px mr-10px;
             background-color: #F2F2F4;
           }
           p {
             @apply z-3 text-30px text-30px;
             color: #F2F2F4;
+            @media screen and (max-width: 991px) {
+              @apply text-25px text-left;
+            }
+            @media screen and (max-width: 767px) {
+              @apply text-20px leading-20px;
+            }
           }
         }
       }
@@ -70,6 +88,9 @@ const titles = [
           color: #F2F2F4;
           &:hover {
             background-color: hwb(197 4% 62%);
+          }
+          @media screen and (max-width: 767px) {
+            @apply text-18px;
           }
         }
       }
