@@ -15,23 +15,13 @@ const items = [
     title: 'Экспертиза качества ремонта',
     description: 'Проведем непредвзятое исследование качества ремонта автомобиля в автосервисе.'  
   },
-  {
-    img: '',
-    title: 'Экспертиза качества ремонта',
-    description: 'Проведем непредвзятое исследование качества ремонта автомобиля в автосервисе.'  
-  },
-  {
-    img: '',
-    title: 'Экспертиза качества ремонта',
-    description: 'Проведем непредвзятое исследование качества ремонта автомобиля в автосервисе.'  
-  },
 ]
 const emit = defineEmits(['action'])
 </script>
 
 <template>
   <div class="services">
-    <h3 class="relative z-4" style="color: red; font-size:42px;">Секция 4:Вариант: 2 нужен текст и картинки (если нету картинок я поищу в интернете )</h3>
+    <!-- <h3 class="relative z-4" style="color: red; font-size:42px">Секция 4:Вариант: 2 нужен текст и картинки (если нету картинок я поищу в интернете )</h3> -->
     <h1>Наши услуги</h1>
     <span>Независимые оценщики при подсчете суммы ущерба используют только реальные рыночные цены, и они не отчитываются перед страховой компанией</span>
     <div class="content">
@@ -88,10 +78,10 @@ const emit = defineEmits(['action'])
             @apply w-full mt-20px;
             button {
               @apply text-20px uppercase py-20px w-full px-10px rounded-4px;
-              background-color: #d44157;
+              background-color: #0C698F;
               color: #F2F2F4;
               &:hover {
-                background-color: rgb(127, 26, 41);
+                background-color: hwb(197 4% 62%);
               }
             }
           }
