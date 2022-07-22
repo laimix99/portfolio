@@ -14,7 +14,7 @@
     }, 
     {
       title: 'Юридическое сопровождение-Независимая экспертиза', 
-      img: '/images/commissioner/price/item-3.jpg',
+      img: 'http://9202430.ru/wp-content/uploads/2019/07/93.jpg',
       price: '15 000', 
       descripton: 'После ДТП у пострадавшего лица есть право на независимую экспертизу.Проводим полный осмотр вашего т/с на СТО, делаем полный разбор автомобиля (если это необходимо), учитываем все скрытые дефекты после ДТП. Предоставляем независимого эксперта.Добьёмся для вас полного страхового возмещения от страховой компании.'
     },
@@ -79,7 +79,7 @@
           @apply h-630px;
         }
         img {
-          @apply w-full max-w-350px h-full max-h-160px ;
+          @apply w-full max-w-350px h-full max-h-200px ;
         }
         .text {
           @apply flex flex-col items-start h-full mt-10px;
@@ -87,18 +87,22 @@
             @apply w-full text-20px font-700 text-left;
             line-height: 120%;
             color: rgb(29, 28, 28);
+
           }
           p {
             @apply w-full text-16px text-left mt-10px;
             line-height: 140%;
             color: rgb(29, 28, 28);
+            @media screen and (max-width: 767px) {
+              @apply leading-20px;
+            }
           }
         }
         
         .price {
-          @apply flex flex-row w-full items-end justify-start mb-20px;
+          @apply flex flex-row w-full items-end justify-start mb-5px;
           span {
-            @apply text-42px text-left mt-20px font-700;
+            @apply text-42px text-left mt-10px font-700;
             color: #0C698F;
             @media screen and (max-width: 767px) {
               @apply text-30px;
