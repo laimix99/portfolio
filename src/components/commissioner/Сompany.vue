@@ -3,11 +3,10 @@
     <div class="container">
       <!-- <h3 class="relative z-4" style="color: red; font-size:42px;">Секция 5: нужен текст. Если эту секцию не надо то я ее уберу</h3> -->
       <h1>О компании</h1>
-      <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi quidem nam, explicabo cumque sit repudiandae iste nisi sint eaque possimus modi eos, facilis corrupti voluptates magni rem enim dolore provident.
-        Voluptates cum deserunt ipsa neque adipisci veritatis vero quos blanditiis similique possimus! Qui, quos nemo maiores ratione saepe reprehenderit ipsum doloremque numquam corrupti, atque necessitatibus quibusdam perferendis? Veritatis, dolorum ipsam?
-        Fugiat ea, corporis doloremque modi ipsum earum similique nesciunt vel voluptatum. Id corrupti hic eum harum numquam voluptatem rem ipsa maxime repudiandae deleniti porro vero delectus, reiciendis debitis, veniam quisquam!
-        Saepe perferendis, consequuntur hic quaerat facilis corrupti dicta assumenda a amet veniam eum itaque molestias provident sit labore autem veritatis ex repellendus voluptates illum atque omnis eos placeat possimus. Dignissimos!
-        Veritatis, sequi incidunt nobis ipsam maxime nesciunt laudantium qui iusto? Porro ea amet minima impedit quae at voluptates obcaecati sequi voluptas sapiente cupiditate, rem perferendis placeat aperiam dolores eveniet fuga?
+      <span>
+        О компании: компания Центр Урегулирования Убытков предлагает услуги аварийного комиссара, который поможет отстоять ваши права при наступлении ДТП. Профильный эксперт берет на себя все хлопоты, связанные с оформлением происшествия, переговорами с другими участниками аварии, страховыми компаниями.
+        Вызвать аварийного комиссара вы можете в любое время. Мы работаем круглосуточно, чтобы защитить ваши интересы в спорных ситуациях со страховыми компаниями и другими участниками ДТП. Готовы предоставить объективное экспертное мнение по поводу того, можно ли считать произошедшее страховым случаем; рассчитать ущерб, используя точные специнструменты; помочь вам избежать страхового мошенничества.
+        Мы скрупулезно соблюдаем все формальности, действуем в рамках закона и в интересах заказчика, чтобы добиться наиболее выгодного исхода в случае ДТП.
       </span>
     </div>
   </div>

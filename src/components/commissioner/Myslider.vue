@@ -58,7 +58,7 @@ const navigation = {
 .my-slider {
   @apply relative h-full;
   @media screen and (max-width: 991px) {
-    @apply max-h-700px;
+    @apply h-800px;
   }
   .next {
     @apply p-10px rounded-1/2 absolute right-0 top-1/2;
@@ -70,7 +70,7 @@ const navigation = {
       @apply right-80px;
     }
     @media screen and (max-width: 767px) {
-      @apply p-5px  right-40px;
+      @apply hidden;
     }
     @media screen and (max-width: 479px) {
       @apply -top-40px right-120px;
@@ -92,7 +92,7 @@ const navigation = {
       @apply left-80px;
     }
     @media screen and (max-width: 767px) {
-      @apply p-5px  left-40px;
+      @apply hidden;
     }
      @media screen and (max-width: 479px) {
       @apply -top-40px left-120px;
@@ -108,13 +108,13 @@ const navigation = {
     max-width: 900px;
     height: 100%;
     @media screen and (max-width: 991px) {
-      @apply max-w-400px h-500px;
+      @apply max-w-400px h-800px;
     }
     @media screen and (max-width: 767px) {
-      @apply max-w-250px;
+      @apply max-w-400px;
     }
     @media screen and (max-width: 479px) {
-      @apply max-w-300px;
+      @apply max-w-350px;
     }
     // @media screen and (max-width: 767px) {
     //   @apply max-w-300px;
