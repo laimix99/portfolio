@@ -43,7 +43,7 @@
       height: 90;
       
       &-title {
-        font-size: 28px;
+        font-size: 22px;
       }
       &-text {
         font-size: 16px;
