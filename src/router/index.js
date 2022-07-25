@@ -19,6 +19,7 @@ import TodoLayout from '../layouts/TodoLayout.vue';
 import KryptoLayout from '../layouts/KryptoLayout.vue'
 import BreewLayout from '../layouts/BreewLayout.vue'
 import СommissionerLayout from '../layouts/СommissionerLayout.vue'
+import TrelloLayout from '../layouts/TrelloLayout.vue'
 import ErrorPage from '../pages/ErrorPage.vue';
 
 const router = createRouter({
@@ -135,6 +136,13 @@ const router = createRouter({
     {
       path: '/commissioner',
       component: СommissionerLayout,
+      children: [
+        
+      ],
+    },
+    {
+      path: '/trello',
+      component: TrelloLayout,
       children: [
         
       ],

@@ -6,6 +6,7 @@ const links = [
   { path: '/deli', name: 'Deli', img: 'https://investelite.ru/wp-content/uploads/2021/10/1577440491_gf7tmw-9k6m.jpg', subtitle: 'Delimobile website' },
   { path: '/krypto', name: 'Krypto', img: '/images/krypto/main-layout/cover.png', subtitle: 'Krypto website' },
   { path: '/breew', name: 'Breew', img: '/images/breew/main-layout/breew-bg.png', subtitle: 'Breew website' },
+  { path: '/trello', name: 'Trello', img: '', subtitle: '' },
   { path: '/commissioner', name: 'Сommissioner', img: '', subtitle: 'Сommissioner website' },
   // { path: '/', name: 'My app' },
   // { path: '/spinner', name: 'Spinner' },
