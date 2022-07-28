@@ -1,4 +1,5 @@
 <script setup>
+import { ref, computed, reactive, onBeforeMount } from 'vue';
 import FirstSection from '../components/breew/FirstSection.vue'
 import SecondSection from '../components/breew/SecondSection.vue'
 import ThirdSection from '../components/breew/ThirdSection.vue'
@@ -13,15 +14,15 @@ import Footer from '../components/breew/Footer.vue'
 // import BurgerIcon from '../components/commissioner/BurgerIcon.vue'
 // import CrossIcon from '../components/commissioner/CrossIcon.vue'
 import { useWindowSize } from '@vueuse/core'
-// const showMobileMenu = ref(false)
-// const { width, height } = useWindowSize()
-// const showButton = computed(() => {
-//   if (width.value < 991) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// })
+const showMobileMenu = ref(false)
+const { width, height } = useWindowSize()
+const showButton = computed(() => {
+  if (width.value < 991) {
+    return true;
+  } else {
+    return false;
+  }
+})
 // const handleMobileMenu = () => {
 // showMobileMenu.value = !showMobileMenu.value
 // }
@@ -33,7 +34,7 @@ const links = ['Home', 'About', 'Token', 'Pages']
     <div class="container">
       <div class="header">
         <img src="/images/breew/header/logo.png" alt="">
-        <div class="menu">
+        <div v-if="showButton ? showMobileMenu : true" class="menu" :class="{ 'mobile-links' : showButton }">
           <div class="link" v-for="link in links">{{ link }}</div>
         </div>
         <button>Download app</button>
@@ -78,4 +79,19 @@ const links = ['Home', 'About', 'Token', 'Pages']
       }
     }
   }
+      .mobile-links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      padding: 20px 0px;
+      z-index: 999;
+      width: 100%;
+      background: #eee;
+      box-shadow: 1px 1px 30px rgb(0, 0, 0, 0.3);
+      @apply flex-col items-center space-y-4;
+      .link {
+        margin-left: 30px;
+        color: black !important;
+      }
+    }
 </style>
