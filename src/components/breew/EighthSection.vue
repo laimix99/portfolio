@@ -10,7 +10,7 @@
   <div class="eighth-section">
     <div class="container">
       <div class="title">
-        <h1>07</h1>
+        <h1>06</h1>
         <span>08</span>
       </div>
       <p>Latest resources</p>
@@ -35,8 +35,14 @@
 <style scoped lang="scss">
   .eighth-section {
     @apply flex flex-col items-center w-full pt-200px pb-200px;
+    @media screen and (max-width: 767px) {
+      @apply pb-50px;
+    }
     .container {
       @apply w-full max-w-1500px flex flex-col items-start;
+      @media screen and (max-width: 1500px) {
+        @apply max-w-1100px px-10px;
+      }
       .title {
         @apply w-full max-w-198px flex justify-between relative;
         h1 {
@@ -60,14 +66,31 @@
       p {
         @apply text-75px leading-89px mt-42px font-700;
         color: #1A1A1A; 
+        @media screen and (max-width: 1500px) {
+          @apply text-50px;
+        }
       }
       .items {
         @apply w-full flex mt-160px;
+        @media screen and (max-width: 1500px) {
+          @apply mt-70px flex-wrap justify-center;
+        }
         .item {
-          @apply flex flex-col items-start bg-white py-37px px-33px mr-29px;
+          @apply flex flex-col items-start bg-white py-37px px-33px mx-15px;
           border: 1px solid rgba(0, 0, 0, 0.2);
           border-radius: 40px;
-          width: calc(33.33% - 29px);
+          width: calc(33.33% - 30px);
+          @media screen and (max-width: 1500px) {
+            @apply py-15px px-10px;
+          }
+          @media screen and (max-width: 991px) {
+            @apply mt-15px;
+            width: calc(50% - 30px);
+          }
+          @media screen and (max-width: 767px) {
+            @apply ;
+            width: calc(100% - 30px);
+          }
           &-date {
             @apply flex w-full justify-between max-w-291px relative mt-40px;
             h2 {

@@ -9,7 +9,7 @@
 <template>
   <div class="sixth-section">
     <div class="title">
-      <h1>05</h1>
+      <h1>04</h1>
       <span>08</span>
     </div>
     <p>Get started with Breew in 3 easy steps</p>
@@ -38,7 +38,7 @@
 
 <style scoped lang="scss">
   .sixth-section {
-    @apply w-full flex flex-col items-center pb-178px;
+    @apply w-full flex flex-col items-center pt-50px pb-178px;
     .title {
       @apply w-full max-w-198px flex justify-between relative;
       h1 {
@@ -62,34 +62,75 @@
     p {
       @apply text-75px leading-89px font-700 w-full max-w-850px mt-50px;
       color: #1A1A1A;
+      @media screen and (max-width: 1500px) {
+        @apply text-50px;
+      }
+      @media screen and (max-width: 767px) {
+        @apply text-40px;
+      }
     }
     .content {
       @apply w-full max-w-1500px mt-200px flex justify-between;
-      .left-col {}
+      @media screen and (max-width: 1500px) {
+        @apply max-w-1100px px-10px mt-50px;
+      }
+      @media screen and (max-width: 991px) {
+        @apply flex-col items-center;
+        flex-direction: column-reverse;
+      }
+      .left-col {
+        img {
+          @media screen and (max-width: 991px) {
+            @apply w-full max-w-600px mt-20px ml-50px;
+          }
+          @media screen and (max-width: 767px) {
+            @apply ml-0;
+          }
+        }
+      }
       .right-col {
         @apply flex flex-col items-center w-full max-w-1/2;
+        @media screen and (max-width: 1500px) {
+          @apply max-w-400px;
+        }
+         @media screen and (max-width: 991px) {
+          @apply  max-w-full;
+         }
         .items {
           @apply flex flex-col items-start w-full mt-10px;
           .item {
             @apply flex items-center items-start mb-100px;
+            @media screen and (max-width: 1500px) {
+              @apply mb-30px;
+            }
             img {
               @apply mr-26px;
+               
             }
             &-text {
               @apply flex flex-col items-start;
               &-title {
                 @apply text-25px leading-41px font-700;
                 color: #1A1A1A;
+                @media screen and (max-width: 1500px) {
+                  @apply text-left;
+                }
               }
               &-description {
                 @apply text-22px leading-33px text-left mt-32px;
                 color: #1A1A1A;
+                @media screen and (max-width: 767px) {
+                  @apply mt-10px;
+                }
               }
             }
           }
         }
         .buttons {
           @apply mt-34px flex;
+          @media screen and (max-width: 1500px) {
+            @apply flex-col;
+          }
           button {
             @apply text-24px leading-36px font-700 mr-40px text-white rounded-31px py-34px px-51px w-300px;
             background: #0582CA;
@@ -98,6 +139,9 @@
               color: #0582CA;
               background: #FFFFFF;
               outline: 1px solid rgba(0, 0, 0, 0.2);
+            }
+            @media screen and (max-width: 1500px) {
+              @apply text-18px px-30px mt-10px mr-0;
             }
           }
         }

@@ -118,55 +118,5 @@ showMobileMenu.value = !showMobileMenu.value
     @apply absolute top-24px right-10px;
   }
 }
-// .lang {
-//   @media screen and (max-width: 991px) {
-//     @apply mr-50px ;
-//   }
-// }
-// .burger {
-//   @apply absolute top-20px right-20px;
-// }
-// .mobile-links {
-//   position: absolute;
-//   top: 100%;
-//   left: 0;
-//   padding: 20px 0px;
-  
-//   z-index: 999;
-//   width: 100%;
-//   background: #eee;
-//   box-shadow: 1px 1px 30px rgb(0, 0, 0, 0.3);
-//   @apply flex-col items-center space-y-4;
-//   h1 {
-//     color: black !important;
-//   }
-// }
-//   .krypto {
-//     background: #160E33;
-//     .all-projects {
-//       background: url('https://thypix.com/wp-content/uploads/blue-arrow-79.png')center no-repeat;
-//       background-size: 100%;
-//       }
-//     .header {
-//       @media screen and (max-width: 991px) {
-//         @apply py-20px px-20px;
-//       }
-//       @media screen and (max-width: 767px) {
-//         h1 {
-//           @apply text-18px mr-15px;
-//         }
-//         img {
-//           @apply w-50px;
-//         }
-//       }
-//       @media screen and (max-width: 479px) {
-//         h1 {
-//           @apply mr-10px;
-//         .lang {
-//           @apply hidden;
-//         }
-//       }
-//     }
-//   }
-// }
+
 </style>
