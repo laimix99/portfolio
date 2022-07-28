@@ -10,12 +10,27 @@ import EighthSection from '../components/breew/EighthSection.vue'
 import NinthSection from '../components/breew/NinthSection.vue'
 import TenthSection from  '../components/breew/TenthSection.vue'
 import Footer from '../components/breew/Footer.vue'
-  const links = ['Home', 'About', 'Token', 'Pages']
+// import BurgerIcon from '../components/commissioner/BurgerIcon.vue'
+// import CrossIcon from '../components/commissioner/CrossIcon.vue'
+import { useWindowSize } from '@vueuse/core'
+// const showMobileMenu = ref(false)
+// const { width, height } = useWindowSize()
+// const showButton = computed(() => {
+//   if (width.value < 991) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// })
+// const handleMobileMenu = () => {
+// showMobileMenu.value = !showMobileMenu.value
+// }
+const links = ['Home', 'About', 'Token', 'Pages']
 </script>
 
 <template>
   <div class="breew-layout">
-    <div class="container ">
+    <div class="container">
       <div class="header">
         <img src="/images/breew/header/logo.png" alt="">
         <div class="menu">
@@ -24,23 +39,23 @@ import Footer from '../components/breew/Footer.vue'
         <button>Download app</button>
       </div>
     </div>
-    <FirstSection/>
-    <SecondSection/>
-    <ThirdSection/>
-    <FourthSection/>
-    <FifthSection/>
-    <SixthSection/>
-    <SeventhSection/>
-    <EighthSection/>
-    <NinthSection/>
-    <TenthSection/>
-    <Footer/>
+    <!-- <FirstSection/> -->
+    <!-- <SecondSection/> -->
+    <!-- <ThirdSection/> -->
+    <!-- <FourthSection/> -->
+    <!-- <FifthSection/> -->
+    <!-- <SixthSection/> -->
+    <!-- <SeventhSection/> -->
+    <!-- <EighthSection/> -->
+    <!-- <NinthSection/> -->
+    <!-- <TenthSection/> -->
+    <!-- <Footer/> -->
   </div>
 </template>
 
 <style scoped lang="scss">
   .breew-layout {
-    @apply flex flex-col items-center w-full pt-68px;
+    @apply flex flex-col items-center w-full py-10px;
     background-color: #FAFAFA;
     
     .container {
