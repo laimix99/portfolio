@@ -1,10 +1,10 @@
 <script setup>
-  import { ref, computed, reactive, onBeforeMount, onMounted } from 'vue';
-  import { Swiper, SwiperSlide } from 'swiper/vue';
-  import { Navigation,} from 'swiper';
-  import 'swiper/css';
-  import { useWindowSize } from '@vueuse/core'
-  const { width, height } = useWindowSize()
+import { ref, computed, reactive, onBeforeMount, onMounted } from 'vue';
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Navigation,} from 'swiper';
+import 'swiper/css';
+import { useWindowSize } from '@vueuse/core'
+const { width, height } = useWindowSize()
 const onSwiper = (swiper) => {
   console.log(swiper);
 };

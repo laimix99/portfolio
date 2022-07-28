@@ -31,7 +31,8 @@ const links = ['Home', 'About', 'Token', 'Pages']
 
 <template>
   <div class="breew-layout">
-    <div class="container">
+    <router-link to="/" class="all-projects bg-no-repeat w-40px h-40px cursor-pointer top-10px left-10px absolute"/>
+    <div class="container ">
       <div class="header">
         <img src="/images/breew/header/logo.png" alt="">
         <div v-if="showButton ? showMobileMenu : true" class="menu" :class="{ 'mobile-links' : showButton }">
@@ -58,6 +59,10 @@ const links = ['Home', 'About', 'Token', 'Pages']
   .breew-layout {
     @apply flex flex-col items-center w-full py-10px;
     background-color: #FAFAFA;
+    .all-projects {
+      background: url('https://thypix.com/wp-content/uploads/blue-arrow-79.png')center no-repeat;
+      background-size: 100%;
+    }
     
     .container {
       @apply w-full max-w-1500px; 

@@ -6,6 +6,8 @@ const links = [
   { path: '/deli', name: 'Deli', img: 'https://investelite.ru/wp-content/uploads/2021/10/1577440491_gf7tmw-9k6m.jpg', subtitle: 'Delimobile website' },
   { path: '/krypto', name: 'Krypto', img: '/images/krypto/main-layout/cover.png', subtitle: 'Krypto website' },
   { path: '/breew', name: 'Breew', img: '/images/breew/main-layout/breew-bg.png', subtitle: 'Breew website' },
+  { path: '/trello', name: 'Trello', img: 'https://telecomdaily.ru/img/news/2021/02_21/trello.jpg', subtitle: 'trello website' },
+  { path: '/commissioner', name: 'Сommissioner', img: 'https://оценка174.рф/images/img/avariynyy-komissar.jpg', subtitle: 'Сommissioner website' },
   // { path: '/', name: 'My app' },
   // { path: '/spinner', name: 'Spinner' },
   // { path: '/stock', name: 'Stock' },
@@ -22,7 +24,7 @@ const links = [
   >
     <div class="name" />
     <div class="w-full flex flex-col items-start  max-w-1600px lg:p-20px p-10px">
-      <h1 class="title text-light-50 text-50px pt-30px">My portfolio</h1>
+      <h1 class="title text-light-50 text-50px pt-30px leading-60px">laimix99 gallery</h1>
       <div class=" mt-50px flex flex-row justify-start items-center flex-wrap py-20px w-full z-2">
         
         <router-link
@@ -39,16 +41,17 @@ const links = [
         </router-link>
       </div>
     </div>
-    <div class="flex justify-center w-full z-2">
+    <!-- <div class="flex justify-center w-full z-2">
       <router-view/>
-    </div>
+    </div> -->
   </div>
 
 </template>
 
 <style scoped lang="scss">
 .layout {
-  background: url('https://media1.giphy.com/media/ZVik7pBtu9dNS/giphy.gif?cid=ecf05e47rst13k9d9bbblr3n084srlcjt14d36ve0u0hcuis&rid=giphy.gif&ct=g')center center/cover no-repeat;
+  // background: url('https://media1.giphy.com/media/ZVik7pBtu9dNS/giphy.gif?cid=ecf05e47rst13k9d9bbblr3n084srlcjt14d36ve0u0hcuis&rid=giphy.gif&ct=g')center center/cover no-repeat;
+  background-color: black;
   overflow-x: hidden;
 }
 .item {
