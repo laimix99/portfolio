@@ -1,4 +1,5 @@
 <script setup>
+import Button from './Button.vue'
 const titles = [
   'Вызов по Екатеринбургу круглосуточно', 
   'Приедем в течении 15 минут', 

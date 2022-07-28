@@ -32,11 +32,23 @@
 
 <style scoped lang="scss">
   .third-section {
-    @apply w-full flex flex-col items-center pt-145px;
+    @apply w-full flex flex-col items-center pt-145px pb-100px;
     .container {
       @apply w-full max-w-1500px flex justify-between items-center;
+      @media screen and (max-width: 1500px) {
+        @apply max-w-1100px px-10px;
+      }
+      @media screen and (max-width: 991px) {
+        @apply flex-col items-center;
+      }
       .left-col {
         @apply flex flex-col items-start w-full max-w-750px;
+        @media screen and (max-width: 1500px) {
+          @apply max-w-400px;
+        }
+        @media screen and (max-width: 991px) {
+          @apply items-center max-w-full;
+        }
         .title {
           @apply w-full max-w-198px flex justify-between relative;
           h1 {
@@ -60,9 +72,24 @@
         .text {
           @apply text-75px leading-89px font-700 not-italic text-left mt-50px w-full max-w-553px;
           color: #1A1A1A;
+          @media screen and (max-width: 1500px) {
+            @apply text-50px; 
+          }
+          @media screen and (max-width: 991px) {
+            @apply text-center ;
+          }
+          @media screen and (max-width: 767px) {
+            @apply text-40px;
+          }
         }
         .description {
           @apply text-22px leading-33px text-black text-left w-full max-w-600px mt-50px;
+          @media screen and (max-width: 991px) {
+            @apply text-center;
+          }
+          @media screen and (max-width: 767px) {
+            @apply text-18px leading-25px;
+          }
         }
         .services {
           @apply flex flex-col mt-50px;
@@ -74,12 +101,26 @@
             span {
               @apply text-22px leading-33px font-700;
               color: #1A1A1A;
+              @media screen and (max-width: 767px) {
+                @apply text-left;
+              }
             }
           }
         }
       }
       .right-col {
-
+        img {
+          @media screen and (max-width: 1500px) {
+            width: 100%;
+            max-width: 700px;
+          }
+          @media screen and (max-width: 991px) {
+            @apply -ml-50px mt-30px;
+          }
+          @media screen and (max-width: 767px) {
+            @apply -ml-10px;
+          }
+        }
       }
     }
   }
