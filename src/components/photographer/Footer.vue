@@ -42,12 +42,18 @@ const images = [
     h1 {
       @apply text-36px font-700 text-white z-3 pt-50px pb-200px; 
       font-family: 'Poppins', sans-serif;
+      @media screen and (max-width: 767px) {
+        @apply pb-100px text-25px;
+      }
 
     }
     .items {
       @apply flex flex-row w-full ;
+      @media screen and (max-width: 991px) {
+        @apply flex-wrap justify-center;
+      }
       img {
-        @apply w-full z-3 mx-10px;
+        @apply w-full z-3 mx-10px ;
         max-width: 200px ;
         max-height: 280px;
         &:nth-child(1) {
@@ -65,10 +71,21 @@ const images = [
         &:nth-child(5) {
           margin-top: -180px
         }
+        @media screen and (max-width: 1117px) {
+          @apply ;
+          width: calc(33.33% - 20px);
+          &:nth-child(1n) {
+            margin-top: 0px
+          }
+
+        }
       }
     }
     .massengers {
       @apply pb-50px pt-80px;
+      @media screen and (max-width: 767px) {
+        @apply pt-30px;
+      }
     }
   }
 }

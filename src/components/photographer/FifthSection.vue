@@ -40,19 +40,38 @@ const items = [
   background: rgba(183, 76, 76, 0.35);
   .container {
     @apply flex flex-row items-center w-full max-w-1110px px-10px py-60px;
+    @media screen and (max-width: 991px) {
+      // @apply flex-col;
+    }
     .items {
       @apply flex flex-row w-full;
+      @media screen and (max-width: 991px) {
+        @apply flex-col items-center;
+      }
       .item {
         @apply flex flex-col items-start mx-15px py-45px pl-40px relative;
         width: calc(50% - 30px);
         background: white;
+        @media screen and (max-width: 991px) {
+          @apply mt-15px;
+          width: calc(100% - 30px);
+        }
+        @media screen and (max-width: 767px) {
+          @apply  pl-10px; 
+        }
         h1 {
           @apply text-36px font-700 text-black;
           font-family: 'Poppins', sans-serif;
+          @media screen and (max-width: 767px) {
+            @apply text-25px;
+          }
         }
         span {
           @apply text-18px text-black leading-30px text-left w-full max-w-350px mt-30px;
           font-family: 'Poppins', sans-serif;
+          @media screen and (max-width: 767px) {
+            @apply text-15px;
+          }
         }
         a {
 
@@ -62,11 +81,17 @@ const items = [
             &:hover {
               background: rgba(138, 82, 64, 0.47);  
             }
+            @media screen and (max-width: 767px) {
+              @apply text-18px px-50px;
+            }
           }
         }
         .next {
           @apply absolute right-30px top-38px rounded-1/2 p-10px;
           border: 1px solid black;
+          @media screen and (max-width: 767px) {
+            @apply right-10px;
+          }
         }
       }
     }

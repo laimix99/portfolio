@@ -27,6 +27,9 @@ import MySvg from './MySvg.vue'
   background: rgba(176, 85, 85, 0.63);
   .container {
     @apply flex flex-row justify-between items-center w-full max-w-1110px px-10px pt-100px pb-130px;
+    @media screen and (max-width: 991px) {
+      @apply flex-col;
+    }
     .left-col {
       @apply ;
       img {
@@ -35,6 +38,9 @@ import MySvg from './MySvg.vue'
     }
     .right-col {
       @apply flex flex-col items-center;
+      @media screen and (max-width: 991px) {
+        @apply mt-30px;
+      }
       h1 {
         @apply text-36px font-700 text-white;
         font-family: 'Poppins', sans-serif;
@@ -48,6 +54,9 @@ import MySvg from './MySvg.vue'
         color: rgba(0, 0, 0, 0.57);
         background: rgba(255, 255, 255, 0.49);
         font-family: 'Poppins', sans-serif;
+        @media screen and (max-width: 767px) {
+          @apply text-20px;
+        }
       }
     }
   }
