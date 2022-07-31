@@ -20,6 +20,7 @@ import KryptoLayout from '../layouts/KryptoLayout.vue'
 import BreewLayout from '../layouts/BreewLayout.vue'
 import СommissionerLayout from '../layouts/СommissionerLayout.vue'
 import TrelloLayout from '../layouts/TrelloLayout.vue'
+import PhotographerLayout from '../layouts/PhotographerLayout.vue'
 import ErrorPage from '../pages/ErrorPage.vue';
 
 const router = createRouter({
@@ -146,6 +147,10 @@ const router = createRouter({
       children: [
         
       ],
+    },
+    {
+      path: '/photographer',
+      component: PhotographerLayout,
     },
     {
       path: '/:pathMatch(.*)*',

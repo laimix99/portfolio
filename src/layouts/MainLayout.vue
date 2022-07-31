@@ -3,6 +3,7 @@ const links = [
   { path: '/calculator', name: 'Calculator',img: 'https://kartinkin.net/uploads/posts/2021-07/1626739220_8-kartinkin-com-p-kalkulyator-fon-krasivo-9.jpg', subtitle: 'Here you can see different versions of Calculator' },
   { path: '/todo', name: 'Todo', img: 'https://smartprogress.do/uploadImages/001487344.jpg', subtitle: 'Here you can see different versions of ToDo' },
   { path: '/movies', name: 'Movies', img: 'https://xchip.ru/wp-content/uploads/2021/09/yvavya.jpg', subtitle: 'Application for the movies and series search' },
+  { path: '/photographer', name: 'Photographer', img: 'https://static-cdn5.vigbo.tech/u2973/47326/blog/4207466/2993450/37770917/1000-f5195c6a20508d0cdc0d4aa514865bd1.jpg', subtitle: 'Photographer website' },
   { path: '/deli', name: 'Deli', img: 'https://investelite.ru/wp-content/uploads/2021/10/1577440491_gf7tmw-9k6m.jpg', subtitle: 'Delimobile website' },
   { path: '/krypto', name: 'Krypto', img: '/images/krypto/main-layout/cover.png', subtitle: 'Krypto website' },
   { path: '/breew', name: 'Breew', img: '/images/breew/main-layout/breew-bg.png', subtitle: 'Breew website' },
