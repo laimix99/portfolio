@@ -21,6 +21,7 @@ import BreewLayout from '../layouts/BreewLayout.vue'
 import СommissionerLayout from '../layouts/СommissionerLayout.vue'
 import TrelloLayout from '../layouts/TrelloLayout.vue'
 import PhotographerLayout from '../layouts/PhotographerLayout.vue'
+import GeeckoLayout from '../layouts/GeeckoLayout.vue'
 import ErrorPage from '../pages/ErrorPage.vue';
 
 const router = createRouter({
@@ -151,6 +152,9 @@ const router = createRouter({
     {
       path: '/photographer',
       component: PhotographerLayout,
+    },{
+      path: '/geecko',
+      component: GeeckoLayout,
     },
     {
       path: '/:pathMatch(.*)*',

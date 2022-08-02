@@ -9,6 +9,7 @@ const links = [
   { path: '/breew', name: 'Breew', img: '/images/breew/main-layout/breew-bg.png', subtitle: 'Breew website' },
   { path: '/trello', name: 'Trello', img: 'https://telecomdaily.ru/img/news/2021/02_21/trello.jpg', subtitle: 'trello website' },
   { path: '/commissioner', name: 'Сommissioner', img: 'https://оценка174.рф/images/img/avariynyy-komissar.jpg', subtitle: 'Сommissioner website' },
+  { path: '/geecko', name: 'Geecko', img: '', subtitle: '' },
   // { path: '/', name: 'My app' },
   // { path: '/spinner', name: 'Spinner' },
   // { path: '/stock', name: 'Stock' },
