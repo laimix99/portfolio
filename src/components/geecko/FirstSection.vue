@@ -273,6 +273,8 @@ const onSlideChange = () => {
             <div class="block-developers">
               <ButtonMy
                 icon="fire"
+                color="#FFD91D"
+                text_color="#1A1B35"
               >
                 Hire Developers
               </ButtonMy>
@@ -334,7 +336,7 @@ const onSlideChange = () => {
 .first-section {
   @apply flex flex-col items-center w-full pt-60px;
   .container {
-    @apply flex flex-col items-start w-full max-w-1280px ;
+    @apply flex flex-col items-start w-full max-w-1300px pl-100px;
     p {
       @apply text-51px font-400 w-full text-left ;
       color: #9591AA;
@@ -360,12 +362,12 @@ const onSlideChange = () => {
     .content {
       @apply flex flex-row items-center w-full h-600px -mt-40px;
       .left-col {
-        @apply flex flex-col w-full max-w-600px box-border;
+        @apply flex flex-col w-full max-w-800px box-border;
         background: rgba(230, 229, 226, 0.15);
         border: 0.5px solid #CCCCCC;
         border-radius: 15px;
         .block {
-          @apply flex flex-col items-start py-40px pl-67px box-border;
+          @apply flex flex-col w-full items-start py-40px pl-50px box-border;
           &-title {
             @apply text-28px text-left;
             line-height: 140%;
