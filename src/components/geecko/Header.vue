@@ -29,6 +29,7 @@ const links = [
 <style scoped lang="scss">
 .header {
   @apply flex flex-col items-center w-full;
+  
   .container {
     @apply flex flex-col items-center w-full max-w-1110px px-10px;
     .menu {

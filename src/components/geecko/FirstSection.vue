@@ -290,11 +290,15 @@ const onSlideChange = () => {
             <button class="next ">
               <MySvg
                 name="next"
+                width="30"
+                height="30"
               />
             </button>
             <button class="prev">
               <MySvg
                 name="prev"
+                width="30"
+                height="30"
               />
             </button>
           </div>

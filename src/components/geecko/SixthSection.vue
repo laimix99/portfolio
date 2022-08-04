@@ -11,7 +11,7 @@ const items = [
 
 <template>
   <div class="sixth-section">
-    <div class="container br">
+    <div class="container">
       <div class="top-container">
         <div class="left-col">
           <h1>We are <span>Geecko</span></h1>

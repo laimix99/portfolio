@@ -1,5 +1,5 @@
 <template>
-  <div class="photo-block bg">
+  <div class="photo-block">
     <img class="item-1" src="/images/geecko/sixth-section/item-1.png" alt="">
     <img class="item-2" src="/images/geecko/sixth-section/item-2.png" alt="">
     <img class="item-3" src="/images/geecko/sixth-section/item-3.png" alt="">
