@@ -1,5 +1,6 @@
 <script setup>
 import ButtonMy from './ButtonMy.vue'
+import Stop from './Stop.vue'
 const items = [
   { title: 'Coding test — 98%', description: 'General Programming Python' },
   { title: 'English level', description: 'Proficiency (C2)' }
@@ -38,6 +39,7 @@ const items = [
               try 1 week free
             </ButtonMy>
           </div>
+          <Stop/>
         </div>
       </div>
       <div class="tools-block">
@@ -73,7 +75,7 @@ const items = [
         color: #231F20;
       }
       .block {
-        @apply flex flex-row items-center w-full justify-between pt-36px pl-83px pr-68px pb-33px;
+        @apply flex flex-row items-center w-full justify-between pt-36px pl-83px pr-68px pb-33px relative mt-40px;
         background: rgba(255, 255, 255, 0.3);
         border: 0.5px solid #FFFFFF;
         border-radius: 15px;
