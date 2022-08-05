@@ -17,9 +17,10 @@ const items = [
           <div class="left-col">
             <div class="left-col-title">Fast track to hire</div>
             <div class="left-col-video">
-              <video controls>
+              <!-- <video controls>
               <source src="dir/film.mp4" type="video/mp4">
-              </video>
+              </video> -->
+              <div class="video"></div>
             </div>
             <div class="left-col-description">Check out their video pitch</div>
           </div>
@@ -94,7 +95,8 @@ const items = [
           &-video {
             @apply mt-15px;
             video {
-              @apply w-406px h-279px;
+              @apply w-406px h-279px ;
+              background: grey;
             }
           }
         }
