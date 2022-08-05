@@ -10,6 +10,8 @@ import SeventhSection from '../components/geecko/SeventhSection.vue'
 import EighthSection from '../components/geecko/EighthSection.vue'
 import NinthSection from '../components/geecko/NinthSection.vue'
 import TenthSection from '../components/geecko/TenthSection.vue'
+import EleventhSection from '../components/geecko/EleventhSection.vue'
+import Footer from '../components/geecko/Footer.vue'
 </script>
 
 <template>
@@ -27,6 +29,10 @@ import TenthSection from '../components/geecko/TenthSection.vue'
     <EighthSection/>
     <NinthSection/>
     <TenthSection/>
+    <div class="gray-gradient">
+      <EleventhSection/>
+      <Footer/>
+    </div>
   </div>
 </template>
 

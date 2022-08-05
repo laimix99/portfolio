@@ -72,4 +72,19 @@ const props = defineProps({
     border-radius: 24px;
     background: #494949;
   }
+  .button-letter {
+    @apply py-12px px-45px rounded-50px flex flex-row items-center w-full;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 95.5%;
+    text-align: center;
+    text-transform: uppercase;
+    background: #4D4E57;
+    color: #FFFFFF;
+    font-family: "Retro Computer";
+    &::after {
+      content: url('/images/geecko/eleventh-section/letter.png');
+      margin-left: 10px;
+    }
+}
 </style>
