@@ -45,7 +45,7 @@ const slides = [
   </div>
 </template>
 
-<style lang="scss">
+<style scoped lang="scss">
 .sixth-section {
   @apply flex flex-col items-center w-full py-100px;
   background: url('/images/photographer/sixth-section/bg.png')center bottom/cover no-repeat;
@@ -59,6 +59,7 @@ const slides = [
 }
 .my-swiper {
   @apply w-full max-w-1110px;
+  cursor: grab;
 }
 .swiper--bullet {
   @apply ;
