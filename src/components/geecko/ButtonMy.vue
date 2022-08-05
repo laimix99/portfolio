@@ -48,4 +48,14 @@ const props = defineProps({
       @apply ml-10px;
     }
   }
+  .button-black {
+    @apply pt-33px pb-38px rounded-20px uppercase px-90px;
+    background: #181830;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 140%;
+    font-family: "Retro Computer";
+    // text-transform: capitalize;
+    color: #FFFFFF;
+  }
 </style>

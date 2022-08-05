@@ -7,6 +7,7 @@ import FourthSection from '../components/geecko/FourthSection.vue'
 import FifthSection from '../components/geecko/FifthSection.vue'
 import SixthSection from '../components/geecko/SixthSection.vue'
 import SeventhSection from '../components/geecko/SeventhSection.vue'
+import EighthSection from '../components/geecko/EighthSection.vue'
 </script>
 
 <template>
@@ -21,6 +22,7 @@ import SeventhSection from '../components/geecko/SeventhSection.vue'
     <FifthSection/>
     <SixthSection/>
     <SeventhSection/>
+    <EighthSection/>
   </div>
 </template>
 
