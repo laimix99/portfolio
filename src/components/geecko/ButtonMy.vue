@@ -58,4 +58,18 @@ const props = defineProps({
     // text-transform: capitalize;
     color: #FFFFFF;
   }
+  .button-grya {
+    @apply py-8px px-64px ;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    font-family: "Retro Computer";
+    // display: flex;
+    // align-items: center;
+    text-align: center;
+    // letter-spacing: 0.01em;
+    color: #FFFFFF;
+    border-radius: 24px;
+    background: #494949;
+  }
 </style>
