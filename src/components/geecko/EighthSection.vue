@@ -36,6 +36,7 @@ import ButtonMy from './ButtonMy.vue'
 <style scoped lang="scss">
 .eighth-section {
   @apply flex flex-col items-center w-full py-100px;
+  overflow-x: hidden;
   .container {
     @apply flex flex-col items-start w-full max-w-1100px;
     h1 {
