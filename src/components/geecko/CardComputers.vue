@@ -40,6 +40,7 @@
 <style scoped lang="scss">
 .card-computers {
   @apply flex flex-col items-center w-full -mt-70px;
+  
   @media screen and (max-width: 767px) {
     @apply px-20px;
   }

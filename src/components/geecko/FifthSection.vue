@@ -48,6 +48,7 @@ const items = [
 .fifth-section {
   @apply flex flex-col items-center w-full py-70px ;
   background: url('/images/geecko/fifth-section/bg.png')center bottom/cover no-repeat;
+  overflow-x: hidden;
   .container {
     @apply flex flex-col items-start w-full max-w-1000px;
     @media screen and (max-width: 991px) {
