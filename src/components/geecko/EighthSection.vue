@@ -41,6 +41,12 @@ import ButtonMy from './ButtonMy.vue'
     h1 {
       @apply text-52px font-400;
       color: #231F20;
+      @media screen and (max-width: 991px) {
+        @apply  w-full max-w-200px text-left px-20px leading-50px;
+      }
+      @media screen and (max-width: 767px) {
+        @apply text-42px;
+      }
       span {
         @apply font-600;
       }
@@ -49,15 +55,30 @@ import ButtonMy from './ButtonMy.vue'
       @apply w-full h-100px relative;
       .cloud-1 {
         @apply absolute top-20px left-250px;
+        @media screen and (max-width: 991px) {
+          @apply w-82px;
+          left: 7%;
+        }
       }
       .cloud-2 {
         @apply absolute top-0 right-200px;
+        @media screen and (max-width: 991px) {
+          @apply w-230px;
+          left: 36%;
+        }
       }
       .cloud-3 {
         @apply absolute top-20px right-40px;
+        @media screen and (max-width: 991px) {
+          display: none;
+        }
       }
       .month {
         @apply absolute -top-70px right-350px;
+        @media screen and (max-width: 991px) {
+          @apply w-50px;
+          left: 65%;
+        }
       }
     }
   }
@@ -67,12 +88,21 @@ import ButtonMy from './ButtonMy.vue'
     background-size: contain;
     background-repeat: repeat-x; 
     background-position: bottom;
+    @media screen and (max-width: 991px) {
+      @apply min-h-632px;
+      background-size: cover;
+    }
     .wrapper {
       @apply w-full max-w-1100px relative h-373px;
+      
+      
       .man {
         @apply h-244px w-254px z-5 absolute left-160px top-100px;
         background: url('/images/geecko/eighth-section/man.png')center center/cover no-repeat;
         background-size: 100%;
+        @media screen and (max-width: 991px) {
+          @apply top-330px left-0;
+        }
         h2 {
           @apply text-23px font-400 absolute top-10px left-30px; 
           color: #07042D;
@@ -83,6 +113,9 @@ import ButtonMy from './ButtonMy.vue'
         @apply h-217px w-176px z-5 absolute left-430px top-100px;
         background: url('/images/geecko/eighth-section/woman.png')center center/cover no-repeat;
         background-size: 100%;
+        @media screen and (max-width: 991px) {
+          @apply top-410px left-190px;
+        }
         p {
           @apply absolute text-20px font-400 top-10px left-30px;
           color: #0D0D0D;
@@ -91,11 +124,19 @@ import ButtonMy from './ButtonMy.vue'
       }
       img {
         @apply absolute -top-140px right-40px z-10;
+        @media screen and (max-width: 991px) {
+          @apply w-321px -top-100px;
+          left: 50%;
+          transform: translate(-50%);
+        }
       }
     }
   }
   .button {
     @apply -mt-35px z-20;
+    @media screen and (max-width: 991px) {
+      @apply w-full -mt-450px;
+    }
   }
 }
 </style>

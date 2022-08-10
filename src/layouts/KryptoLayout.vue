@@ -11,8 +11,8 @@ import Footer from '../components/krypto/Footer.vue'
 import BurgerIcon from '../components/commissioner/BurgerIcon.vue'
 import CrossIcon from '../components/commissioner/CrossIcon.vue'
 import { useWindowSize } from '@vueuse/core'
-const showMobileMenu = ref(false)
 const { width, height } = useWindowSize()
+const showMobileMenu = ref(false)
 const showButton = computed(() => {
   if (width.value < 991) {
     return true;

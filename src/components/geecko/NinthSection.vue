@@ -12,12 +12,12 @@ const items = [
   {img: '/images/geecko/ninth-section/ts.png', title: 'TypeScript'},
   {img: '/images/geecko/ninth-section/php.png', title: 'PHP'},
   {img: '/images/geecko/ninth-section/ruby.png', title: 'Ruby'},
-  {img: '/images/geecko/ninth-section/skala.png', title: 'Skala'},
+  {img: '/images/geecko/ninth-section/scala.png', title: 'Scala'},
   {img: '/images/geecko/ninth-section/swift.png', title: 'Swift'},
   {img: '/images/geecko/ninth-section/java.png', title: 'Java'},
   {img: '/images/geecko/ninth-section/kotlin.png', title: 'Kotlin'},
   {img: '/images/geecko/ninth-section/dart.png', title: 'Dart'},
-  {img: '/images/geecko/ninth-section/obj.png', title: 'Objective-c'},
+  // {img: '/images/geecko/ninth-section/obj.png', title: 'Objective-c'},
 ]
 </script>
 
@@ -26,11 +26,11 @@ const items = [
     <div class="container">
       <h1><span>Pick up skills</span> you needed</h1>
       <div class="search">
-        <input type="text" placeholder="Type in skills you looking for">
-        <MySvg
+        <!-- <input type="text" placeholder="Type in skills you looking for"> -->
+        <!-- <MySvg
           name="search"
           class="icon"
-        />
+        /> -->
       </div>
       <div class="items">
         <div class="item" v-for="item in items">
@@ -54,12 +54,18 @@ const items = [
 .ninth-section {
   @apply flex flex-col items-center w-full py-100px;
   background: linear-gradient(180deg, rgba(221, 217, 213, 0) 0%, rgba(221, 217, 213, 0.5) 100%);
+  @media screen and (max-width: 991px) {
+    @apply mt-200px;
+  }
   .container {
     @apply flex flex-col items-center w-full max-w-1100px;
     h1 {
       @apply text-42px font-400;
       // font-family: 'Proxima Nova';
       color: #231F20;
+      @media screen and (max-width: 767px) {
+        @apply text-42px text-left px-20px;
+      }
       span {
         @apply font-600;
       }
@@ -85,12 +91,22 @@ const items = [
         background: #FFFFFF;
         box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.16);
         border-radius: 5px;
+        @media screen and (max-width: 991px) {
+          @apply;
+          width: calc(50% - 24px);
+        }
         img {
           @apply mr-16px;
+          @media screen and (max-width: 767px) {
+            @apply w-20px;
+          }
         }
         h2 {
           @apply text-20px font-400;
           color: #231F20;
+          @media screen and (max-width: 767px) {
+            @apply text-14px;
+          }
         }
       }
     }

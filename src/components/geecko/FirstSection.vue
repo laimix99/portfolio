@@ -1,12 +1,44 @@
 <script setup>
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Navigation,} from 'swiper';
+import { onMounted, computed,  } from "vue";
+import { useWindowSize } from '@vueuse/core'
 
 import 'swiper/css';
 import ButtonMy from './ButtonMy.vue'
 import Options from './Options.vue'
 import MySvg from './MySvg.vue'
+// import { width } from 'dom7';
+const { width, height } = useWindowSize()
 
+const viewSlides = computed(() => {
+  if (width.value <= 767) {
+    return 1;
+  }
+  if (width.value <= 991){
+    return 2;
+  } 
+  if (width.value <= 1300 ) {
+    return 1;
+  } 
+  else {
+    return 1.5;
+  }
+})
+// const widthSwiper = computed(() => {
+//   if (width.value < 767) {
+//     return 600;
+//   }
+//   if (width.value < 991) {
+//     return 900;
+//   }
+//   if (width.value < 1300) {
+//     return 450;
+//   }
+//   else {
+//     return 700;
+//   }
+// })
 const cards = [
   {
     img: 'human-1.png',
@@ -261,11 +293,11 @@ const onSlideChange = () => {
   <div class="first-section">
     <div class="container">
       <p>Fast track to hire<br /> <span>The Best</span> engineers</p>
-      <div class="content ">
+      <div class="content">
         <div class="left-col">
           <div class="block">
             <div class="block-title">
-              <span class="block-title-bolt">Unique candidates</span> on exclusive <br /> basis scored by Geecko completely <br/> <span class="block-title-bolt"> NEW to the US market </span>
+              <span class="block-title-bolt">Unique candidates</span> on exclusive  basis scored by Geecko completely<span class="block-title-bolt"> NEW to the US market </span>
             </div>
             <div class="block-subtitle">
               This is the opportunity of a lifetime to boost your team. Many talented Eastern European developers are looking for a job right now — and we've already scored them.
@@ -305,11 +337,12 @@ const onSlideChange = () => {
           <swiper
             :modules="[Navigation]"
             :navigation="navigation"
-            :slides-per-view="1.5"
+            :slides-per-view="viewSlides"
             :space-between="10"
             @swiper="onSwiper"
             @slideChange="onSlideChange"
             class="swiper"
+            :style="{width: widthSwiper + 'px'}"
           >
             <swiper-slide class="slide" v-for="card in cards">
               <div 
@@ -341,6 +374,13 @@ const onSlideChange = () => {
   @apply flex flex-col items-center w-full pt-60px;
   .container {
     @apply flex flex-col items-start w-full max-w-1300px pl-100px;
+    @media screen and (max-width: 1300px) {
+      @apply pl-0px;
+    }
+    @media screen and (max-width: 991px) {
+      @apply px-26px;
+    }
+
     p {
       @apply text-51px font-400 w-full text-left ;
       color: #9591AA;
@@ -365,30 +405,52 @@ const onSlideChange = () => {
     }
     .content {
       @apply flex flex-row items-center w-full h-600px -mt-40px;
+      @media screen and (max-width: 991px) {
+        @apply flex-col mt-0 h-full items-center px-10px;
+        flex-direction: column-reverse ;
+      }
       .left-col {
         @apply flex flex-col w-full max-w-800px box-border;
         background: rgba(230, 229, 226, 0.15);
         border: 0.5px solid #CCCCCC;
         border-radius: 15px;
+        @media screen and (max-width: 991px) {
+          @apply mt-60px;
+        }
         .block {
           @apply flex flex-col w-full items-start py-40px pl-50px box-border;
+          @media screen and (max-width: 767px) {
+            @apply pl-10px pr-40px py-20px items-center; 
+          }
           &-title {
-            @apply text-28px text-left;
+            @apply text-28px text-left w-full max-w-465px;
             line-height: 140%;
             color: #101014;
+            @media screen and (max-width: 767px) {
+              @apply text-24px;
+            }
             &-bolt {
               @apply font-700;
             }
           }
           &-subtitle {
-            @apply text-20px text-left w-full max-w-420px mt-32px;
+            @apply text-20px text-left w-full max-w-420px mt-20px;
             line-height: 140%;
             color: #4D4E57;
+            @media screen and (max-width: 767px) {
+              @apply text-16px;
+            }
           }
           &-developers {
             @apply mt-32px flex flex-row items-center;
+            @media screen and (max-width: 767px) {
+              @apply flex-col ;
+            }
             &-people {
               @apply flex flex-row items-center ml-15px;
+              @media screen and (max-width: 767px) {
+                @apply mt-20px;
+              }
               svg {
                 fill: #78909C;
               }
@@ -402,10 +464,20 @@ const onSlideChange = () => {
 
       }
       .right-col {
-        @apply relative;
+        @apply relative ;
+        @media screen and (max-width: 991px) {
+          @apply w-full h-650px mt-20px;
+          // overflow: hidden;
+        }
+        @media screen and (max-width: 767px) {
+          @apply w-300px h-500px;
+        }
         .buttons {
           @apply absolute -left-80px bottom-0 flex flex-row items-center;
           flex-direction: row-reverse;
+          @media screen and (max-width: 991px) {
+            @apply bottom-0px left-0;
+          }
           .next {
 
             img {
@@ -420,12 +492,29 @@ const onSlideChange = () => {
           }
         }
         .swiper {
-          @apply w-700px -ml-10px flex flex-row;
+          @apply  -ml-10px flex flex-row;
           cursor: grab;
+          max-width: 700px;
+          @media screen and (max-width: 1300px) {
+            @apply max-w-450px -ml-0;
+          }
+          @media screen and (max-width: 991px) {
+            @apply max-w-900px;
+          }
+          @media screen and (max-width: 767px) {
+            @apply max-w-300px;
+          }
           .slide {
             @apply p-0;
+            @media screen and (max-width: 767px) {
+              @apply ;
+              // width: 300px !important;
+            }
             .card {
               @apply h-588px rounded-20px flex flex-col items-start justify-between w-full pt-40px pb-30px px-45px;
+              @media screen and (max-width: 767px) {
+                @apply h-450px w-300px ;
+              }
               .decorate {
                 @apply flex flex-row justify-between w-full ;
                 &-icon {
