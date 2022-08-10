@@ -5,7 +5,9 @@ import ButtonMy from './ButtonMy.vue'
 <template>
   <div class="tenth-section">
     <div class="container">
-      <h1>Still have questions?</h1>
+      <div class="title">
+        <h1>Still have questions?</h1>
+      </div>
       <img src="/images/geecko/tenth-section/item.png" alt="">
       <div class="contacts">
         <div class="contacts-title">
@@ -31,20 +33,38 @@ import ButtonMy from './ButtonMy.vue'
   background-size: cover;
   .container {
     @apply flex flex-row items-center w-full max-w-1100px justify-between;
-    h1 {
-      @apply text-42px font-400;
-      color: #FFFFFF;
+    @media screen and (max-width: 767px) {
+      @apply flex-col items-center px-20px -mt-10px;
+    } 
+    .title {
+      @apply flex flex-row justify-start items-start w-full ;
+      h1 {
+        @apply text-42px font-400;
+        color: #FFFFFF;
+        @media screen and (max-width: 767px) {
+          @apply text-42px text-left;
+        }
+      }
     }
     img {
-      @apply mr-20px mb-10px;
+      @apply mr-90px mb-30px;
+      @media screen and (max-width: 767px) {
+        @apply m-0;
+      }
     }
     .contacts {
       @apply w-full max-w-288px flex flex-col items-center;
+      @media screen and (max-width: 767px) {
+        @apply max-w-full -mt-10px;
+      }
       &-title {
         @apply flex flex-col items-start w-full; 
         h2 {
           @apply text-12px font-600;
           color: #B2B8C6;
+          @media screen and (max-width: 767px) {
+            display: none;
+          }
         }
       }
       input {

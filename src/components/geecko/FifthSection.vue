@@ -28,12 +28,13 @@ const items = [
     </div>
     <CardComputers/>
     <div class="bottom-block">
-      <div class="item">
+      <div class="bottom-block-item">
         <h4>save your time and</h4>
         <ButtonMy
           icon="coin"
           color="#FFD91D"
           text_color="#231F20"
+          style="margin-top: 20px;"
         >
           HIRE IN 1 CLICK
         </ButtonMy>
@@ -49,8 +50,11 @@ const items = [
   background: url('/images/geecko/fifth-section/bg.png')center bottom/cover no-repeat;
   .container {
     @apply flex flex-col items-start w-full max-w-1000px;
+    @media screen and (max-width: 991px) {
+      @apply px-20px;
+    }
     h1 {
-      @apply text-52px font-600;
+      @apply text-52px font-600 text-left;
       line-height: 120%;
       color: #FFFFFF;
       span {
@@ -60,8 +64,18 @@ const items = [
     }
     .subtitle {
       @apply flex flex-row w-full pl-40px mt-64px;
+      @media screen and (max-width: 991px) {
+        @apply pl-0 mt-40px;
+      }
+      @media screen and (max-width: 767px) {
+        @apply flex flex-col items-start;
+      }
       &-text {
         @apply flex flex-row items-start;
+        @media screen and (max-width: 767px) {
+          @apply flex flex-col;
+        }
+        
         .crowm {
           @apply mr-24px;
         }
@@ -69,6 +83,9 @@ const items = [
           @apply text-left text-24px mr-42px relative;
           line-height: 120%;
           color: #FFFFFF;
+          @media screen and (max-width: 767px) {
+            @apply mt-10px;
+          }
           span {
             @apply font-600;
           }
@@ -76,8 +93,17 @@ const items = [
       }
       .items {
         @apply flex flex-row;
+        @media screen and (max-width: 767px) {
+          @apply flex-wrap w-full max-w-400px mt-20px;
+        }
         .item {
           @apply mr-65px flex flex-col items-start;
+          &:nth-child(4) {
+            margin-right: 0px;
+          }
+          @media screen and (max-width: 767px) {
+            @apply;
+          }
           h3 {
             @apply text-32px ;
             line-height: 38px;
@@ -96,15 +122,24 @@ const items = [
   }
   .bottom-block {
     @apply flex flex-col items-center w-full;
-    .item {
+    @media screen and (max-width: 767px) {
+      @apply mt-20px;
+    }
+    &-item {
       @apply flex flex-row items-center w-full max-w-812px justify-between;
+      @media screen and (max-width: 767px) {
+        @apply flex-col ;
+      }
       h4 {
         @apply text-14px font-400 text-white;
         font-family: "Retro Computer";
         animation: blink 1s infinite;
         @keyframes blink {
-          from { opacity: 1; /* Непрозрачный текст */ }
-          to { opacity: 0; /* Прозрачный текст */ }
+          from { opacity: 1;}
+          to { opacity: 0;}
+        }
+        @media screen and (max-width: 767px) {
+          @apply mt-20px;
         }
       }
     }
