@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Navigation, Pagination} from 'swiper';
+import { useWindowSize } from '@vueuse/core'
 
-import 'swiper/css';
+import { ref, computed } from 'vue';
 import MySvg from './MySvg.vue'
+import 'swiper/css';
+const { width, height } = useWindowSize()
 
 const cards = [
   {
@@ -56,6 +59,19 @@ const pagination = {
     return `<div class="${className}"></div>`
   }
 }
+const viewSlides = computed(() => {
+  
+  if (width.value <= 768) {
+    return 1;
+  }
+  if (width.value <= 1000) {
+    return 2;
+  }
+  if (width.value > 1000) {
+    return 3;
+  }
+  // return width;
+})
 </script>
 
 <template>
@@ -81,7 +97,7 @@ const pagination = {
           :modules="[Pagination, Navigation]"
           :pagination="pagination"
           :navigation="navigation"
-          :slides-per-view="3"
+          :slides-per-view="viewSlides"
           :space-between="24"
           @swiper="onSwiper"
           @slideChange="onSlideChange"
@@ -107,10 +123,16 @@ const pagination = {
   @apply flex flex-col items-center w-full py-100px;
   .container {
     @apply flex flex-col items-start w-full max-w-1100px;
+    @media screen and (max-width: 991px) {
+      @apply px-20px;
+    }
     h1 {
-      @apply text-52px;
+      @apply text-52px text-left;
       line-height: 120%;
       color: #231F20;
+      @media screen and (max-width: 767px) {
+        @apply text-42px;
+      }
       span {
         @apply font-600;
       }
@@ -146,9 +168,15 @@ const pagination = {
       }
       .next {
         @apply absolute right-0 top-1/2;
+        @media screen and (max-width: 991px) {
+          display: none;
+        }
       }
       .prev {
         @apply absolute left-0 top-1/2;
+        @media screen and (max-width: 991px) {
+          display: none;
+        }
       }
     }
   }
@@ -158,15 +186,24 @@ const pagination = {
   background: #e5e5e5;
   width: 100%;
   height: 3px;
-  
   opacity: 0.5;
   position: relative;
+  @media screen and (max-width: 767px) {
+    @apply space-x-10px;
+    background: #ccc ;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+  }
 }
 .swiper--bullet--active {
   opacity: 1;
-  background-color: #91b0c4;
+  background-color: black;
 }
 .swiper-pagination {
   @apply flex flex-row items-center justify-center mt-70px;
+  @media screen and (max-width: 767px) {
+    @apply space-x-10px mt-20px;
+  }
 }
 </style>

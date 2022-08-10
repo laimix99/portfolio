@@ -40,33 +40,56 @@
 <style scoped lang="scss">
 .card-computers {
   @apply flex flex-col items-center w-full -mt-70px;
+  @media screen and (max-width: 767px) {
+    @apply px-20px;
+  }
   .container {
     @apply flex flex-col items-center w-full max-w-1180px;
     .cards {
       @apply flex flex-col items-center w-full;
       .card-top {
         @apply flex flex-row items-start w-full z-1;
+        @media screen and (max-width: 767px) {
+          @apply flex-col items-start relative;
+        }
         &-left-col {
           @apply z-10;
           background: url('/images/geecko/card-computers/computers-1.png')center bottom/contain no-repeat;
           height: 650px;
           width: 100%;
           background-size: 750px;
-          // @apply w-full;
-          // img {
-          //   @apply;
-          //   width: 150%;
-          // }
+          @media screen and (max-width: 767px) {
+            @apply absolute -left-155px top-180px;
+            width: 510px;
+            height: 374px;
+            background-size: cover;
+            background-position: center;
+          }
         }
         &-right-col {
-          @apply flex flex-col items-center w-full -ml-200px mt-90px;
+          @apply flex flex-col items-center w-full -ml-200px mt-90px z-2;
+          @media screen and (max-width: 767px) {
+            @apply -ml-0 items-center relative;
+          }
           &-title {
             @apply flex flex-row items-center pl-80px;
+            @media screen and (max-width: 767px) {
+              @apply pl-0 items-center w-full justify-center py-30px;
+              background: rgba(72, 72, 72, 0.3);
+              border: 0.5px solid #636363;
+              border-radius: 15px;
+            }
             &-cup {
               @apply w-51px mr-16px;
+              @media screen and (max-width: 767px) {
+                @apply w-35px;
+              }
             }
             h1 {
               @apply text-32px font-400 text-white;
+              @media screen and (max-width: 767px) {
+                @apply text-22px; 
+              }
               span {
                 @apply font-600;
               }
@@ -77,10 +100,17 @@
             background: rgba(72, 72, 72, 0.3);
             border: 0.5px solid #636363;
             border-radius: 15px;
+            @media screen and (max-width: 767px) {
+              @apply w-full ;
+              padding: 275px 45px 37px;
+            }
             &-title {
               @apply text-32px font-400 text-left;
               line-height: 120%;
               color: #FFFFFF;
+              @media screen and (max-width: 767px) {
+                @apply text-24px;
+              }
               span {
                 @apply font-700;
               }
@@ -89,23 +119,41 @@
               @apply text-16px font-400 text-left mt-24px;
               line-height: 140%;
               color: #FFFFFF;
+              @media screen and (max-width: 767px) {
+                @apply text-16px w-full max-w-200px;
+              }
             }
           }
         }
       }
       .card-down {
         @apply flex flex-row items-start w-full -mt-200px z-5;
+        @media screen and (max-width: 767px) {
+          @apply -mt-0 relative;
+        }
         &-left-col {
           @apply flex flex-col items-center w-full mt-100px;
           &-title {
             @apply flex flex-row items-start pr-120px;
+            @media screen and (max-width: 767px) {
+              @apply w-full justify-center py-30px pr-0;
+              background: rgba(72, 72, 72, 0.3);
+              border: 0.5px solid #636363;
+              border-radius: 15px;
+            }
             &-ball {
               @apply mr-15px;
+              @media screen and (max-width: 767px) {
+                @apply w-30px;
+              }
             }
             h1 {
               @apply text-32px font-400;
               line-height: 140%;
               color: #FFFFFF;
+              @media screen and (max-width: 767px) {
+                @apply text-24px;
+              }
               span {
                 @apply font-600;
               }
@@ -116,10 +164,17 @@
             background: rgba(72, 72, 72, 0.3);
             border: 0.5px solid #636363;
             border-radius: 15px;
+            @media screen and (max-width: 767px) {
+              @apply w-full;
+              padding: 275px 45px 37px;
+            }
             &-title {
               @apply text-32px font-400 text-left;
               line-height: 140%;
               color: #FFFFFF;
+              @media screen and (max-width: 767px) {
+                @apply text-24px;
+              }
             }
             &-descriptiom {
               @apply mt-16px flex flex-col items-start lowercase;
@@ -147,11 +202,13 @@
           height: 650px;
           width: 100%;
           background-size: 900px;
-          // @apply w-full;
-          // img {
-          //   @apply;
-          //   width: 150%;
-          // }
+          @media screen and (max-width: 767px) {
+            @apply absolute top-195px -left-210px ml-0 ;
+            width: 550px;
+            height: 354px;
+            background-size: cover;
+            background-position: center;
+          }
         }
       }
     }

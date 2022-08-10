@@ -31,6 +31,9 @@ import ButtonMy from './ButtonMy.vue'
   @apply flex flex-col items-center w-full py-48px;
   .container {
     @apply flex flex-row justify-between items-center w-full max-w-1100px;
+    @media screen and (max-width: 767px) {
+      @apply flex-col px-20px;
+    }
     .title {
       @apply flex flex-col items-start;
       h1 {
@@ -49,8 +52,14 @@ import ButtonMy from './ButtonMy.vue'
     }
     .contacts {
       @apply w-full max-w-288px flex flex-col items-center;
+      @media screen and (max-width: 767px) {
+        @apply max-w-full;
+      }
       &-title {
         @apply flex flex-col items-start w-full; 
+        @media screen and (max-width: 767px) {
+          display: none;
+        }
         h2 {
           @apply text-12px font-600;
           color: #B2B8C6;

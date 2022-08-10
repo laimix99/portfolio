@@ -110,7 +110,7 @@ const handleMobileMenu = () => {
     background: #FAFAFA;
     font-family: 'Montserrat', sans-serif;
     .header {
-      @apply w-full flex flex-col items-center;
+      @apply w-full flex flex-col items-center relative;
       background-color: #140E36;
       z-index: 9999;
       @media screen and (max-width: 991px) {
@@ -119,7 +119,7 @@ const handleMobileMenu = () => {
         top: 0;
       }
       .menu {
-        @apply flex flex-row items-center justify-between w-full max-w-1100px py-5px px-10px relative;
+        @apply flex flex-row items-center justify-between w-full max-w-1100px py-5px px-10px ;
         .logo {
           @apply w-full max-w-100px text-left font-700;
           color: #F2F2F4;

@@ -11,8 +11,8 @@ const items = [
   <div class="fourth-section">
     <div class="container">
       <h1><span>Hack</span> the hiring process </h1>
+      <p>with 60 second pitch and 1 week free trial</p>
       <div class="content">
-        <p>with 60 second pitch and 1 week free trial</p>
         <div class="block">
           <div class="left-col">
             <div class="left-col-title">Fast track to hire</div>
@@ -32,13 +32,15 @@ const items = [
                 <div class="item-description">{{ item.description }}</div>
               </div>
             </div>
-            <ButtonMy
-              icon="coin"
-              color="#4D4E57"
-              text_color="#fff"
-            >
-              try 1 week free
-            </ButtonMy>
+            <div class="button">
+              <ButtonMy
+                icon="coin"
+                color="#4D4E57"
+                text_color="#fff"
+              >
+                try 1 week free
+              </ButtonMy>
+            </div>
           </div>
           <Stop/>
         </div>
@@ -58,28 +60,47 @@ const items = [
   background: linear-gradient(180deg, rgba(226, 225, 221, 0.7) 0%, rgba(221, 217, 213, 0.4) 100%);
   .container {
     @apply flex flex-col items-start w-full max-w-980px  not-italic;
+    @media screen and (max-width: 991px) {
+      @apply p-24px;
+    }
     h1 {
       @apply text-42px font-400;
       // font-family: 'Proxima Nova';
       line-height: 120%;
       color: #231F20;
+      @media screen and (max-width: 767px) {
+        @apply text-left;
+      }
       span {
         @apply font-600;
       }
     }
+    p {
+      @apply text-24px font-400;
+      font-family: 'Proxima Nova';
+      line-height: 140%;
+      color: #231F20;
+      @media screen and (max-width: 991px) {
+        @apply w-full max-w-400px text-left;
+      }
+      @media screen and (max-width: 767px) {
+        @apply text-16px;
+      }
+    }
     .content {
       @apply flex flex-col items-start w-full;
-      p {
-        @apply text-24px font-400;
-        font-family: 'Proxima Nova';
-        line-height: 140%;
-        color: #231F20;
+      @media screen and (max-width: 767px) {
+        @apply mt-50px;
       }
+
       .block {
         @apply flex flex-row items-center w-full justify-between pt-36px pl-83px pr-68px pb-33px relative mt-40px;
         background: rgba(255, 255, 255, 0.3);
         border: 0.5px solid #FFFFFF;
         border-radius: 15px;
+        @media screen and (max-width: 767px) {
+          @apply flex-col px-30px;
+        }
         .left-col {
           @apply flex flex-col items-start;
           &-title {
@@ -102,6 +123,9 @@ const items = [
         }
         .right-col {
           @apply flex flex-col items-start;
+          @media screen and (max-width: 767px) {
+            @apply w-full;
+          }
           &-name {
             @apply text-20px font-600;
             color: #101014;
@@ -112,6 +136,9 @@ const items = [
               @apply w-full max-w-391px flex flex-col items-start w-391px mt-10px py-14px pl-16px ;
               box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
               border-radius: 8px;
+              @media screen and (max-width: 767px) {
+                @apply w-full max-w-full;
+              }
               &-title {
                 @apply text-14px leading-10px font-600;
                 color: #101014;
@@ -120,6 +147,11 @@ const items = [
                 @apply text-12px leading-12px mt-12px;
                 color: #4D4E57;
               }
+            }
+          }
+          .button {
+            @media screen and (max-width: 767px) {
+              @apply w-full flex flex-col items-center;
             }
           }
         }

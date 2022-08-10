@@ -26,16 +26,28 @@ const items = [
   @apply flex flex-col items-center w-full py-50px;
   .container {
     @apply flex flex-col items-start w-full max-w-1110px ;
+    @media screen and (max-width: 991px) {
+      @apply px-26px;
+    }
     h1 {
       @apply text-52px font-700;
       color: #231F20;
     }
     .items {
       @apply flex flex-row items-center w-full mt-50px;
+      @media screen and (max-width: 767px) {
+        @apply flex-col items-start;
+      }
       .item {
         @apply flex flex-row items-center mr-20px;
+        @media screen and (max-width: 767px) {
+          @apply mt-20px;
+        }
         &:nth-child(1) {
           width: 360px;
+          @media screen and (max-width: 767px) {
+            @apply w-300px;
+          }
         }
         &:nth-child(4) {
           width: 310px;
@@ -48,7 +60,9 @@ const items = [
           font-family: "Proxima Nova";
           line-height: 140%;
           color: #4D4E57;
-          
+          @media screen and (max-width: 767px) {
+            @apply w-full max-w-230px;
+          }
         }
       }
     }
