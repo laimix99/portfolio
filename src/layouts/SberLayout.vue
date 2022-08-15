@@ -3,6 +3,8 @@ import Header from '../components/sber/Header.vue'
 import FirstSection from '../components/sber/FirstSection.vue';
 import SecondSection from '../components/sber/SecondSection.vue'
 import ThirdSection from '../components/sber/ThirdSection.vue'
+import FourthSection from '../components/sber/FourthSection.vue'
+import FifthSection from '../components/sber/FifthSection.vue'
 </script>
 
 <template>
@@ -11,6 +13,8 @@ import ThirdSection from '../components/sber/ThirdSection.vue'
     <FirstSection/>
     <SecondSection/>
     <ThirdSection/>
+    <FourthSection/>
+    <FifthSection/>
   </div>
 </template>
 
