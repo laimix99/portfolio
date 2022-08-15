@@ -1,10 +1,12 @@
 <script setup>
 import Header from '../components/sber/Header.vue'
+import FirstSection from '../components/sber/FirstSection.vue';
 </script>
 
 <template>
   <div class="sber-layout">
     <Header/>
+    <FirstSection/>
   </div>
 </template>
 
