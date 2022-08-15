@@ -3,8 +3,8 @@ import MyButton from './MyBotton.vue'
 </script>
 
 <template>
-  <div class="first-section br">
-    <div class="container br">
+  <div class="first-section">
+    <div class="container">
       <h1>Узнай, насколько ты крутой эксперт!</h1>
       <h2>Ответь на вопросы и проверь, чего ты стоишь!</h2>
       <MyButton>
@@ -35,7 +35,9 @@ import MyButton from './MyBotton.vue'
       text-shadow: 0px 0px 5px rgba(117, 223, 184, 0.6);
     }
     img {
-      @apply absolute -right-50px;
+      @apply absolute ;
+      left: 55%;
+      bottom: -53px;
     }
   }
 }

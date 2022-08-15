@@ -1,12 +1,16 @@
 <script setup>
 import Header from '../components/sber/Header.vue'
 import FirstSection from '../components/sber/FirstSection.vue';
+import SecondSection from '../components/sber/SecondSection.vue'
+import ThirdSection from '../components/sber/ThirdSection.vue'
 </script>
 
 <template>
   <div class="sber-layout">
     <Header/>
     <FirstSection/>
+    <SecondSection/>
+    <ThirdSection/>
   </div>
 </template>
 
@@ -20,6 +24,10 @@ import FirstSection from '../components/sber/FirstSection.vue';
 @font-face {
   font-family: 'SB Sans Display';
   src: url("/fonts/SB Sans Display Semibold.ttf") format("truetype"),     
+}
+@font-face {
+  font-family: 'SB Sans Interface';
+  src: url("/fonts/SB Sans Interface.ttf") format("truetype"),     
 }
 
 // SB Sans Display Semibold
