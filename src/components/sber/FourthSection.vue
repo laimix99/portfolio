@@ -5,7 +5,7 @@ import Table from './Table.vue'
 
 <template>
 <div class="fourth-section">
-  <div class="container br">
+  <div class="container">
    <div class="content">
     <h1>Топ-10</h1>
     <Table/>
