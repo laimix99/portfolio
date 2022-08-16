@@ -1,28 +1,29 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 import MainLayout from '../layouts/MainLayout.vue';
-import IndexPage from '../pages/IndexPage.vue';
+import IndexPage from '../pages/IndexPage.vue';                       //pages
 import TodoPage from '../pages/TodoPage.vue';
-import SpinnerPage from '../pages/SpinnerPage.vue';
-import CalculatorLayout from '../layouts/CalculatorLayout.vue';
-import CalculatorPage from '../pages/CalculatorPage.vue'
-import StockPage from '../pages/StockPage.vue';
-import OneMoviePage from '../pages/movies/OneMoviePage.vue';
-import MoviesPage from '../pages/movies/MoviesPage.vue';
-import MoviesLayout from '../layouts/MoviesLayout.vue';
-import LoginLayout from '../layouts/LoginLayout.vue';
-import LoginPage from '../pages/login/LoginPage.vue';
-import DeliLayout from '../layouts/DeliLayout.vue';
-import ClientPage from '../pages/deli/ClientPage.vue';
-import ServicesPage from '../pages/deli/ServicesPage.vue';
-import TodoLayout from '../layouts/TodoLayout.vue';
-import KryptoLayout from '../layouts/KryptoLayout.vue'
-import BreewLayout from '../layouts/BreewLayout.vue'
-import СommissionerLayout from '../layouts/СommissionerLayout.vue'
-import TrelloLayout from '../layouts/TrelloLayout.vue'
-import PhotographerLayout from '../layouts/PhotographerLayout.vue'
-import GeeckoLayout from '../layouts/GeeckoLayout.vue'
-import ErrorPage from '../pages/ErrorPage.vue';
+import SpinnerPage from '../pages/SpinnerPage.vue';                   //pages
+import CalculatorLayout from '../layouts/CalculatorLayout.vue';       //layouts
+import CalculatorPage from '../pages/CalculatorPage.vue'              //pages
+import StockPage from '../pages/StockPage.vue';                       //pages
+import OneMoviePage from '../pages/movies/OneMoviePage.vue';          //pages
+import MoviesPage from '../pages/movies/MoviesPage.vue';              //pages
+import MoviesLayout from '../layouts/MoviesLayout.vue';               //layouts
+import LoginLayout from '../layouts/LoginLayout.vue';                 //layouts
+import LoginPage from '../pages/login/LoginPage.vue';                 //pages
+import DeliLayout from '../layouts/DeliLayout.vue';                   //layouts
+import ClientPage from '../pages/deli/ClientPage.vue';                //pages
+import ServicesPage from '../pages/deli/ServicesPage.vue';            //pages
+import TodoLayout from '../layouts/TodoLayout.vue';                   //layouts
+import KryptoLayout from '../layouts/KryptoLayout.vue'                //layouts
+import BreewLayout from '../layouts/BreewLayout.vue'                  //layouts
+import СommissionerLayout from '../layouts/СommissionerLayout.vue'    //layouts
+import TrelloLayout from '../layouts/TrelloLayout.vue'                //layouts
+import PhotographerLayout from '../layouts/PhotographerLayout.vue'    //layouts
+import GeeckoLayout from '../layouts/GeeckoLayout.vue'                //layouts
+import SberLayout from '../layouts/SberLayout.vue'                    //layouts
+import ErrorPage from '../pages/ErrorPage.vue';                       //layouts
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -155,6 +156,10 @@ const router = createRouter({
     },{
       path: '/geecko',
       component: GeeckoLayout,
+    },
+    {
+      path: '/sber',
+      component: SberLayout,
     },
     {
       path: '/:pathMatch(.*)*',
