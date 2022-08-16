@@ -20,7 +20,7 @@
 <style scoped lang="scss">
 .second-section {
   @apply flex flex-col items-center w-full pt-41px pb-30px;
-  background: url('/images/sber/second-section/grid.png')center center/cover no-repeat;
+  background: url('/images/sber/second-section/grid.svg')center center/contain repeat;
   .container {
     @apply max-w-1143px px-10px flex flex-col items-center;
     .top-container {

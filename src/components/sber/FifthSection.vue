@@ -140,7 +140,7 @@ const onSlideChange = () => {
 
 <style scoped lang="scss">
 .fifth-section {
-  @apply flex flex-col items-center w-full py-80px;
+  @apply flex flex-col items-center w-full pt-80px;
   .container {
     @apply flex flex-col items-center w-full max-w-1143px px-10px relative;
     .title {
@@ -306,11 +306,11 @@ const onSlideChange = () => {
     .next {
       @apply absolute right-0;
       fill: #75DFB8;
-      top: 50%;
+      top: 55%;
     }
     .prev {
       @apply absolute left-5px;
-      top: 50%;
+      top: 55%;
       fill: #75DFB8;
     }
   }

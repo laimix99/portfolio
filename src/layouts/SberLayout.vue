@@ -5,6 +5,8 @@ import SecondSection from '../components/sber/SecondSection.vue'
 import ThirdSection from '../components/sber/ThirdSection.vue'
 import FourthSection from '../components/sber/FourthSection.vue'
 import FifthSection from '../components/sber/FifthSection.vue'
+import SixthSection from '../components/sber/SixthSection.vue'
+import Footer from '../components/sber/Footer.vue'
 </script>
 
 <template>
@@ -15,6 +17,8 @@ import FifthSection from '../components/sber/FifthSection.vue'
     <ThirdSection/>
     <FourthSection/>
     <FifthSection/>
+    <SixthSection/>
+    <Footer/>
   </div>
 </template>
 

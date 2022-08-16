@@ -10,7 +10,9 @@ import Table from './Table.vue'
     <h1>Топ-10</h1>
     <Table/>
    </div>
-  <MyBotton>
+  <MyBotton
+    name="1"
+  >
     Позвать друзей
   </MyBotton>
   </div>
@@ -20,7 +22,7 @@ import Table from './Table.vue'
 <style scoped lang="scss">
 .fourth-section {
   @apply flex flex-col items-center w-full py-100px;
-  background: url('/images/sber/second-section/grid.png')center center/cover no-repeat;
+  background: url('/images/sber/second-section/grid.svg')center center/contain repeat;
   .container {
     @apply flex flex-col items-center w-full max-w-1143px px-10px;
     .content {

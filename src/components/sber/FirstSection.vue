@@ -7,7 +7,9 @@ import MyButton from './MyBotton.vue'
     <div class="container">
       <h1>Узнай, насколько ты крутой эксперт!</h1>
       <h2>Ответь на вопросы и проверь, чего ты стоишь!</h2>
-      <MyButton>
+      <MyButton
+        name="1"
+      >
         GO
       </MyButton>
 
