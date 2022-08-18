@@ -42,25 +42,26 @@ const blocks = [
     @apply flex flex-col items-center w-full max-w-877px;
     .blocks {
       @apply flex flex-row w-full justify-between;
+      @media screen and (max-width: 767px) {
+        @apply flex-col;
+      }
       .block {
         @apply flex flex-col items-center;
+        @media screen and (max-width: 767px) {
+          @apply mt-12px;
+        }
         .content {
           @apply w-207px h-207px flex flex-col justify-center relative;
           background: url('/images/sber/third-section/item.png')center center/cover no-repeat;
           .ball {
             @apply w-36px h-36px rounded-50px absolute top-17px left-37px;
-            // background: linear-gradient(180deg, #FFCD1D 0%, #F5DEA3 57.28%, #DCB141 57.29%);
             border: 4px solid #2B9A4A;
           }
           h1 {
             @apply text-66px font-600 relative;
             font-family: 'SB Sans Interface';
             background: linear-gradient(180deg, #FFCD1D 0%, #F5DEA3 57.28%, #DCB141 57.29%);
-            // background: linear-gradient(180deg, #FFFFFF 57.8%, #B0ACAC 57.81%, #FFFFFF 100%);
-            // -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            // background-clip: text;
-            // text-fill-color: transparent;
           }
           span {
             @apply font-600 text-30px ;
@@ -74,6 +75,10 @@ const blocks = [
           color: #FFFFFF;
           opacity: 0.5;
           font-family: 'SB Sans Interface';
+          @media screen and (max-width: 767px) {
+            @apply ;
+            opacity: 1;
+          }
         }
       }
     }

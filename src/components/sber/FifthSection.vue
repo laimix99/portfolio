@@ -1,6 +1,8 @@
 <script setup>
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Navigation,} from 'swiper';
+import { useWindowSize } from '@vueuse/core'
+import { onMounted, computed,  } from "vue";
 
 import 'swiper/css';
 import MySvg from './MySvg.vue'
@@ -65,6 +67,19 @@ const onSwiper = (swiper) => {
 const onSlideChange = () => {
   console.log('slide change');
 };
+
+const { width, height } = useWindowSize()
+// const viewSlides = computed(() => {
+//   if (width.value < 991)
+// })
+
+const showBg = computed(() => {
+  if (width.value <= 1081) {
+    return 'bg-2.svg';
+  } else {
+    return 'bg.png';
+  }
+})
 </script>
 
 <template>
@@ -99,7 +114,11 @@ const onSlideChange = () => {
         @slideChange="onSlideChange"
         class="swiper"
       >
-        <swiper-slide class="slide" v-for="slide in slides">
+        <swiper-slide
+          v-for="slide in slides"
+          class="slide" 
+          :style="{background: `url('/images/sber/fifth-section/${showBg}')center bottom/contain no-repeat`}"
+        >
           <h2>{{ slide.title }}</h2>
           <h3>{{ slide.subtitle }}</h3>
           <p>{{ slide.description }}</p>
@@ -107,14 +126,14 @@ const onSlideChange = () => {
             <span>Узнать подробнее</span>
           </a>
           <div class="the-date">{{slide.date}}</div>
-          <div class="user">
+          <!-- <div class="user">
             <img :src="slide.img" alt="">
             <div class="user-title">
               <h4 >{{ slide.name }}</h4>
               <h5 >{{ slide.speciality }}</h5>
               <span class="place-of-work">{{ slide.place_of_work }}</span>
             </div>
-          </div>
+          </div> -->
         </swiper-slide>
         <swiper-slide class="card">
           <h2 class="card-title">Круглый стол</h2>
@@ -174,24 +193,40 @@ const onSlideChange = () => {
       @apply w-full max-w-1050px mt-56px pt-50px;
       .slide {
         @apply flex flex-col items-start h-398px w-548px pl-40px pt-50px relative;
-        background: url('/images/sber/fifth-section/bg.png')center bottom/contain no-repeat;
+        // background-size: 100%;
+        @media screen and (max-width: 1081px) {
+          // @apply pl-100px;
+        }
         cursor: grab;
-        // background-color: red;
         h2 {
           @apply text-28px font-600;
           font-family: 'SB Sans Interface';
           color: #2B9A4A;
+          @media screen and (max-width: 1081px) {
+            @apply text-32px absolute  top-15px;
+            left: 25%;
+          }
         }
         h3 {
           @apply text-24px text-left mt-20px h-62px leading-30px;
           font-family: 'SB Sans Interface';
           color: #E7E7F0;
+          @media screen and (max-width: 1081px) {
+            @apply text-18px w-full max-w-240px absolute ;
+            left: 25%;
+            top: 30px;
+          }
         }
         p {
           @apply text-16px font-400 text-left leading-28px w-full max-w-436px mt-16px min-h-140px;
           font-family: 'SB Sans Interface';
           color: #E7E7F0;
           opacity: 0.8;
+          @media screen and (max-width: 1081px) {
+            @apply absolute w-full max-w-240px leading-23px;
+            left: 25%;
+            top: 95px;
+          }
         }
         a {
           @apply mt-8px;
@@ -201,6 +236,7 @@ const onSlideChange = () => {
             font-family: 'SB Sans Interface';
             color: #75DFB8;
             opacity: 0.8;
+            display: none;
           }
         }
         .the-date {
