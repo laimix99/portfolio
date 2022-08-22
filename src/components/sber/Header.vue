@@ -1,11 +1,11 @@
 <script setup>
 import MySvg from './MySvg.vue'
 
-const items = [
-  {bg: 'item-1.png', title: 'Пройди квиз'},
-  {bg: 'item-2.png', title: 'Войди в ТОП-3'},
-  {bg: 'item-2.png', title: 'Получи приз'},
-]
+// const items = [
+//   {bg: 'item-1.png', title: 'Пройди квиз'},
+//   {bg: 'item-2.png', title: 'Войди в ТОП-3'},
+//   {bg: 'item-2.png', title: 'Получи приз'},
+// ]
 </script>
 
 <template>
@@ -23,27 +23,8 @@ const items = [
           <MySvg
             color="#75DFB8"
             name="down"
-          />
-        </div>
-      </div>
-      <div class="bottom-menu">
-        <div class="items">
-          <div 
-            class="item"
-            :style="{ background: `url('/images/sber/header/${item.bg}')center bottom/cover no-repeat`, }"
-            v-for="item in items"
-          >
-            <h2>{{ item.title }}</h2>
-          </div>
-          <MySvg
-            color="#2B9A4A"
-            name="next"
-            class="next-1"
-          />
-          <MySvg
-            color="#2B9A4A"
-            name="next"
-            class="next-2"
+            width="30"
+            height="30"
           />
         </div>
       </div>
@@ -60,6 +41,9 @@ const items = [
       @apply flex flex-row items-start justify-between w-full ;
       .logo {
         @apply flex flex-row w-full max-w-280px items-start justify-between relative;
+        @media screen and (max-width: 767px) {
+          @apply max-w-150px;
+        }
         &-sber {
           @apply ;
           &::after {
@@ -71,9 +55,21 @@ const items = [
             opacity: 0.3;
             top: 50%;
             left: 49%;
+            @media screen and (max-width: 991px) {
+              display: none;
+            }
           }
           &-icon {
             @apply w-136px relative;
+            @media screen and (max-width: 767px) {
+              @apply w-87px;
+            }
+          }
+        }
+        .icon {
+
+          @media screen and (max-width: 767px) {
+            @apply w-41px;
           }
         }
       }
@@ -87,47 +83,24 @@ const items = [
           opacity: 0.3;
           top: 29%;
           left: -720px;
-          position: absolute
+          position: absolute;
+          @media screen and (max-width: 1100px) {
+            width: 300px;
+            left: -500px;
+          }
+          @media screen and (max-width: 991px) {
+            display: none;
+          }
         }
         h1 {
           @apply text-20px font-400 leading-32px not-italic;
           color: #75DFB8;
           font-family: 'SB Sans Display';
+          @media screen and (max-width: 767px) {
+            @apply text-16px;
+          }
         }
       }
-    }
-    .bottom-menu {
-      @apply flex flex-col items-start w-full mt-40px;
-      .items {
-        @apply flex flex-row py-19px items-start relative;
-        .item {
-          @apply w-183px h-47px mr-80px relative;
-          background-size: cover;
-          &:nth-child(1) {
-            width: 216px;
-            height: 50px;
-          }
-          h2 {
-            @apply text-20px leading-28px ;
-            color: #E7E7F0;
-            opacity: 0.8;
-            font-family: 'SB Sans Interface';
-            position: absolute;
-            right: 32px;
-            top: 10px;
-          }
-        }
-        .next-1 {
-          @apply absolute;
-          // bottom: 0;
-          left: -150px;
-        }
-        .next-2 {
-          @apply absolute;
-          // bottom: 0;
-          left: 110px;
-        }
-      } 
     }
   }
 }
