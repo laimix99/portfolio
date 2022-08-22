@@ -1,7 +1,26 @@
 <script setup>
-import MyBotton from './MyBotton.vue'
+import { useWindowSize } from '@vueuse/core'
+import { ref, onMounted, computed,  } from "vue";
 
-const items = [
+import MyBotton from './MyBotton.vue'
+import MySvg from './MySvg.vue';
+// const showMobileContetn = ref(false)
+const { width, height } = useWindowSize()
+// const showContent = computed(() => {
+//   if (width.value <= 767) {
+//     return false;
+//   } else {
+//     return true; 
+//   }
+// })
+const isMobile = computed(() => {
+  return width.value <= 767
+})
+// const handleMobileMenu = () => {
+//   showMobileContetn.value = !showMobileContetn.value
+// }
+// const show = true
+const items = ref( [
   {
     title: 'Разработчик интерфейсов/ Frontend-разработчик',
     description: 'Разработка интерфейсных компонентов (инфраструктура и веб-интерфейсы)',
@@ -12,7 +31,8 @@ const items = [
       'NodeJS',
       'GraphQL',
       'Cypress',
-    ]
+    ],
+    showInfo: false,
   },
   {
     title: 'JavaScript-разработчик',
@@ -23,7 +43,8 @@ const items = [
       'spring-security',
       'spring-boot,',
       'queryDSL',
-    ]
+    ],
+    showInfo: false,
   },
   {
     title: 'Frontend-разработчик ',
@@ -42,7 +63,8 @@ const items = [
       'TypeScript',
       'React',
       'Redux'
-    ]
+    ],
+    showInfo: false,
   },
   {
     title: 'Java-разработчик',
@@ -68,7 +90,8 @@ const items = [
       'Jaeger',
       'Grafana',
       'Prometheus'
-    ]
+    ],
+    showInfo: false,
   },
   {
     title: 'Java-разработчик (внутренняя безопасность)',
@@ -80,9 +103,14 @@ const items = [
       'Spark',
       'Kafka',
       'Elasticsearch'
-    ]
+    ],
+    showInfo: false,
   },
-]
+])
+const changeShowInfo = (index) => {
+  items.value[index].showInfo = !items.value[index].showInfo
+  console.log('changeShowInfo', items.value[index].showInfo)
+}
 </script>
 
 <template>
@@ -95,14 +123,23 @@ const items = [
         </a>
       </div>
       <div class="items">
-        <div class="item" v-for="item in items">
+        <div 
+          v-for="(item, itemIndex) in items"
+          class="item" 
+        >
           <div class="cub"></div>
-          <!-- <div class="line"></div> -->
           <h2>{{ item.title }}</h2>
-          <h3>{{ item.description }}</h3>
-          <div class="knowledge">
-            <div class="knowledge-item" v-for="k in item.knowledge">
-              <p>{{ k }}</p>
+          <div v-if="isMobile ? item.showInfo : true">
+            <h3 >{{ item.description }}</h3>
+            <div 
+              class="knowledge"
+            >
+              <div 
+                v-for="k in item.knowledge"
+                class="knowledge-item" 
+              >
+                <p>{{ k }}</p>
+              </div>
             </div>
           </div>
           <div class="buttons">
@@ -116,10 +153,32 @@ const items = [
             <a href="">
               <MyBotton
                 name="white"
+                class="button-2"
               >
                 Задать вопрос
               </MyBotton>
             </a>
+            <MyBotton
+              name="down"
+              class="down"
+              @click="changeShowInfo(itemIndex)"
+            >
+              <MySvg
+                v-if="!item.showInfo"
+                name="down"
+                width="30"
+                height="30"
+                color="white"
+              />  
+              <MySvg
+                v-else
+                name="up"
+                width="30"
+                height="30"
+                color="white"
+              />
+            </MyBotton>
+
           </div>
         </div>
       </div>
@@ -132,18 +191,26 @@ const items = [
   clip-path: polygon(100% 0, 100% calc(100% - $value), calc(100% - $value) 100%, 0 100%, 0 0);
 }
 .sixth-section {
-  @apply flex flex-col items-center w-full pt-80px;
+  @apply flex flex-col items-center w-full pt-80px pb-58px;
   .container {
-    @apply flex flex-col items-center w-full max-w-1143px;
+    @apply flex flex-col items-center w-full max-w-1143px px-10px;
     .title {
       @apply flex flex-row items-end w-full justify-between;
+      @media screen and (max-width: 767px) {
+        @apply justify-center;
+      }
       h1 {
         @apply text-48px font-600;
         color: #E7E7F0;
         text-shadow: 0px 0px 5px rgba(117, 223, 184, 0.6);
+        @media screen and (max-width: 767px) {
+          @apply text-32px;
+        }
       }
       a {
-
+        @media screen and (max-width: 767px) {
+          display: none;
+        }
         span {
           @apply text-20px font-400;
           text-decoration-line: underline;
@@ -154,34 +221,40 @@ const items = [
     .items {
       @apply flex flex-row flex-wrap items-start w-full mt-63px;
       --clip-value: 20px;
-      .cub {
-        @apply -z-1;
-        width: calc(100% - 4px);
-        height: calc(100% - 4px);
-        left: 2px;
-        top: 2px;
-        position: absolute;
-        // background: #2CB352;
-        background: url('/images/sber/fourth-section/bg.png')center center/cover no-repeat;
-        @include clip(var(--clip-value));
+      @media screen and (max-width: 767px) {
+        @apply flex-col items-center;
       }
       .item {
-        @apply flex flex-col items-start mx-25px py-44px pl-36px mt-30px relative;
+        @apply flex flex-col items-start mx-25px py-44px px-36px mt-30px relative;
         background: #2CB352;
-        
-        // background: linear-gradient(-45deg, transparent 15px, #58a 0), linear-gradient(45deg, transparent 15px, #655 0);
         width: calc(50% - 50px);
-        // border: 2px solid #2CB352;
-        // box-shadow: 0px 0px 5px rgba(117, 223, 184, 0.6), inset 0px 0px 20px rgba(117, 223, 184, 0.2);
         @include clip(var(--clip-value));
-
-
+        @media screen and (max-width: 767px) {
+          @apply mx-0;
+          width: 100%;
+        }
+        .cub {
+          @apply -z-1;
+          width: calc(100% - 4px);
+          height: calc(100% - 4px);
+          left: 2px;
+          top: 2px;
+          position: absolute;
+          // background: #2CB352;
+          background: url('/images/sber/fourth-section/bg.png')center center/cover no-repeat;
+          @include clip(var(--clip-value));
+          @media screen and (max-width: 767px) {
+            
+          }
+        }
         h2 {
           @apply text-28px font-400 text-left;
           line-height: 120%;
           color: #2B9A4A;
           font-family: 'SB Sans Interface';
-
+          @media screen and (max-width: 767px) {
+            @apply text-20px;
+          }
         }
         h3 {
           @apply text-18px font-400 text-left mt-12px leading-28px;
@@ -204,6 +277,27 @@ const items = [
         }
         .buttons {
           @apply flex flex-row mt-48px;
+          @media screen and (max-width: 767px) {
+            @apply w-full justify-between;
+          }
+          .down {
+            @apply;
+            display: none;
+            @media screen and (max-width: 767px) {
+              @apply p-0;
+              display: inherit;
+            }
+          }
+          .button-2 {
+            @media screen and (max-width: 767px) {
+              display: none;
+              background: url('/images/sber/sixth-section/down.svg');
+              background-size: cover;
+              background-repeat: no-repeat;
+              width: 100px;
+              height: 100px;
+            }
+          }
         }
       }
     }

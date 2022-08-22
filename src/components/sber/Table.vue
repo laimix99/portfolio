@@ -88,7 +88,7 @@ const rows = [
       <tbody>
         <tr v-for="row in rows">
           <th scope="row">{{ row.number }}</th>
-          <td :style="{ 'background': row.color, '-webkit-background-clip': 'text',  }">{{ row.name }}</td>
+          <td :style="{ 'background': row.color, '-webkit-background-clip': 'text', }">{{ row.name }}</td>
           <td>{{ row.answers }}</td>
           <td>{{ row.time }}</td>
         </tr>
@@ -101,14 +101,14 @@ const rows = [
   @apply flex flex-col items-start w-full max-w-488px py-35px;
   table {
     @apply w-full ;
+    border-collapse: collapse;
+    table-layout: fixed;
+    // border: 3px solid purple;
     caption {
       @apply text-18px font-400 w-full;
       color: #E7E7F0;
       font-family: 'SB Sans Interface';
     }
-    // thead {
-    //   @apply mt-32px;
-    // }
     thead th {
       @apply text-20px font-400 pt-32px pb-20px;
       font-family: 'SB Sans Interface';
@@ -131,14 +131,6 @@ const rows = [
     tbody tr {
       @apply;
       background: #111316 ;
-      // margin-top: 1px !important;
-      // border-radius: 10px;
-      // letter-spacing: 2px;
-      // border-spacing: 5px;
-      // &:nth-child(n) {
-      //   padding-top: 2px; 
-      // }
-
     }
     tbody td {
       @apply text-20px font-400 ;
@@ -159,5 +151,8 @@ const rows = [
       border-radius: 0px 4px 0px 0px;
     }
   }
+}
+.cub {
+  // @apply w-full max-w-full;
 }
 </style>
