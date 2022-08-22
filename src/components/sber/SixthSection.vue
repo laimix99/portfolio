@@ -128,7 +128,6 @@ const changeShowInfo = (index) => {
           class="item" 
         >
           <div class="cub"></div>
-          <!-- <div class="line"></div> -->
           <h2>{{ item.title }}</h2>
           <div v-if="isMobile ? item.showInfo : true">
             <h3 >{{ item.description }}</h3>
@@ -192,7 +191,7 @@ const changeShowInfo = (index) => {
   clip-path: polygon(100% 0, 100% calc(100% - $value), calc(100% - $value) 100%, 0 100%, 0 0);
 }
 .sixth-section {
-  @apply flex flex-col items-center w-full pt-80px;
+  @apply flex flex-col items-center w-full pt-80px pb-58px;
   .container {
     @apply flex flex-col items-center w-full max-w-1143px px-10px;
     .title {
@@ -225,34 +224,29 @@ const changeShowInfo = (index) => {
       @media screen and (max-width: 767px) {
         @apply flex-col items-center;
       }
-      .cub {
-        @apply -z-1;
-        width: calc(100% - 4px);
-        height: calc(100% - 4px);
-        left: 2px;
-        top: 2px;
-        position: absolute;
-        // background: #2CB352;
-        background: url('/images/sber/fourth-section/bg.png')center center/cover no-repeat;
-        @include clip(var(--clip-value));
-        @media screen and (max-width: 767px) {
-          
-        }
-      }
       .item {
         @apply flex flex-col items-start mx-25px py-44px px-36px mt-30px relative;
         background: #2CB352;
-        
-        // background: linear-gradient(-45deg, transparent 15px, #58a 0), linear-gradient(45deg, transparent 15px, #655 0);
         width: calc(50% - 50px);
-        // border: 2px solid #2CB352;
-        // box-shadow: 0px 0px 5px rgba(117, 223, 184, 0.6), inset 0px 0px 20px rgba(117, 223, 184, 0.2);
         @include clip(var(--clip-value));
         @media screen and (max-width: 767px) {
           @apply mx-0;
           width: 100%;
         }
-
+        .cub {
+          @apply -z-1;
+          width: calc(100% - 4px);
+          height: calc(100% - 4px);
+          left: 2px;
+          top: 2px;
+          position: absolute;
+          // background: #2CB352;
+          background: url('/images/sber/fourth-section/bg.png')center center/cover no-repeat;
+          @include clip(var(--clip-value));
+          @media screen and (max-width: 767px) {
+            
+          }
+        }
         h2 {
           @apply text-28px font-400 text-left;
           line-height: 120%;

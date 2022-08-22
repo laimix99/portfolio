@@ -63,6 +63,9 @@
   h1 {
     @apply text-16px font-400 leading-24px text-white;
     font-family: 'SB Sans Interface';
+    @media screen and (max-width: 767px) {
+      @apply mt-15px;
+    }
   }
 }
 </style>

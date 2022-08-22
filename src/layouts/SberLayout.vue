@@ -16,7 +16,7 @@ import Footer from '../components/sber/Footer.vue'
     <SecondSection/>
     <ThirdSection/>
     <FourthSection/>
-    <!-- <FifthSection/> -->
+    <FifthSection/>
     <SixthSection/>
     <Footer/>
   </div>
