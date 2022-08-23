@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import MainLayout from '../layouts/MainLayout.vue';
 import IndexPage from '../pages/IndexPage.vue';                       //pages
 import TodoPage from '../pages/TodoPage.vue';
-import SpinnerPage from '../pages/SpinnerPage.vue';                   //pages
+import SpinnerPage from '../pages/SpinnerPage.vue';                   //SpinnerPage
 import CalculatorLayout from '../layouts/CalculatorLayout.vue';       //layouts
 import CalculatorPage from '../pages/CalculatorPage.vue'              //pages
 import StockPage from '../pages/StockPage.vue';                       //pages
@@ -15,14 +15,15 @@ import LoginPage from '../pages/login/LoginPage.vue';                 //pages
 import DeliLayout from '../layouts/DeliLayout.vue';                   //layouts
 import ClientPage from '../pages/deli/ClientPage.vue';                //pages
 import ServicesPage from '../pages/deli/ServicesPage.vue';            //pages
-import TodoLayout from '../layouts/TodoLayout.vue';                   //layouts
-import KryptoLayout from '../layouts/KryptoLayout.vue'                //layouts
-import BreewLayout from '../layouts/BreewLayout.vue'                  //layouts
-import СommissionerLayout from '../layouts/СommissionerLayout.vue'    //layouts
-import TrelloLayout from '../layouts/TrelloLayout.vue'                //layouts
-import PhotographerLayout from '../layouts/PhotographerLayout.vue'    //layouts
-import GeeckoLayout from '../layouts/GeeckoLayout.vue'                //layouts
-import SberLayout from '../layouts/SberLayout.vue'                    //layouts
+import TodoLayout from '../layouts/TodoLayout.vue';                   //Todo
+import KryptoLayout from '../layouts/KryptoLayout.vue'                //Krypto
+import BreewLayout from '../layouts/BreewLayout.vue'                  //Breew
+import СommissionerLayout from '../layouts/СommissionerLayout.vue'    //Commissioner
+import TrelloLayout from '../layouts/TrelloLayout.vue'                //Trello
+import PhotographerLayout from '../layouts/PhotographerLayout.vue'    //Photographer
+import GeeckoLayout from '../layouts/GeeckoLayout.vue'                //Geecko
+import SberLayout from '../layouts/SberLayout.vue'                    //Sber
+import AvitoLayout from '../layouts/AvitoLayout.vue'                  //Avito
 import ErrorPage from '../pages/ErrorPage.vue';                       //layouts
 
 const router = createRouter({
@@ -160,6 +161,10 @@ const router = createRouter({
     {
       path: '/sber',
       component: SberLayout,
+    },
+    {
+      path: '/avito',
+      component: AvitoLayout,
     },
     {
       path: '/:pathMatch(.*)*',
