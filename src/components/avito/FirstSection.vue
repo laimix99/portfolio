@@ -1,5 +1,5 @@
 <script setup>
-import MyBottons from './MyBottons.vue'
+import MyButtons from './MyButtons.vue'
 </script>
 
 <template>
@@ -8,9 +8,10 @@ import MyBottons from './MyBottons.vue'
       <div class="items">
         <h1>Крупнейший <span>карнавал</span> для кодеров</h1>
         <p>Заходи на карнавал и ощути атмосферу безудержного веселья! Что тебе ближе - код гольф или фикс колеса обозрения? Выбор только за тобой!</p>
-        <MyBottons class="button">
+        <MyButtons class="button">
           начать
-        </MyBottons>
+        </MyButtons>
+        <h2>avito.tech</h2>
       </div>
       <div class="messages">
         <h2>проверим <br/> кто лучший в код гольфе?</h2>
@@ -27,7 +28,7 @@ import MyBottons from './MyBottons.vue'
   .container {
     @apply flex flex-col items-center w-full max-w-1150px relative px-5px;
     .items {
-      @apply flex flex-col items-start w-full pl-97px pt-77px pb-87px mt-50px;
+      @apply flex flex-col items-start w-full pl-97px pt-77px pb-87px mt-50px relative;
       background: radial-gradient(85.41% 129.58% at 14.8% 3.8%, rgba(13, 15, 21, 0.86) 55.21%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
       border: 2px solid rgba(241, 239, 229, 0.2);
       border-radius: 20px;
@@ -46,6 +47,21 @@ import MyBottons from './MyBottons.vue'
       }
       .button {
         @apply mt-70px;
+      }
+      h2 {
+        @apply text-25px text-white py-10px px-15px absolute;
+        top: -25px;
+        left: 50%;
+        transform: translate(-50%);
+        background: #1B1A29;
+        box-shadow: 3px 3px 0px #000000;
+        border-radius: 40px;
+        &::before {
+          content: url('/images/avito-layout/first-section/comet.png');
+          // width: 20px;
+          // height: 14px;
+          // margin-top: 10px
+        }
       }
     }
     .messages {

@@ -3,6 +3,9 @@ import FirstSection from '../components/avito/FirstSection.vue'
 import SecondSection from '../components/avito/SecondSection.vue'
 import ThirdSection from '../components/avito/ThirdSection.vue'
 import FourthSection from '../components/avito/FourthSection.vue'
+import FifthSection from '../components/avito/FifthSection.vue'
+import SixthSection from '../components/avito/SixthSection.vue'
+import Footer from '../components/avito/Footer.vue'
 </script>
 
 <template>
@@ -11,6 +14,9 @@ import FourthSection from '../components/avito/FourthSection.vue'
     <SecondSection/>
     <ThirdSection/>
     <FourthSection/>
+    <FifthSection/>
+    <SixthSection/>
+    <Footer/>
   </div>
 </template>
 
