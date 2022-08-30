@@ -1,0 +1,29 @@
+<script setup>
+import FirstSection from '../components/avito/FirstSection.vue'
+import SecondSection from '../components/avito/SecondSection.vue'
+import ThirdSection from '../components/avito/ThirdSection.vue'
+import FourthSection from '../components/avito/FourthSection.vue'
+import FifthSection from '../components/avito/FifthSection.vue'
+import SixthSection from '../components/avito/SixthSection.vue'
+import Footer from '../components/avito/Footer.vue'
+</script>
+
+<template>
+  <div class="avito-layout">
+    <FirstSection/>
+    <SecondSection/>
+    <ThirdSection/>
+    <FourthSection/>
+    <FifthSection/>
+    <SixthSection/>
+    <Footer/>
+  </div>
+</template>
+
+<style scoped lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800;900&display=swap');
+.avito-layout {
+  @apply flex flex-col items-center w-full;
+  background: #e1daca;
+}
+</style>
