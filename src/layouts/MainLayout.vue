@@ -1,5 +1,6 @@
 <script setup>
 const links = [
+  { path: '/test', name: 'Тестовое задание ', img: '', subtitle: 'МассПроект' },
   { path: '/calculator', name: 'Calculator',img: 'https://kartinkin.net/uploads/posts/2021-07/1626739220_8-kartinkin-com-p-kalkulyator-fon-krasivo-9.jpg', subtitle: 'Here you can see different versions of Calculator' },
   { path: '/todo', name: 'Todo', img: 'https://smartprogress.do/uploadImages/001487344.jpg', subtitle: 'Here you can see different versions of ToDo' },
   { path: '/movies', name: 'Movies', img: 'https://xchip.ru/wp-content/uploads/2021/09/yvavya.jpg', subtitle: 'Application for the movies and series search' },
@@ -11,6 +12,7 @@ const links = [
   { path: '/commissioner', name: 'Сommissioner', img: 'https://оценка174.рф/images/img/avariynyy-komissar.jpg', subtitle: 'Сommissioner website' },
   { path: '/geecko', name: 'Geecko', img: '', subtitle: '' },
   { path: '/sber', name: 'Sber', img: '', subtitle: '' },
+  { path: '/avito', name: 'Avito', img: '', subtitle: '' },
   // { path: '/', name: 'My app' },
   // { path: '/spinner', name: 'Spinner' },
   // { path: '/stock', name: 'Stock' },

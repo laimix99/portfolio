@@ -31,8 +31,6 @@ import { ref, computed, reactive, onBeforeMount } from 'vue';
     </div>
   </div>
   <div class="mt-40px m-auto relative">
-    <!-- <input type="text" class="absolute top-0 left-0"> -->
-    <!-- <input type="text"> -->
     <AppV1 v-if="currentVersion === 'v1'" />
     <AppV2 v-if="currentVersion === 'v2'"
     :height="800"
