@@ -8,7 +8,7 @@
 <template>
   <div class="test-layout">
     <h1>Тестовые задания</h1>
-    <div class="container br">
+    <div class="container">
       <router-link
       v-for="link in links"
         :to="link.path"
