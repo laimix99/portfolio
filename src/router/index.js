@@ -24,6 +24,7 @@ import PhotographerLayout from '../layouts/PhotographerLayout.vue'    //Photogra
 import GeeckoLayout from '../layouts/GeeckoLayout.vue'                //Geecko
 import SberLayout from '../layouts/SberLayout.vue'                    //Sber
 import AvitoLayout from '../layouts/AvitoLayout.vue'                  //Avito
+import TestLayout from  '../layouts/TestLayout.vue'
 import ErrorPage from '../pages/ErrorPage.vue';                       //layouts
 
 const router = createRouter({
@@ -165,6 +166,10 @@ const router = createRouter({
     {
       path: '/avito',
       component: AvitoLayout,
+    },
+    {
+      path: '/test',
+      component: TestLayout
     },
     {
       path: '/:pathMatch(.*)*',
