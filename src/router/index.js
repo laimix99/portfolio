@@ -25,6 +25,7 @@ import GeeckoLayout from '../layouts/GeeckoLayout.vue'                //Geecko
 import SberLayout from '../layouts/SberLayout.vue'                    //Sber
 import AvitoLayout from '../layouts/AvitoLayout.vue'                  //Avito
 import TestLayout from  '../layouts/TestLayout.vue'
+import FirstTask from '../layouts/FirstTask.vue'
 import ErrorPage from '../pages/ErrorPage.vue';                       //layouts
 
 const router = createRouter({
@@ -169,7 +170,11 @@ const router = createRouter({
     },
     {
       path: '/test',
-      component: TestLayout
+      component: TestLayout,
+    },
+    {
+      path: '/first-task',
+      component: FirstTask,
     },
     {
       path: '/:pathMatch(.*)*',
