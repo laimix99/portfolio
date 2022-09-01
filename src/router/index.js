@@ -26,6 +26,7 @@ import SberLayout from '../layouts/SberLayout.vue'                    //Sber
 import AvitoLayout from '../layouts/AvitoLayout.vue'                  //Avito
 import TestLayout from  '../layouts/TestLayout.vue'
 import FirstTask from '../layouts/FirstTask.vue'
+import SecondTask from '../layouts/SecondTask.vue'
 import ErrorPage from '../pages/ErrorPage.vue';                       //layouts
 
 const router = createRouter({
@@ -175,6 +176,10 @@ const router = createRouter({
     {
       path: '/first-task',
       component: FirstTask,
+    },
+    {
+      path: '/second-task',
+      component: SecondTask,
     },
     {
       path: '/:pathMatch(.*)*',

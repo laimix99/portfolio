@@ -1,7 +1,7 @@
 <script setup>
   const links = [
     {path: '/first-task', title: 'Верстка', description: '', img: '/images/test/first-task.png', },
-
+    {path: '/second-task', title: 'Нужно реализовать дерево прав доступа.', description: '', img: '/images/test/second-task.png', },
   ]
 </script>
 
@@ -26,21 +26,27 @@
 
 <style scoped lang="scss">
   .test-layout {
-    @apply flex flex-col items-center w-full h-100vh pt-20px;
+    @apply flex flex-col items-center w-full h-100vh pt-60px;
     background: url('/images/test/bg.gif') center center/cover no-repeat;
     h1 {
       @apply text-40px text-white;
     }
     .container {
-      @apply flex flex-row flex-wrap items-start justify-between w-full max-w-1300px mt-50px;
+      @apply flex flex-row flex-wrap items-start justify-start w-full max-w-1300px mt-50px;
       .link {
-        @apply flex flex-col items-start mx-20px rounded-16px p-10px mt-20px;
+        @apply flex flex-col items-start mx-20px rounded-16px p-10px ;
         background: linear-gradient(90deg, #cfecd0, #ffc5ca);
         width: calc(33.33% - 40px);
         aspect-ratio: 340/320;
         transition-duration: 300ms;
         &:hover {
           transform: translateY(-10px);
+        }
+        @media screen and (max-width: 1000px) {
+          width: calc(50% - 40px);
+        }
+        @media screen and (max-width: 767px) {
+          width: 100%;
         }
         img {
           @apply w-full rounded-16px;
@@ -49,7 +55,10 @@
         .title {
           @apply flex flex-col items-start w-full mt-40px;
           span {
-            @apply text-3vw ; 
+            @apply text-2vw text-left leading-30px; 
+            @media screen and (max-width: 1000px) {
+              @apply text-20px;
+            }
           }
         }
       }
