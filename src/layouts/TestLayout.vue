@@ -26,7 +26,7 @@
 
 <style scoped lang="scss">
   .test-layout {
-    @apply flex flex-col items-center w-full h-100vh pt-20px;
+    @apply flex flex-col items-center w-full h-100vh pt-60px;
     background: url('/images/test/bg.gif') center center/cover no-repeat;
     h1 {
       @apply text-40px text-white;
@@ -42,6 +42,12 @@
         &:hover {
           transform: translateY(-10px);
         }
+        @media screen and (max-width: 1000px) {
+          width: calc(50% - 40px);
+        }
+        @media screen and (max-width: 767px) {
+          width: 100%;
+        }
         img {
           @apply w-full rounded-16px;
           height: 60%;
@@ -49,7 +55,10 @@
         .title {
           @apply flex flex-col items-start w-full mt-40px;
           span {
-            @apply text-3vw ; 
+            @apply text-2vw ; 
+            @media screen and (max-width: 1000px) {
+              @apply text-20px;
+            }
           }
         }
       }
