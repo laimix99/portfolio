@@ -23,7 +23,7 @@ import MyButtons from './MyButtons.vue'
 
 <style scoped lang="scss">
 .first-section {
-  @apply flex flex-col items-center h-673px w-full;
+  @apply flex flex-col items-center h-673px w-full relative;
   background: url('/images/avito-layout/first-section/bg.png')center center/cover no-repeat;
   .container {
     @apply flex flex-col items-center w-full max-w-1150px relative px-5px;
@@ -77,7 +77,7 @@ import MyButtons from './MyButtons.vue'
   }
   img {
     @apply w-232px h-347px absolute;
-    bottom: 0;
+    bottom: -40px;
     left: 75%;
   };
 }
