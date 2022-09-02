@@ -20,8 +20,10 @@ const items = [
           class="prize"
           />
           <!-- <img class="prize" :src="item.prize" alt=""> -->
-          <img class="place" :src="item.place" alt="">
-          <span v-html="item.description"/>
+          <div class="title">
+            <img class="place" :src="item.place" alt="">
+            <span v-html="item.description"/>
+          </div>
         </div>
         <div class="item-big">
           <h2>а также</h2>
@@ -46,7 +48,7 @@ const items = [
       color: #01002A;
     }
     .items {
-      @apply flex flex-row w-full mt-54px;
+      @apply flex flex-row flex-wrap w-full mt-54px;
       .item {
         @apply flex flex-col items-center mx-15px pb-27px px-10px;
         width: calc(16.66% - 30px);
@@ -54,27 +56,46 @@ const items = [
         border: 2px solid #000000;
         box-shadow: 4px 4px 0px rgba(134, 126, 118, 0.62);
         border-radius: 12px;
-        
-        
+        @media screen and (max-width: 991px) {
+          width: calc(50% - 30px) ;
+          &:nth-child(3) {
+            // display: none;
+            @apply flex flex-row justify-between px-40px;
+            flex-direction: row-reverse;
+            width: 100%;
+            margin-top: 24px; 
+          }
+        }
         .prize {
           @apply -mt-55px w-147px h-170px;
+          @media screen and (max-width: 991px) {
+              // @apply mt-0;
+          }
         }
-        .place {
-          @apply mt-8px;
-        }
-        span {
-          @apply text-16px font-500 mt-10px;
-          line-height: 120%;
-          color: #01002A;
+        .title {
+          @apply flex flex-col items-center;
+          .place {
+            @apply mt-8px;
+          }
+          span {
+            @apply text-16px font-500 mt-10px;
+            line-height: 120%;
+            color: #01002A;
+          }
         }
       }
       .item-big {
-        @apply ml-15px flex flex-col items-center pt-15px pl-67px pr-98px relative;
+        @apply ml-15px flex flex-col items-center  pt-15px pl-67px pr-98px relative;
         width: calc(16.66% * 3 - 15px);
         background: #F1EFE5;
         border: 2px solid #000000;
         box-shadow: 4px 4px 0px rgba(134, 126, 118, 0.62);
         border-radius: 12px;
+        @media screen and (max-width: 991px) {
+          @apply h-280px mx-15px mt-26px px-15px; 
+            width: calc(100% - 30px);
+
+          }
         h2 {
           @apply text-20px font-600 italic;
           color: #9F4837;
@@ -90,11 +111,21 @@ const items = [
           @apply absolute;
           bottom: 10px;
           left: 15%;
+          @media screen and (max-width: 991px) {
+            left: 25%;
+          }
+          @media screen and (max-width: 767px) {
+            left: 5%;
+          }
         }
         .jacket {
           @apply absolute;
           bottom: -3px;
           left: 35%;
+          @media screen and (max-width: 991px) {
+            left: 50%;
+            transform: translate(-50%);
+          }
         }
         .scarf {
           @apply absolute;

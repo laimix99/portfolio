@@ -29,16 +29,28 @@ const items = [
   @apply flex flex-col items-center w-full;
   .container {
     @apply flex flex-col items-center w-full max-w-1150px px-5px;
+    @media screen and (max-width: 767px) {
+      @apply px-24px;
+    }
     h1 {
       @apply text-40px font-800 uppercase mt-52px;
       color: #01002A;
       font-family: 'Jost', sans-serif;
+      @media screen and (max-width: 767px) {
+        @apply text-32px;
+      }
     }
     .items {
       @apply flex flex-row items-start w-full mt-40px;
+      @media screen and (max-width: 767px) {
+        @apply flex-col items-center mt-0;
+      }
       .item {
         @apply flex flex-col items-center mx-17.5px;
         width: calc(33.33% - 35px);
+        @media screen and (max-width: 767px) {
+          @apply w-full mt-24px;
+        }
         img {
           @apply ;
           // border: 1px solid red;
@@ -48,6 +60,9 @@ const items = [
           @apply text-32px font-500 mt-27px;
           color: #01002A;
           font-family: 'Jost', sans-serif;
+          @media screen and (max-width: 767px) {
+            @apply text-28px mt-14px;
+          }
         }
         span {
           @apply text-18px font-400 text-center mt-10px;

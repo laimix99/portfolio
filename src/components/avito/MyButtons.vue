@@ -16,7 +16,7 @@
 
 <style scoped lang="scss">
   button {
-    @apply text-20px font-700 uppercase pl-60px pr-76px py-17px relative;
+    @apply text-20px font-700 uppercase pl-60px pr-76px py-17px relative ;
     filter: drop-shadow(4px 4px 0px rgba(54, 70, 88, 0.62));
     font-family: 'Jost', sans-serif;
     background: #FFD465;
@@ -42,6 +42,9 @@
       color: #01002A;
       opacity: 0.4;
       transform: rotate(90deg);
+    }
+    @media screen and (max-width: 767px) {
+      @apply w-full;
     }
   }
 </style>

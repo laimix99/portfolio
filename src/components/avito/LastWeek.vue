@@ -6,7 +6,7 @@
     {place: 4, img: '/images/avito-layout/fifth-section/cat.png', name: 'MetalCare', point: 4700},
     {place: 5, img: '/images/avito-layout/fifth-section/bat.png', name: 'Max', point: 4600},
     {place: 6, img: '/images/avito-layout/fifth-section/bat.png', name: 'Vlad E', point: 4500},
-    {place: 7, img: '/images/avito-layout/fifth-section/bat.png', name: 'Арсений Креститель', point: 4400},
+    {place: 7, img: '/images/avito-layout/fifth-section/bat.png', name: 'Арсений', point: 4400},
     {place: 8, img: '/images/avito-layout/fifth-section/plant.png', name: 'Томми Версети', point: 4300},
     {place: 9, img: '/images/avito-layout/fifth-section/plant.png', name: 'Ivan Zheludkov', point: 4200},
     {place: 10, img: '/images/avito-layout/fifth-section/bat.png', name: 'Nikola', point: 4100},
@@ -50,6 +50,9 @@
           font-family: 'Jost', sans-serif;
           color: #01002A;
           opacity: 0.5;
+          @media screen and (max-width: 991px) {
+          @apply pl-10px;
+        }
         }
         .avatar {
           @apply w-32px h-32px mr-12px;

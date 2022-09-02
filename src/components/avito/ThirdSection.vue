@@ -39,6 +39,9 @@ const items = [
   box-shadow: 4px 4px 0px rgba(134, 126, 118, 0.62);
   .container {
     @apply flex flex-col items-center w-full max-w-1100px px-5px;
+    @media screen and (max-width: 767px) {
+      @apply px-12px;
+    }
     h1 {
       @apply text-32px font-500;
       color: #01002A;

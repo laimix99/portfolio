@@ -40,6 +40,9 @@ const users = [
 <style scoped lang="scss">
 .this-weeks-top {
   @apply flex flex-col items-start w-full max-w-720px;
+  @media screen and (max-width: 991px) {
+    @apply;
+  }
   .user {
     @apply flex flex-row items-center justify-between w-full mt-5px pb-4px;
     border-bottom: 1px solid #DBD7C4;
@@ -50,6 +53,9 @@ const users = [
         font-family: 'Jost', sans-serif;
         color: #01002A;
         opacity: 0.5;
+        @media screen and (max-width: 991px) {
+          @apply pl-10px;
+        }
       }
       .avatar {
         @apply w-32px h-32px mr-12px;
