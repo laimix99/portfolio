@@ -30,6 +30,9 @@ const links = [
 .footer {
   @apply flex flex-col items-center w-full pt-37px pb-10px;
   background: #01002A;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
   .container {
     @apply flex flex-row items-start justify-between w-full max-w-1150px px-5px;
     .logo {
