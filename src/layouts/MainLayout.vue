@@ -13,6 +13,7 @@ const links = [
   { path: '/geecko', name: 'Geecko', img: '/images/geecko.png', subtitle: 'Geecko website' },
   { path: '/sber', name: 'Sber', img: '/images/sber/first-section/bg.png', subtitle: 'Sber website' },
   { path: '/avito', name: 'Avito', img: '/images/avito.png', subtitle: 'Avito website' },
+  { path: '/vue', name: 'VueJs', img: '', subtitle: 'Book' },
   // { path: '/', name: 'My app' },
   // { path: '/spinner', name: 'Spinner' },
   // { path: '/stock', name: 'Stock' },
