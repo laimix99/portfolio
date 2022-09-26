@@ -24,6 +24,7 @@ import PhotographerLayout from '../layouts/PhotographerLayout.vue'    //Photogra
 import GeeckoLayout from '../layouts/GeeckoLayout.vue'                //Geecko
 import SberLayout from '../layouts/SberLayout.vue'                    //Sber
 import AvitoLayout from '../layouts/AvitoLayout.vue'                  //Avito
+import ChatLayout from '../layouts/ChatLayout.vue'
 import TestLayout from  '../layouts/TestLayout.vue'
 import FirstTask from '../layouts/FirstTask.vue'
 import SecondTask from '../layouts/SecondTask.vue'
@@ -180,6 +181,10 @@ const router = createRouter({
     {
       path: '/second-task',
       component: SecondTask,
+    },
+    {
+      path: '/chat',
+      component: ChatLayout,
     },
     {
       path: '/:pathMatch(.*)*',
