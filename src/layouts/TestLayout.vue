@@ -2,6 +2,7 @@
   const links = [
     {path: '/first-task', title: 'Верстка', description: '', img: '/images/test/first-task.png', },
     {path: '/second-task', title: 'Нужно реализовать дерево прав доступа.', description: '', img: '/images/test/second-task.png', },
+    {path: '/third-task', title: '', description: '', img: '', },
   ]
 </script>
 

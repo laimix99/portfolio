@@ -27,6 +27,7 @@ import AvitoLayout from '../layouts/AvitoLayout.vue'                  //Avito
 import TestLayout from  '../layouts/TestLayout.vue'
 import FirstTask from '../layouts/FirstTask.vue'
 import SecondTask from '../layouts/SecondTask.vue'
+import ThirdTask from '../layouts/ThirdTask.vue'
 import ErrorPage from '../pages/ErrorPage.vue';                       //layouts
 
 const router = createRouter({
@@ -180,6 +181,10 @@ const router = createRouter({
     {
       path: '/second-task',
       component: SecondTask,
+    },
+    {
+      path: '/third-task',
+      component: ThirdTask,
     },
     {
       path: '/:pathMatch(.*)*',
