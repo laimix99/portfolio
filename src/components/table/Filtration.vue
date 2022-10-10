@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="filtration br">
     <h1>Фильтр</h1>
     <div class="col">
@@ -63,4 +63,83 @@
       border: 1px solid grey;
     }
   }
-</style>
+</style> -->
+
+<script setup>
+  import { ref } from 'vue';
+  const showCol = ref(false);
+  const showSelectCol = () => {
+    showCol.value = !showCol.value;
+  };
+  const showCondition = ref(false);
+  const showSelectCondition = () => {
+    showCondition.value = !showCondition.value;
+  };
+  </script>
+  
+  <template>
+    <div
+      class="
+        filtration
+        flex flex-row
+        w-full
+        justify-between
+        items-start
+        relative
+        br
+        h-50px
+      "
+    >
+      <h1 class="text-15px font-700 text-white">Фильтр</h1>
+      <div class="flex flex-col items-senter w-1/4 ">
+        <button @click="showSelectCol()" class="text-15px text-white font-700">
+        Выбор колонки
+        </button>
+        <div
+          v-show="showCol"
+          class="flex justify-center left-190px mt-10px"
+        >
+          <select class="select w-150px">
+            <option>Название</option>
+            <option>Количество</option>
+            <option>Растояние</option>
+          </select>
+        </div>
+      </div>
+      <div class="w-1/4 flex flex-col items-center">
+        <button @click="showSelectCondition()" class="text-white text-15px font-700">
+        Выбор условий
+        </button>
+        <div
+          v-show="showCondition"
+          class="flex justify-start mt-10px"
+        >
+          <select class="w-150px">
+            <option>Равно</option>
+            <option>Содержит</option>
+            <option>Больше</option>
+            <option>Меньше</option>
+          </select>
+        </div>
+      </div>
+      <input type="text" placeholder="Поле для ввода значения для фильтрации" />
+    </div>
+  </template>
+  
+  <style scoped>
+  .filtration {
+    /* border: 1px solid red; */
+  }
+  input {
+    border: 1px solid grey;
+  }
+  .select__list {
+    border-radius: 0;
+    background: red;
+  }
+  .select {
+    /* background: red; */
+    /* border-radius: 19px; */
+  }
+  </style>
+  

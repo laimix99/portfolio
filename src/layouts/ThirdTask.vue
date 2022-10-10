@@ -2,6 +2,8 @@
 import Table from '../components/table/Table.vue'
 import Filtration from '../components/table/Filtration.vue'
 
+import { onMounted, ref, computed } from 'vue';
+
 const tables = [
     { date: '21.02', name: 'Книга', quantity: '45', distance: '150' },
     { date: '22.03', name: 'Рука', quantity: '66', distance: '660' },
@@ -39,19 +41,20 @@ const tables = [
 <template>
   <div class="third-task">
     <div class="container br">
-      <Table
-        :table="tables"
-      />
       <Filtration/>
+      <Table
+        :rows="tables"
+      />
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
   .third-task {
-    @apply flex flex-col items-center w-full py-40px;
+    @apply flex flex-col items-center w-full py-40px h-100vh;
+    background-color: #242424;
     .container {
-      @apply flex flex-row justify-between items-start w-full max-w-1200px;
+      @apply flex flex-col justify-between items-center w-full max-w-1200px;
     }
   }
 </style>
