@@ -1,7 +1,7 @@
 <script setup>
 import { ref, computed, reactive } from 'vue';
 import env from '../../env.js';
-const search = ref('superman');
+const search = ref('');
 const movies = ref([]);
 const searchMovies = () => {
   if (search.value != '') {
@@ -22,9 +22,9 @@ const searchMovies = () => {
         <img
           src="https://m.media-amazon.com/images/M/MV5BZmQ5NGFiNWEtMmMyMC00MDdiLTg4YjktOGY5Yzc2MDUxMTE1XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg"
           alt="Naruto Poster"
-          class="faetured-img block w-full h-300px z-0 relative object-cover"
+          class="object-cover h-300px w-full z-0 faetured-img block relative"
         />
-        <div class="detail absolute left-0 right-0 bottom-0 z-1 p-16px text-left">
+        <div class="text-left p-16px right-0 bottom-0 left-0 z-1 detail absolute">
           <h3 class="mb-16px">Naruto</h3>
           <p>
             Naruto Uzumaki, a mischievous adolescent ninja, struggles as he
@@ -34,7 +34,7 @@ const searchMovies = () => {
         </div>
       </router-link>
     </div>
-    <form @submit.prevent="searchMovies()" class="search-box flex flex-col justify-center relative items-center py-16px px-32px">
+    <form @submit.prevent="searchMovies()" class="flex flex-col py-16px px-32px search-box justify-center relative items-center">
       <input
         type="text"
         placeholder="What are you looking for?"
@@ -42,15 +42,15 @@ const searchMovies = () => {
       />
       <input type="submit" value="Search" />
     </form>
-    <div class="movie-list flex justify-start items-start flex-wrap px-8px h-full">
-      <div class="movie w-full p-8px" v-for="movie in movies" :key="movie.imdbID">
-        <router-link :to="'/movies/' + movie.imdbID" class="movie-link flex flex-col h-full">
+    <div class="flex flex-wrap h-full px-8px movie-list justify-start items-start">
+      <div class="w-full p-8px movie" v-for="movie in movies" :key="movie.imdbID">
+        <router-link :to="'/movies/' + movie.imdbID" class="flex flex-col h-full movie-link">
           <div class="product-image block relative">
-            <img class="block w-full h-275px object-cover" :src="movie.Poster" alt="" />
-            <div class="type absolute py-8px px-16px top-220px left-0 capitalize">{{ movie.Type }}</div>
-            <div class="detail flex flex-col justify-start min-h-75px py-16px px-8px text-left">
-              <p class="year text-14px m-0">{{ movie.Year }}</p>
-              <h3 class="font-600 text-16px mt-5px">{{ movie.Title }}</h3>
+            <img class="object-cover h-275px w-full block" :src="movie.Poster" alt="" />
+            <div class="py-8px px-16px top-220px left-0 type absolute capitalize">{{ movie.Type }}</div>
+            <div class="flex flex-col text-left min-h-75px py-16px px-8px detail justify-start">
+              <p class="m-0 text-14px year">{{ movie.Year }}</p>
+              <h3 class="font-600 mt-5px text-16px">{{ movie.Title }}</h3>
             </div>
           </div>
         </router-link>

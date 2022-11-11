@@ -1,4 +1,4 @@
-<script setup>
+<script lang="ts" setup>
 import Header from '../components/geecko/Header.vue'
 import FirstSection from '../components/geecko/FirstSection.vue'
 import SecondSection from '../components/geecko/SecondSection.vue'
@@ -12,19 +12,24 @@ import NinthSection from '../components/geecko/NinthSection.vue'
 import TenthSection from '../components/geecko/TenthSection.vue'
 import EleventhSection from '../components/geecko/EleventhSection.vue'
 import Footer from '../components/geecko/Footer.vue'
+const scrollTo = (linkId: string) => {
+  const element = document.getElementById(linkId)
+  element.scrollIntoView({ block: 'start', behavior: 'smooth' })
+}
 </script>
 
 <template>
   <div class="geecko-layout">
-    <Header/>
-    <FirstSection/>
+    <router-link to="/" class=" bg-no-repeat cursor-pointer h-40px top-90 left-10px w-50px all-projects "/>
+    <Header @link="scrollTo"/>
+    <FirstSection id="track" />
     <div class="gray-gradient">
-      <SecondSection/>
+      <SecondSection id="works" />
       <ThirdSection/>
     </div>
     <FourthSection/>
     <FifthSection/>
-    <SixthSection/>
+    <SixthSection id="benefits"/>
     <SeventhSection/>
     <EighthSection/>
     <NinthSection/>
@@ -38,15 +43,11 @@ import Footer from '../components/geecko/Footer.vue'
 
 <style scoped lang="scss">
 .geecko-layout {
-  @apply flex flex-col items-center w-full;
+  @apply flex flex-col w-full items-center;
     background: #fff;
-  // background: linear-gradient(180deg, #E2E1DD 11.42%, rgba(226, 225, 221, 0) 102.46%);
-  // transform: matrix(1, 0, 0, -1, 0, 0);
   .gray-gradient {
-    // background: linear-gradient(180deg, #E2E1DD 11.42%, rgba(226, 225, 221, 0) 102.46%);
     @apply flex flex-col w-full;
     background: linear-gradient(0deg, #E2E1DD 11.42%, rgb(226, 225, 221, 0) 102.46%);
-    // transform: matrix(1, 0, 0, -1, 0, 0);
   }
 }
 
@@ -59,5 +60,11 @@ import Footer from '../components/geecko/Footer.vue'
   font-family: "Proxima Nova";
   src: url("/fonts/proximanova_light.otf") format("truetype"),     
 }
+.all-projects {
+    background: url('https://thypix.com/wp-content/uploads/blue-arrow-79.png')center no-repeat;
+    background-size: 100%;
+    z-index: 555;
+    position: fixed;
+  }
 </style>
  

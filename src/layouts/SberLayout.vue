@@ -11,6 +11,7 @@ import Footer from '../components/sber/Footer.vue'
 
 <template>
   <div class="sber-layout">
+    <router-link to="/" class=" bg-no-repeat cursor-pointer h-40px top-90 left-10px w-50px all-projects "/>
     <Header/>
     <FirstSection/>
     <SecondSection/>
@@ -24,7 +25,7 @@ import Footer from '../components/sber/Footer.vue'
 
 <style scoped lang="scss">
 .sber-layout {
-  @apply  flex flex-col items-center w-full;
+  @apply  flex flex-col w-full items-center;
   background: #020804;
 }
 
@@ -37,6 +38,11 @@ import Footer from '../components/sber/Footer.vue'
   font-family: 'SB Sans Interface';
   src: url("/fonts/SB Sans Interface.ttf") format("truetype"),     
 }
-
+.all-projects {
+    background: url('https://thypix.com/wp-content/uploads/blue-arrow-79.png')center no-repeat;
+    background-size: 100%;
+    z-index: 555;
+    position: fixed;
+  }
 // SB Sans Display Semibold
 </style>
