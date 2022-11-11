@@ -20,7 +20,8 @@
     @apply w-full flex flex-col items-center mt-4rem;
   }
   .container {
-    @apply flex justify-between w-full max-w-1100px px-0px;
+    @apply flex  justify-between w-full max-w-1100px px-0px;
+    flex-direction: row !important; 
   }
   .title {
     @apply flex flex-col items-start;
