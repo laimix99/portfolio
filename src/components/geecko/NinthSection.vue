@@ -52,19 +52,19 @@ const items = [
 
 <style scoped lang="scss">
 .ninth-section {
-  @apply flex flex-col items-center w-full py-100px;
+  @apply flex flex-col w-full py-100px items-center;
   background: linear-gradient(180deg, rgba(221, 217, 213, 0) 0%, rgba(221, 217, 213, 0.5) 100%);
   @media screen and (max-width: 991px) {
-    @apply mt-200px;
+    @apply mt-10px py-50px;
   }
   .container {
-    @apply flex flex-col items-center w-full max-w-1100px;
+    @apply flex flex-col w-full max-w-1100px items-center;
     h1 {
-      @apply text-42px font-400;
+      @apply font-400 text-42px;
       // font-family: 'Proxima Nova';
       color: #231F20;
       @media screen and (max-width: 767px) {
-        @apply text-42px text-left px-20px;
+        @apply text-left px-20px text-42px;
       }
       span {
         @apply font-600;
@@ -73,20 +73,20 @@ const items = [
     .search {
       @apply w-full relative;
       input {
-      @apply w-full h-48px mt-32px pl-49px ;
+      @apply h-48px mt-32px w-full pl-49px ;
       background: #fff;
       color: #B1BBC8;
       border: 1px solid #E2E6EB;
       border-radius: 9px;
     }
     .icon {
-      @apply absolute top-48px left-20px;
+      @apply top-48px left-20px absolute;
     }
     }
     .items {
-      @apply flex flex-row flex-wrap items-center w-full;
+      @apply flex flex-row flex-wrap w-full items-center;
       .item {
-        @apply mx-12px mt-24px flex flex-row items-center py-16px px-24px h-62px ;
+        @apply flex flex-row h-62px mx-12px mt-24px py-16px px-24px items-center ;
         width: calc(20% - 24px);
         background: #FFFFFF;
         box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.16);
@@ -102,7 +102,7 @@ const items = [
           }
         }
         h2 {
-          @apply text-20px font-400;
+          @apply font-400 text-20px;
           color: #231F20;
           @media screen and (max-width: 767px) {
             @apply text-14px;
