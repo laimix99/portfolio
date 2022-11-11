@@ -44,13 +44,9 @@ const scrollTo = (linkId: string) => {
 .geecko-layout {
   @apply flex flex-col w-full items-center;
     background: #fff;
-  // background: linear-gradient(180deg, #E2E1DD 11.42%, rgba(226, 225, 221, 0) 102.46%);
-  // transform: matrix(1, 0, 0, -1, 0, 0);
   .gray-gradient {
-    // background: linear-gradient(180deg, #E2E1DD 11.42%, rgba(226, 225, 221, 0) 102.46%);
     @apply flex flex-col w-full;
     background: linear-gradient(0deg, #E2E1DD 11.42%, rgb(226, 225, 221, 0) 102.46%);
-    // transform: matrix(1, 0, 0, -1, 0, 0);
   }
 }
 
