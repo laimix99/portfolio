@@ -30,24 +30,6 @@
 <template>
   <div class="footer">
     <div class="container">
-      <div class="menu">
-        <div class="menu-item">
-          <h1>Menu</h1>
-          <span v-for="m in menu">{{ m.title }}</span>
-        </div>
-      </div>
-      <div class="utility-pages">
-        <div class="utility-pages-item">
-          <h1>Utility pages</h1>
-          <span v-for="u in utilityPages">{{ u.title }}</span>
-        </div>
-      </div>
-      <div class="follow">
-        <div class="follow-item" >
-          <h1>Follow us</h1>
-          <span v-for="f in follow">{{ f.title }}</span>
-        </div>
-      </div>
       <div class="subscribe">
         <div class="subscribe-title">Subscribe to our newsletter </div>
         <div class="subscribe-subtitle">Recieve upto info about latest trends and and news updates via email. </div>
@@ -60,17 +42,17 @@
 
 <style scoped lang="scss">
   .footer {
-    @apply flex flex-col items-center w-full pb-100px ;
+    @apply flex flex-col w-full pb-100px items-center ;
     .container {
-      @apply flex justify-start w-full max-w-1500px pt-200px;
+      @apply flex w-full max-w-1500px pt-200px justify-start;
       border-top: 1px solid rgba(0, 0, 0, 0.2);
       @media screen and (max-width: 1500px) {
-        @apply max-w-1100px px-10px flex-col items-center pt-50px;
+        @apply flex-col max-w-1100px px-10px pt-50px items-center;
       }
       .menu {
-        @apply flex flex-col items-start mr-110px;
+        @apply flex flex-col mr-110px items-start;
         @media screen and (max-width: 1500px) {
-          @apply flex-row items-center mr-0;
+          @apply flex-row mr-0 items-center;
         }
         @media screen and (max-width: 767px) {
           @apply hidden; 
@@ -81,79 +63,79 @@
             @apply flex-row mb-40px w-full items-center justify-between;
           }
           h1 {
-            @apply text-35px leading-41px font-700 mb-80px;
+            @apply font-700 mb-80px text-35px leading-41px;
             color: #1A1A1A;
             @media screen and (max-width: 1500px) {
               @apply mb-0;
             }
           }
           span {
-            @apply text-22px leading-33px mb-25px cursor-pointer;
+            @apply cursor-pointer mb-25px text-22px leading-33px;
             color: #656565;
             @media screen and (max-width: 1500px) {
-              @apply mb-0 mr-10px;
+              @apply mr-10px mb-0;
             }
           }
         }
       }
       .utility-pages {
-        @apply flex flex-col items-start mr-110px;
+        @apply flex flex-col mr-110px items-start;
         @media screen and (max-width: 1500px) {
           @apply hidden;
         }
         &-item {
           @apply flex flex-col items-start;
           h1 {
-            @apply text-35px leading-41px font-700 mb-80px;
+            @apply font-700 mb-80px text-35px leading-41px;
             color: #1A1A1A;
           }
           span {
-            @apply text-22px leading-33px mb-25px cursor-pointer;
+            @apply cursor-pointer mb-25px text-22px leading-33px;
             color: #656565;
           }
         }
       }
       .follow {
-        @apply flex flex-col items-start mr-110px;
+        @apply flex flex-col mr-110px items-start;
         @media screen and (max-width: 1500px) {
           @apply hidden;
         }
         &-item {
           @apply flex flex-col items-start;
           h1 {
-            @apply text-35px leading-41px font-700 mb-80px;
+            @apply font-700 mb-80px text-35px leading-41px;
             color: #1A1A1A;
           }
           span {
-            @apply text-22px leading-33px mb-25px cursor-pointer;
+            @apply cursor-pointer mb-25px text-22px leading-33px;
             color: #656565;
           }
         }
       }
       .subscribe {
-        @apply flex flex-col items-start py-66px px-45px rounded-48px box-border h-full max-h-500px; 
+        @apply flex flex-col h-full rounded-48px max-h-500px py-66px px-45px items-start box-border; 
         background: #0582CA;
         @media screen and (max-width: 767px) {
           @apply py-20px px-10px items-center;
         }
         &-title {
-          @apply text-35px text-white font-700;
+          @apply font-700 text-white text-35px;
         }
         &-subtitle {
-          @apply text-22px leading-33px text-white text-left mt-19px w-full max-w-450px;
+          @apply mt-19px text-white text-left w-full max-w-450px text-22px leading-33px;
           @media screen and (max-width: 767px) {
             @apply max-w-350px;
           }
         }
         input {
-          @apply text-22px py-27px pl-42px rounded-28px w-full max-w-472px mt-32px;
+          @apply rounded-28px mt-32px w-full max-w-472px py-27px pl-42px text-22px;
           outline: none;
           @media screen and (max-width: 767px) {
             @apply max-w-350px;
           }
         }
         button {
-          @apply text-22px py-27px px-181px rounded-28px mt-32px;
+          @apply rounded-28px mt-32px py-27px px-181px text-22px;
           color: #0582CA;
           background-color: #fff;
           @media screen and (max-width: 767px) {
