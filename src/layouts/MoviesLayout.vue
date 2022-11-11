@@ -1,14 +1,15 @@
 <script setup></script>
 
 <template>
-  <div class="layout-movies w-full max-w-full min-h-100vh m-0 p-0">
-    <div class="layout-movies-header flex justify-center items-center w-full">
+  <div class="max-w-full m-0 w-full min-h-100vh p-0 layout-movies">
+    <div class="flex w-full layout-movies-header justify-center items-center">
       <router-link to="/movies">
-        <h1 class="text-28px py-5px"><span>Vue</span>Movies</h1>
+        <h1 class="py-5px text-28px"><span>Vue</span>Movies</h1>
       </router-link>
-      <router-link to="/" class="all-projects w-50px h-50px cursor-pointer absolute left-10px" />
+      <router-link to="/" class=" bg-no-repeat cursor-pointer h-40px top-120 left-10px w-50px all-projects "/>
+
     </div>
-    <div class="body flex flex-col justify-start">
+    <div class="flex flex-col body justify-start">
       <router-view />
     </div>
   </div>
@@ -16,11 +17,14 @@
 
 <style lang="scss" scoped>
 .all-projects {
-  color: #fff;
-  background: url('https://thypix.com/wp-content/uploads/blue-arrow-79.png') center;
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
+    background: url('https://thypix.com/wp-content/uploads/blue-arrow-79.png')center no-repeat;
+    background-size: 100%;
+    z-index: 555;
+    position: fixed;
+    // @media screen and (max-width: 991px) {
+    //   display: none;
+    // }
+  }
 .layout-movies {
   background: #35495e;
   &::selection {

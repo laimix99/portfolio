@@ -18,6 +18,7 @@ const scrollTo = (linkId: string) => {
 
 <template>
   <div class="krypto">
+    <router-link to="/" class=" bg-no-repeat cursor-pointer h-40px top-90 left-10px w-50px all-projects "/>
     <Header @link="scrollTo"/>
     <FirstSection/>
     <Trade id="works"/>
@@ -34,11 +35,13 @@ const scrollTo = (linkId: string) => {
 .krypto {
   @apply flex flex-col h-full m-auto w-full items-center;
   background: #160E33;
-  .all-projects {
-  background: url('https://thypix.com/wp-content/uploads/blue-arrow-79.png')center no-repeat;
-  background-size: 100%;
-  z-index: 555;
-  }
+}
+.all-projects {
+background: url('https://thypix.com/wp-content/uploads/blue-arrow-79.png')center no-repeat;
+background-size: 100%;
+z-index: 555;
+position: fixed;
+
 }
 
 </style>

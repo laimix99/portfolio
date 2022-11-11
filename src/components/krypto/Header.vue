@@ -31,7 +31,7 @@ const linkClick = (id) => {
 
 <template>
   <div class="header-cover">
-    <router-link to="/" class="bg-no-repeat cursor-pointer h-40px top-10px left-10px w-40px all-projects absolute"/>
+    <!-- <router-link to="/" class="bg-no-repeat cursor-pointer h-40px top-10px left-10px w-40px all-projects absolute"/> -->
     <div class="header">
       <img class="logo" src="/images/krypto/header/logo.png" alt="">
       <div v-if="showButton ? showMobileMenu : true" class="description" :class="{'mobile-links': showButton }">

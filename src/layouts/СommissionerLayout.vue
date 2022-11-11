@@ -50,6 +50,7 @@ const handleMobileMenu = () => {
 
 <template>
   <div class="commissioner-layout">
+    <router-link to="/" class=" bg-no-repeat cursor-pointer h-40px top-90 left-10px w-50px all-projects "/>
     <div class="header">
       <div class="menu">
         
@@ -100,17 +101,17 @@ const handleMobileMenu = () => {
   width: 100%;
   background: #eee;
   box-shadow: 1px 1px 30px rgb(0, 0, 0, 0.3);
-  @apply flex-col items-center space-y-4;
+  @apply flex-col space-y-4 items-center;
   .link {
     color: black !important;
   }
 }
   .commissioner-layout {
-    @apply h-full flex flex-col items-center w-full ;
+    @apply flex flex-col h-full w-full items-center ;
     background: #FAFAFA;
     font-family: 'Montserrat', sans-serif;
     .header {
-      @apply w-full flex flex-col items-center relative;
+      @apply flex flex-col w-full items-center relative;
       background-color: #140E36;
       z-index: 9999;
       @media screen and (max-width: 991px) {
@@ -119,9 +120,9 @@ const handleMobileMenu = () => {
         top: 0;
       }
       .menu {
-        @apply flex flex-row items-center justify-between w-full max-w-1100px py-5px px-10px ;
+        @apply flex flex-row w-full max-w-1100px py-5px px-10px items-center justify-between ;
         .logo {
-          @apply w-full max-w-100px text-left font-700;
+          @apply font-700 text-left w-full max-w-100px;
           color: #F2F2F4;
           @media screen and (max-width: 767px) {
             @apply text-12px;
@@ -130,7 +131,7 @@ const handleMobileMenu = () => {
         .links {
           @apply flex;
           .link {
-            @apply mr-40px text-16px uppercase cursor-pointer; 
+            @apply cursor-pointer mr-40px text-16px uppercase; 
             color: #F2F2F4;
             &:hover {
               color: rgba(242, 242, 244, 0.5);
@@ -140,7 +141,7 @@ const handleMobileMenu = () => {
         .phones {
           @apply flex flex-col;
           a {
-            @apply text-18px font-700 mt-5px;
+            @apply font-700 mt-5px text-18px;
             color: #F2F2F4;
           @media screen and (max-width: 767px) {
             @apply text-12px;
@@ -153,18 +154,24 @@ const handleMobileMenu = () => {
       }
     }
     .container {
-      @apply flex flex-col items-center w-full max-w-1100px;
+      @apply flex flex-col w-full max-w-1100px items-center;
       @media screen and (max-width: 767px) {
         @apply px-10px;
       }
     } 
   }
   .burger {
-    @apply w-full h-full max-w-30px flex flex-col items-center;
+    @apply flex flex-col h-full w-full max-w-30px items-center;
   }
   .band {
-    @apply w-40px h-4px mt-5px;
+    @apply h-4px mt-5px w-40px;
     background-color: red;
     // display: block;
+  }
+  .all-projects {
+    background: url('https://thypix.com/wp-content/uploads/blue-arrow-79.png')center no-repeat;
+    background-size: 100%;
+    z-index: 555;
+    position: fixed;
   }
 </style>

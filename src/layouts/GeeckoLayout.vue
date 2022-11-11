@@ -20,6 +20,7 @@ const scrollTo = (linkId: string) => {
 
 <template>
   <div class="geecko-layout">
+    <router-link to="/" class=" bg-no-repeat cursor-pointer h-40px top-90 left-10px w-50px all-projects "/>
     <Header @link="scrollTo"/>
     <FirstSection id="track" />
     <div class="gray-gradient">
@@ -59,5 +60,11 @@ const scrollTo = (linkId: string) => {
   font-family: "Proxima Nova";
   src: url("/fonts/proximanova_light.otf") format("truetype"),     
 }
+.all-projects {
+    background: url('https://thypix.com/wp-content/uploads/blue-arrow-79.png')center no-repeat;
+    background-size: 100%;
+    z-index: 555;
+    position: fixed;
+  }
 </style>
  

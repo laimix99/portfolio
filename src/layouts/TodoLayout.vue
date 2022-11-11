@@ -18,19 +18,19 @@ import { ref, computed, reactive, onBeforeMount } from 'vue';
 </script>
 
 <template>
-<div class=" layout flex flex-row w-full items-start">
+<div class=" flex flex-row w-full layout items-start">
   <div class="flex flex-col">
-    <router-link to="/" class="all-projects bg-no-repeat w-40px h-40px cursor-pointer top-10px left-10px absolute"/>
-    <div class="header flex flex-col items-start w-200px h-100vh">
-      <div class="items mt-80px w-full">
-        <div class="item flex flex-col items-start pl-10px cursor-pointer" v-for="version in versions" @click="setVersion(version.click)">
-          <span class="title text-30px text-light-900 mt-15px">{{ version.title }}</span>
-          <p class="description text-12px text-light-900 opacity-50 mt-10px">{{ version.description }}</p>
+    <router-link to="/" class=" bg-no-repeat cursor-pointer h-40px top-90 left-10px w-50px all-projects "/>
+    <div class="flex flex-col h-100vh w-200px header items-start">
+      <div class="mt-80px w-full items">
+        <div class="cursor-pointer flex flex-col pl-10px item items-start" v-for="version in versions" @click="setVersion(version.click)">
+          <span class="mt-15px text-30px text-light-900 title">{{ version.title }}</span>
+          <p class="mt-10px opacity-50 text-12px text-light-900 description">{{ version.description }}</p>
         </div> 
       </div>
     </div>
   </div>
-  <div class="mt-40px m-auto relative">
+  <div class="m-auto mt-40px relative">
     <AppV1 v-if="currentVersion === 'v1'" />
     <AppV2 v-if="currentVersion === 'v2'"
     :height="800"
@@ -59,8 +59,13 @@ import { ref, computed, reactive, onBeforeMount } from 'vue';
 }
 
 .all-projects {
-  background: url('https://thypix.com/wp-content/uploads/blue-arrow-79.png')center no-repeat;
-  background-size: 100%;
+    background: url('https://thypix.com/wp-content/uploads/blue-arrow-79.png')center no-repeat;
+    background-size: 100%;
+    z-index: 555;
+    position: fixed;
+    // @media screen and (max-width: 991px) {
+    //   display: none;
+    // }
   }
   .item {
     &:hover {

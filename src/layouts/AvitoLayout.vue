@@ -10,6 +10,7 @@ import Footer from '../components/avito/Footer.vue'
 
 <template>
   <div class="avito-layout">
+    <router-link to="/" class=" bg-no-repeat cursor-pointer h-40px top-90 left-10px w-50px all-projects "/>
     <FirstSection/>
     <SecondSection/>
     <ThirdSection/>
@@ -23,7 +24,16 @@ import Footer from '../components/avito/Footer.vue'
 <style scoped lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800;900&display=swap');
 .avito-layout {
-  @apply flex flex-col items-center w-full;
+  @apply flex flex-col w-full items-center;
   background: #e1daca;
 }
+.all-projects {
+    background: url('https://thypix.com/wp-content/uploads/blue-arrow-79.png')center no-repeat;
+    background-size: 100%;
+    z-index: 555;
+    position: fixed;
+    // @media screen and (max-width: 991px) {
+    //   display: none;
+    // }
+  }
 </style>

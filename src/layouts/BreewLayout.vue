@@ -20,6 +20,7 @@ const scrollTo = (linkId: string) => {
 
 <template>
   <div class="breew-layout">
+    <router-link to="/" class=" bg-no-repeat cursor-pointer h-40px top-90 left-10px w-50px all-projects "/>
     <Header @link="scrollTo" />
     <FirstSection id="home" />
     <SecondSection/>
@@ -41,6 +42,8 @@ const scrollTo = (linkId: string) => {
   .all-projects {
     background: url('https://thypix.com/wp-content/uploads/blue-arrow-79.png')center no-repeat;
     background-size: 100%;
+    z-index: 555;
+    position: fixed;
   }
 }
 </style>

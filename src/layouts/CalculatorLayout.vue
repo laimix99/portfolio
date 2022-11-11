@@ -13,18 +13,18 @@ import CalculatorV2 from '../components/calculator/CalculatorV2.vue' ;
 </script>
 
 <template>
-  <div class="calculator-layout flex flex-row w-full justify-between bg-red-100">
-    <router-link to="/" class="all-projects bg-no-repeat w-40px h-40px cursor-pointer top-10px left-10px absolute"/>
-    <div class="header  h-100vh w-full max-w-250px flex flex-col items-start">
-      <h1 class="title   w-full text-40px mt-60px font-700">Calculator</h1>
-      <div class="items  w-full   ">
-        <div class="item text-left z-5 cursor-pointer w-full pl-10px" v-for="version in versoins" @click="setVersion(version.click)">
-          <p class="text-25px text-black pt-20px font-500">{{ version.title }}</p>
+  <div class="flex flex-row bg-red-100 w-full calculator-layout justify-between">
+    <router-link to="/" class=" bg-no-repeat cursor-pointer h-40px top-90 left-10px w-50px all-projects "/>
+    <div class="flex  flex-col h-100vh w-full max-w-250px header items-start">
+      <h1 class="font-700   mt-60px w-full text-40px title">Calculator</h1>
+      <div class="w-full  items   ">
+        <div class="cursor-pointer text-left w-full pl-10px z-5 item" v-for="version in versoins" @click="setVersion(version.click)">
+          <p class="font-500 text-black pt-20px text-25px">{{ version.title }}</p>
           <span class="text-15px">{{ version.description }}</span>
         </div>
       </div>
     </div>
-    <div class="content m-auto mt-0">
+    <div class="m-auto mt-0 content">
       <CalculatorV1 v-if="currentVersion === 'v1'"/>
       <CalculatorV2 v-if="currentVersion === 'v2'"/>
     </div>
@@ -41,9 +41,14 @@ background-image: linear-gradient(63deg, #1f4e78 0%, #1f4e78 47%, #1f4e78 100%);
   background-image: linear-gradient(63deg, #bdd7ee 0%, #bdd7ee 47%, #bdd7ee 100%);
   
 }
-  .all-projects {
-  background: url('https://thypix.com/wp-content/uploads/blue-arrow-79.png')center no-repeat;
-  background-size: 100%;
+.all-projects {
+    background: url('https://thypix.com/wp-content/uploads/blue-arrow-79.png')center no-repeat;
+    background-size: 100%;
+    z-index: 555;
+    position: fixed;
+    // @media screen and (max-width: 991px) {
+    //   display: none;
+    // }
   }
   .title {
     font-family: 'Splash', cursive;
