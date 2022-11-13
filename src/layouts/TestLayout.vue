@@ -1,8 +1,8 @@
 <script setup>
   const links = [
+    {path: '/bicycle',img: '/images/test/bike.png',title: 'Верстка с добавлением характеристик ',},
     {path: '/first-task', title: 'Верстка', description: '', img: '/images/test/first-task.png', },
     {path: '/second-task', title: 'Нужно реализовать дерево прав доступа.', description: '', img: '/images/test/second-task.png', },
-    {path: '/bicycle'}
   ]
 </script>
 
