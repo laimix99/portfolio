@@ -28,6 +28,7 @@ import TestLayout from  '../layouts/TestLayout.vue'
 import FirstTask from '../layouts/FirstTask.vue'
 import SecondTask from '../layouts/SecondTask.vue'
 import BicycleLayout from '../layouts/BicycleLayout.vue'
+import ButtonAnimaccord from '../layouts/ButtonAnimaccord.vue'
 import ErrorPage from '../pages/ErrorPage.vue';                       //layouts
 
 const router = createRouter({
@@ -188,6 +189,10 @@ const router = createRouter({
     {
       path: '/second-task',
       component: SecondTask,
+    },
+    {
+      path: '/button-animaccord',
+      component: ButtonAnimaccord,
     },
     {
       path: '/:pathMatch(.*)*',
