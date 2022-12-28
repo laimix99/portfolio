@@ -13,13 +13,13 @@
 </script>
   
 <template>
-<div class="client-page w-full max-w-1280px flex flex-col justify-start items-center">
-  <FirstSection class="deli-img z-1"/>
-  <OurQualities class="our-qualiti -mt-16px z-3"/>
-  <div class="services-ser pt-90px max-w-1008px flex flex-row z-2 box-border">
+<div class="flex flex-col w-full max-w-1280px client-page justify-start items-center">
+  <FirstSection class="z-1 deli-img"/>
+  <OurQualities class="-mt-16px z-3 our-qualiti"/>
+  <div class="flex flex-row max-w-1008px pt-90px z-2 services-ser box-border">
     <Services class="deli-services"/>
   </div>
-  <OfferPackage class="offer -mt-65px z-1"/>
+  <OfferPackage class="-mt-65px z-1 offer"/>
   <PricesService />
   <Cooperate/>
   <ServicesSlider/>

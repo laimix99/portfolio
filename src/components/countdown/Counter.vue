@@ -19,7 +19,7 @@
   const showRemaining = () => {
     const timer = setInterval(() => {
       const now = new Date();
-      const end = new Date(2022, 8, 7, 10, 10, 10, 10);
+      const end = new Date(2023, 8, 7, 10, 10, 10, 10);
       const distance = end.getTime() - now.getTime();
       if (distance < 0) {
         calearInterval(timer)
@@ -40,25 +40,25 @@
 </script>
 
 <template>
-  <div class="timer flex flex-row items-center w-full max-w-350px rounded-64px py-10px px-40px mt-27px">
-    <div class="item flex flex-col mx-10px">
+  <div class="flex flex-row rounded-64px mt-27px w-full max-w-350px py-10px px-40px timer items-center">
+    <div class="flex flex-col mx-10px item">
       <span class="text-red-600 text-30px z-10">{{ displayDays }}</span>
-      <span class="text-13px font-400 leading-15px text-white mt-4px">DAYS</span>
+      <span class="font-400 mt-4px text-white text-13px leading-15px">DAYS</span>
     </div>
     <p class="text-white text-13px leading-20px">:</p>
-    <div class="item flex flex-col mx-10px">
-      <span class="text-red-600 text-30px opacity-100">{{ displayHours }}</span>
-      <span class="text-13px font-400 leading-15px text-white mt-4px">HOURS</span>
+    <div class="flex flex-col mx-10px item">
+      <span class="opacity-100 text-red-600 text-30px">{{ displayHours }}</span>
+      <span class="font-400 mt-4px text-white text-13px leading-15px">HOURS</span>
     </div>
     <p class="text-white text-13px leading-20px">:</p>
-     <div class="item flex flex-col mx-10px">
+     <div class="flex flex-col mx-10px item">
       <span class="text-red-600 text-30px">{{ displayMinutes }}</span>
-      <span class="text-13px font-400 leading-15px text-white mt-4px">MINUTES</span>
+      <span class="font-400 mt-4px text-white text-13px leading-15px">MINUTES</span>
     </div>
     <p class="text-white text-13px leading-20px">:</p>
-     <div class="item flex flex-col ml-10px">
+     <div class="flex flex-col ml-10px item">
       <span class="text-red-600 text-30px">{{ displaySeconds }}</span>
-      <span class="text-13px font-400 leading-15px text-white mt-4px">SECONDS</span>
+      <span class="font-400 mt-4px text-white text-13px leading-15px">SECONDS</span>
     </div>
   </div>
 </template>

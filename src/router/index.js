@@ -28,6 +28,8 @@ import TestLayout from  '../layouts/TestLayout.vue'
 import FirstTask from '../layouts/FirstTask.vue'
 import SecondTask from '../layouts/SecondTask.vue'
 import ThirdTask from '../layouts/ThirdTask.vue'
+import BicycleLayout from '../layouts/BicycleLayout.vue'
+import ButtonAnimaccord from '../layouts/ButtonAnimaccord.vue'
 import ErrorPage from '../pages/ErrorPage.vue';                       //layouts
 
 const router = createRouter({
@@ -156,6 +158,13 @@ const router = createRouter({
       ],
     },
     {
+      path: '/bicycle',
+      component: BicycleLayout,
+      children: [
+
+      ],
+    },
+    {
       path: '/photographer',
       component: PhotographerLayout,
     },{
@@ -185,6 +194,10 @@ const router = createRouter({
     {
       path: '/third-task',
       component: ThirdTask,
+    },
+    {
+      path: '/button-animaccord',
+      component: ButtonAnimaccord,
     },
     {
       path: '/:pathMatch(.*)*',

@@ -13,7 +13,7 @@ import Footer from '../components/trello/Footer.vue'
 </script>
 <template>
   <div class="trello-layout">
-    <h1></h1>
+    <router-link to="/" class=" bg-no-repeat cursor-pointer h-40px top-90 left-10px w-50px all-projects "/>
     <TrelloHeader/>
     <FirstSection/>
     <SecondSection/>
@@ -27,3 +27,15 @@ import Footer from '../components/trello/Footer.vue'
     <Footer/>
   </div>
 </template>
+
+<style lang="scss" scoped >
+.all-projects {
+    background: url('https://thypix.com/wp-content/uploads/blue-arrow-79.png')center no-repeat;
+    background-size: 100%;
+    z-index: 555;
+    position: fixed;
+    // @media screen and (max-width: 991px) {
+    //   display: none;
+    // }
+  }
+</style>

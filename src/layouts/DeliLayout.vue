@@ -9,22 +9,22 @@ import Footer from '../components/deli/Footer.vue'
 <template>
   
 <div class="layout">
-  <router-link to="/" class="all-projects bg-no-repeat w-40px h-40px cursor-pointer top-10px left-10px absolute"/>
-  <div class="layout-header max-w-1280px m-auto flex justify-between items-center py-18px px-32px">
-    <div class="layout-header-menu w-full flex flex-row justify-start">
+  <router-link to="/" class=" bg-no-repeat cursor-pointer h-40px top-90 left-10px w-50px all-projects "/>
+  <div class="flex m-auto max-w-1280px py-18px px-32px layout-header justify-between items-center">
+    <div class="flex flex-row w-full layout-header-menu justify-start">
       <router-link class="link no-underline" to="/deli/services">
-        <span class="layout-header-menu-text py-24px relative mr-32px leading-24px opacity-30 cursor-pointer text-20px">о сервисе</span>
+        <span class="cursor-pointer mr-32px opacity-30 py-24px text-20px leading-24px layout-header-menu-text relative">о сервисе</span>
       </router-link> 
       <router-link class="link" to="/deli">
-        <span class="layout-header-menu-text py-24px relative mr-32px leading-24px opacity-30 cursor-pointer text-20px">для клиента</span>
+        <span class="cursor-pointer mr-32px opacity-30 py-24px text-20px leading-24px layout-header-menu-text relative">для клиента</span>
       </router-link>
     </div>
-    <div class="layout-header-contact flex flex-row justify-between">
-      <a href="tel:88001234567" class="room no-underline w-120px font-700 not-italic">8 800 123 45 67</a>
-      <div class="lang font-700 not-italic text-16px ml-32px">eng</div>
+    <div class="flex flex-row layout-header-contact justify-between">
+      <a href="tel:88001234567" class="font-700 w-120px room no-underline not-italic">8 800 123 45 67</a>
+      <div class="font-700 ml-32px text-16px lang not-italic">eng</div>
     </div>
   </div>
-  <div class="body w-full max-w-1280px m-auto min-h 100vh">
+  <div class="m-auto min-h w-full max-w-1280px body 100vh">
     <router-view />
     <Footer></Footer>
   </div>
@@ -34,8 +34,13 @@ import Footer from '../components/deli/Footer.vue'
 
 <style lang="scss" scoped>
 .all-projects {
-  background: url('https://thypix.com/wp-content/uploads/blue-arrow-79.png')center no-repeat;
-  background-size: 100%;
+    background: url('https://thypix.com/wp-content/uploads/blue-arrow-79.png')center no-repeat;
+    background-size: 100%;
+    z-index: 555;
+    position: fixed;
+    // @media screen and (max-width: 991px) {
+    //   display: none;
+    // }
   }
 
 .layout {
