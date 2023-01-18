@@ -1,9 +1,11 @@
 <script setup>
   const links = [
+    {path: '/todo-test', title: 'Todo', description: 'Local Storage', img: '/images/todo.jpg', },
+    {path: '/button-animaccord', title: 'UI Button', description: '', img: '/images/test/button.png', },
     {path: '/bicycle',img: '/images/test/bike.png',title: 'Верстка с добавлением характеристик ',},
     {path: '/first-task', title: 'Верстка', description: '', img: '/images/test/first-task.png', },
     {path: '/second-task', title: 'Нужно реализовать дерево прав доступа.', description: '', img: '/images/test/second-task.png', },
-    {path: '/button-animaccord', title: 'UI Button', description: '', img: '/images/test/button.png', },
+    // {path: '/third-task', title: '', description: '', img: '', },
 
   ]
 </script>
