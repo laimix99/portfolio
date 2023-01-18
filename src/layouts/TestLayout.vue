@@ -1,8 +1,12 @@
 <script setup>
   const links = [
+    {path: '/todo-test', title: 'Todo', description: 'Local Storage', img: '/images/todo.jpg', },
+    {path: '/button-animaccord', title: 'UI Button', description: '', img: '/images/test/button.png', },
     {path: '/bicycle',img: '/images/test/bike.png',title: 'Верстка с добавлением характеристик ',},
     {path: '/first-task', title: 'Верстка', description: '', img: '/images/test/first-task.png', },
     {path: '/second-task', title: 'Нужно реализовать дерево прав доступа.', description: '', img: '/images/test/second-task.png', },
+    // {path: '/third-task', title: '', description: '', img: '', },
+
   ]
 </script>
 
@@ -27,7 +31,7 @@
 
 <style scoped lang="scss">
   .test-layout {
-    @apply flex flex-col h-100vh w-full pt-60px items-center;
+    @apply flex flex-col h-100vh w-full pt-60px overflow-x-hidden items-center;
     background: url('/images/test/bg.gif') center center/cover no-repeat;
     h1 {
       @apply text-white text-40px;
@@ -35,7 +39,7 @@
     .container {
       @apply flex flex-row flex-wrap mt-50px w-full max-w-1300px items-start justify-start;
       .link {
-        @apply flex flex-col rounded-16px mx-20px p-10px items-start ;
+        @apply flex flex-col rounded-16px my-20px mx-20px p-10px items-start ;
         background: linear-gradient(90deg, #cfecd0, #ffc5ca);
         width: calc(33.33% - 40px);
         aspect-ratio: 340/320;

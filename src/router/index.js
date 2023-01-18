@@ -18,7 +18,7 @@ import ServicesPage from '../pages/deli/ServicesPage.vue';            //pages
 import TodoLayout from '../layouts/TodoLayout.vue';                   //Todo
 import KryptoLayout from '../layouts/KryptoLayout.vue'                //Krypto
 import BreewLayout from '../layouts/BreewLayout.vue'                  //Breew
-import СommissionerLayout from '../layouts/СommissionerLayout.vue'    //Commissioner
+import CommissionerLayout from '../layouts/СommissionerLayout.vue'    //Commissioner
 import TrelloLayout from '../layouts/TrelloLayout.vue'                //Trello
 import PhotographerLayout from '../layouts/PhotographerLayout.vue'    //Photographer
 import GeeckoLayout from '../layouts/GeeckoLayout.vue'                //Geecko
@@ -27,7 +27,10 @@ import AvitoLayout from '../layouts/AvitoLayout.vue'                  //Avito
 import TestLayout from  '../layouts/TestLayout.vue'
 import FirstTask from '../layouts/FirstTask.vue'
 import SecondTask from '../layouts/SecondTask.vue'
+import ThirdTask from '../layouts/ThirdTask.vue'
 import BicycleLayout from '../layouts/BicycleLayout.vue'
+import ButtonAnimaccord from '../layouts/ButtonAnimaccord.vue'
+import TodoTest from '../layouts/TodoTest.vue'
 import ErrorPage from '../pages/ErrorPage.vue';                       //layouts
 
 const router = createRouter({
@@ -143,7 +146,7 @@ const router = createRouter({
     },
     {
       path: '/commissioner',
-      component: СommissionerLayout,
+      component: CommissionerLayout,
       children: [
         
       ],
@@ -178,6 +181,10 @@ const router = createRouter({
       component: AvitoLayout,
     },
     {
+      path: '/todo-test',
+      component: TodoTest,
+    },
+    {
       path: '/test',
       component: TestLayout,
     },
@@ -188,6 +195,14 @@ const router = createRouter({
     {
       path: '/second-task',
       component: SecondTask,
+    },
+    {
+      path: '/third-task',
+      component: ThirdTask,
+    },
+    {
+      path: '/button-animaccord',
+      component: ButtonAnimaccord,
     },
     {
       path: '/:pathMatch(.*)*',
